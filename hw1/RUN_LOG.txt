@@ -1,3 +1,4 @@
 2026-08-31 17:55:15,886 | === Session started for hw1 ===
 2026-08-31 18:13:34,241 | Sanity check: logger is working
 2026-08-31 19:22:27,359 | Data preprocessing and visualization completed
+2026-08-31 19:29:48,417 | Uploading visualization images
