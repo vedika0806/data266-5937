@@ -12,3 +12,11 @@
 2026-08-31 20:02:22,997 | [PyTorch modified HP_ID=3] seed=5939 test_acc=0.6754
 2026-08-31 20:02:56,064 | [PyTorch] baseline mean=0.7427 std=0.0353
 2026-08-31 20:02:56,069 | [PyTorch] modified mean=0.6550 std=0.0149
+2026-08-31 20:03:45,483 | [TensorFlow baseline] seed=5937 test_acc=0.7895
+2026-08-31 20:03:52,513 | [TensorFlow baseline] seed=5938 test_acc=0.7982
+2026-08-31 20:03:59,178 | [TensorFlow baseline] seed=5939 test_acc=0.7982
+2026-08-31 20:04:06,603 | [TensorFlow modified HP_ID=3] seed=5937 test_acc=0.7895
+2026-08-31 20:04:12,686 | [TensorFlow modified HP_ID=3] seed=5938 test_acc=0.7895
+2026-08-31 20:04:19,725 | [TensorFlow modified HP_ID=3] seed=5939 test_acc=0.7368
+2026-08-31 20:05:56,374 | [TensorFlow] baseline mean=0.7953 std=0.0041
+2026-08-31 20:05:56,375 | [TensorFlow] modified mean=0.7719 std=0.0248
