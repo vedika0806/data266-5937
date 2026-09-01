@@ -20,3 +20,16 @@
 2026-08-31 20:04:19,725 | [TensorFlow modified HP_ID=3] seed=5939 test_acc=0.7368
 2026-08-31 20:05:56,374 | [TensorFlow] baseline mean=0.7953 std=0.0041
 2026-08-31 20:05:56,375 | [TensorFlow] modified mean=0.7719 std=0.0248
+2026-09-01 07:49:59,132 | === CUDA session started ===
+
+=== CUDA matmul run, N=256 ===
+N=256 | CPU: 22.020 ms | GPU kernel: 91.948 ms | H2D+D2H: 1.105 ms | End-to-end GPU: 93.052 ms | Speedup: 0.237x | MaxDiff: 0.001465
+2026-09-01 07:54:34,210 | CUDA matmul N=256: N=256 | CPU: 22.020 ms | GPU kernel: 91.948 ms | H2D+D2H: 1.105 ms | End-to-end GPU: 93.052 ms | Speedup: 0.237x | MaxDiff: 0.001465
+
+=== CUDA matmul run, N=1024 ===
+N=1024 | CPU: 3425.199 ms | GPU kernel: 1.054 ms | H2D+D2H: 4.995 ms | End-to-end GPU: 6.049 ms | Speedup: 566.228x | MaxDiff: 0.001953
+2026-09-01 07:54:38,226 | CUDA matmul N=1024: N=1024 | CPU: 3425.199 ms | GPU kernel: 1.054 ms | H2D+D2H: 4.995 ms | End-to-end GPU: 6.049 ms | Speedup: 566.228x | MaxDiff: 0.001953
+
+=== CUDA matmul run, N=4096 ===
+N=4096 | CPU: 691799.991 ms | GPU kernel: 59.081 ms | H2D+D2H: 73.857 ms | End-to-end GPU: 132.938 ms | Speedup: 5203.931x | MaxDiff: 0.007812
+2026-09-01 08:06:11,499 | CUDA matmul N=4096: N=4096 | CPU: 691799.991 ms | GPU kernel: 59.081 ms | H2D+D2H: 73.857 ms | End-to-end GPU: 132.938 ms | Speedup: 5203.931x | MaxDiff: 0.007812
