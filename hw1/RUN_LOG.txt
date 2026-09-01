@@ -57,3 +57,27 @@ N=4096 | CPU: 693369.540 ms | GPU kernel: 58.827 ms | H2D+D2H: 74.463 ms | End-t
 === nsys profiler output, N=4096 ===
 /bin/bash: line 1: nsys: command not found
 
+
+=== nvprof profiler output, N=256 ===
+======== Warning: nvprof is not supported on devices with compute capability 8.0 and higher.
+                  Use NVIDIA Nsight Systems for GPU tracing and CPU sampling and NVIDIA Nsight Compute for GPU profiling.
+                  Refer https://developer.nvidia.com/tools-overview for more details.
+
+
+2026-09-01 08:25:54,047 | nvprof profiling complete for N=256
+
+=== nvprof profiler output, N=1024 ===
+======== Warning: nvprof is not supported on devices with compute capability 8.0 and higher.
+                  Use NVIDIA Nsight Systems for GPU tracing and CPU sampling and NVIDIA Nsight Compute for GPU profiling.
+                  Refer https://developer.nvidia.com/tools-overview for more details.
+
+
+2026-09-01 08:25:54,048 | nvprof profiling complete for N=1024
+
+=== nvprof profiler output, N=4096 ===
+======== Warning: nvprof is not supported on devices with compute capability 8.0 and higher.
+                  Use NVIDIA Nsight Systems for GPU tracing and CPU sampling and NVIDIA Nsight Compute for GPU profiling.
+                  Refer https://developer.nvidia.com/tools-overview for more details.
+
+
+2026-09-01 08:25:54,048 | nvprof profiling complete for N=4096
