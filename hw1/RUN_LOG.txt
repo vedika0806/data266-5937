@@ -33,3 +33,15 @@ N=1024 | CPU: 3425.199 ms | GPU kernel: 1.054 ms | H2D+D2H: 4.995 ms | End-to-en
 === CUDA matmul run, N=4096 ===
 N=4096 | CPU: 691799.991 ms | GPU kernel: 59.081 ms | H2D+D2H: 73.857 ms | End-to-end GPU: 132.938 ms | Speedup: 5203.931x | MaxDiff: 0.007812
 2026-09-01 08:06:11,499 | CUDA matmul N=4096: N=4096 | CPU: 691799.991 ms | GPU kernel: 59.081 ms | H2D+D2H: 73.857 ms | End-to-end GPU: 132.938 ms | Speedup: 5203.931x | MaxDiff: 0.007812
+
+=== CUDA matmul run, N=256 ===
+N=256 | CPU: 22.008 ms | GPU kernel: 0.028 ms | H2D+D2H: 0.442 ms | End-to-end GPU: 0.470 ms | Speedup: 46.821x | MaxDiff: 0.001465
+2026-09-01 08:09:19,194 | CUDA matmul N=256: N=256 | CPU: 22.008 ms | GPU kernel: 0.028 ms | H2D+D2H: 0.442 ms | End-to-end GPU: 0.470 ms | Speedup: 46.821x | MaxDiff: 0.001465
+
+=== CUDA matmul run, N=1024 ===
+N=1024 | CPU: 3690.363 ms | GPU kernel: 0.890 ms | H2D+D2H: 5.115 ms | End-to-end GPU: 6.005 ms | Speedup: 614.516x | MaxDiff: 0.001953
+2026-09-01 08:09:23,511 | CUDA matmul N=1024: N=1024 | CPU: 3690.363 ms | GPU kernel: 0.890 ms | H2D+D2H: 5.115 ms | End-to-end GPU: 6.005 ms | Speedup: 614.516x | MaxDiff: 0.001953
+
+=== CUDA matmul run, N=4096 ===
+N=4096 | CPU: 693369.540 ms | GPU kernel: 58.827 ms | H2D+D2H: 74.463 ms | End-to-end GPU: 133.290 ms | Speedup: 5201.962x | MaxDiff: 0.007812
+2026-09-01 08:20:58,431 | CUDA matmul N=4096: N=4096 | CPU: 693369.540 ms | GPU kernel: 58.827 ms | H2D+D2H: 74.463 ms | End-to-end GPU: 133.290 ms | Speedup: 5201.962x | MaxDiff: 0.007812
