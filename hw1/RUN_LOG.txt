@@ -116,3 +116,4 @@ N=4096 | CPU: 663528.643 ms | GPU kernel: 32055.801 ms | H2D+D2H: 73.936 ms | En
 2026-09-01 17:14:58,409 | === CUDA session started ===
 2026-09-01 17:46:37,844 | Analysed matrix multiplication tables and provided conclusion
 2026-09-01 18:20:38,610 | Added bold note to METRICS.md pointing to neural_networks.ipynb and cuda.ipynb for detailed analysis
+2026-09-01 18:41:59,895 | Created AI_USE.md documenting the CUDA cold-start/warm-up measurement bug and how it was diagnosed and fixed
