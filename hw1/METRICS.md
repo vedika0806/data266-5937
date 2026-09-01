@@ -14,3 +14,6 @@
 | 256         | 22.008       | 0.028            | 0.442        | 46.821    |
 | 1024        | 3690.363     | 0.890            | 5.115        | 614.516   |
 | 4096        | 693369.540   | 58.827           | 74.463       | 5201.962  |
+
+
+**All detailed analysis for both the Neural Network (PyTorch/TensorFlow) and CUDA questions is provided in the respective Colab notebooks (`neural_networks.ipynb` and `cuda.ipynb`), including code, plots, and written interpretation. This file summarizes the key results and conclusions.**
