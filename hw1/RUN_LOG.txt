@@ -113,3 +113,4 @@ N=4096 | CPU: 663528.643 ms | GPU kernel: 32055.801 ms | H2D+D2H: 73.936 ms | En
 ==PROF== Report: /content/data266-5937/hw1/ncu_report_N4096.ncu-rep
 
 2026-09-01 08:42:15,497 | ncu profiling complete for N=4096
+2026-09-01 17:14:58,409 | === CUDA session started ===
