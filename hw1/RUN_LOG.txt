@@ -114,3 +114,4 @@ N=4096 | CPU: 663528.643 ms | GPU kernel: 32055.801 ms | H2D+D2H: 73.936 ms | En
 
 2026-09-01 08:42:15,497 | ncu profiling complete for N=4096
 2026-09-01 17:14:58,409 | === CUDA session started ===
+2026-09-01 17:46:37,844 | Analysed matrix multiplication tables and provided conclusion
