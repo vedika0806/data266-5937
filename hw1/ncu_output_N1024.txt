@@ -1,0 +1,6 @@
+==PROF== Connected to process 10901 (/content/data266-5937/hw1/matmul_exe)
+==PROF== Profiling "matMulKernel" - 0: 0%....50%....100% - 49 passes
+==PROF== Profiling "matMulKernel" - 1: 0%....50%....100% - 49 passes
+N=1024 | CPU: 3360.350 ms | GPU kernel: 3476.543 ms | H2D+D2H: 5.016 ms | End-to-end GPU: 3481.559 ms | Speedup: 0.965x | MaxDiff: 0.001953
+==PROF== Disconnected from process 10901
+==PROF== Report: /content/data266-5937/hw1/ncu_report_N1024.ncu-rep

@@ -81,3 +81,35 @@ N=4096 | CPU: 693369.540 ms | GPU kernel: 58.827 ms | H2D+D2H: 74.463 ms | End-t
 
 
 2026-09-01 08:25:54,048 | nvprof profiling complete for N=4096
+
+=== Nsight Compute (ncu) profiler output, N=256 ===
+==PROF== Connected to process 10650 (/content/data266-5937/hw1/matmul_exe)
+==PROF== Profiling "matMulKernel" - 0: 0%....50%....100% - 49 passes
+==PROF== Profiling "matMulKernel" - 1: 0%....50%....100% - 50 passes
+N=256 | CPU: 21.863 ms | GPU kernel: 3120.360 ms | H2D+D2H: 0.468 ms | End-to-end GPU: 3120.828 ms | Speedup: 0.007x | MaxDiff: 0.001465
+==PROF== Disconnected from process 10650
+==PROF== Report: /content/data266-5937/hw1/ncu_report_N256.ncu-rep
+
+2026-09-01 08:42:15,495 | ncu profiling complete for N=256
+
+=== Nsight Compute (ncu) profiler output, N=1024 ===
+==PROF== Connected to process 10901 (/content/data266-5937/hw1/matmul_exe)
+==PROF== Profiling "matMulKernel" - 0: 0%....50%....100% - 49 passes
+==PROF== Profiling "matMulKernel" - 1: 0%....50%....100% - 49 passes
+N=1024 | CPU: 3360.350 ms | GPU kernel: 3476.543 ms | H2D+D2H: 5.016 ms | End-to-end GPU: 3481.559 ms | Speedup: 0.965x | MaxDiff: 0.001953
+==PROF== Disconnected from process 10901
+==PROF== Report: /content/data266-5937/hw1/ncu_report_N1024.ncu-rep
+
+2026-09-01 08:42:15,496 | ncu profiling complete for N=1024
+
+=== Nsight Compute (ncu) profiler output, N=4096 ===
+==PROF== Connected to process 11120 (/content/data266-5937/hw1/matmul_exe)
+==PROF== Profiling "matMulKernel" - 0: 0%
+==WARNING== Launching the workload is taking more time than expected. If this continues to hang, terminate the profile and re-try by profiling the range of all related launches using '--replay-mode range'. See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#replay for more details.
+....50%....100% - 49 passes
+==PROF== Profiling "matMulKernel" - 1: 0%....50%....100% - 50 passes
+N=4096 | CPU: 663528.643 ms | GPU kernel: 32055.801 ms | H2D+D2H: 73.936 ms | End-to-end GPU: 32129.736 ms | Speedup: 20.652x | MaxDiff: 0.007812
+==PROF== Disconnected from process 11120
+==PROF== Report: /content/data266-5937/hw1/ncu_report_N4096.ncu-rep
+
+2026-09-01 08:42:15,497 | ncu profiling complete for N=4096
