@@ -45,3 +45,15 @@ N=1024 | CPU: 3690.363 ms | GPU kernel: 0.890 ms | H2D+D2H: 5.115 ms | End-to-en
 === CUDA matmul run, N=4096 ===
 N=4096 | CPU: 693369.540 ms | GPU kernel: 58.827 ms | H2D+D2H: 74.463 ms | End-to-end GPU: 133.290 ms | Speedup: 5201.962x | MaxDiff: 0.007812
 2026-09-01 08:20:58,431 | CUDA matmul N=4096: N=4096 | CPU: 693369.540 ms | GPU kernel: 58.827 ms | H2D+D2H: 74.463 ms | End-to-end GPU: 133.290 ms | Speedup: 5201.962x | MaxDiff: 0.007812
+
+=== nsys profiler output, N=256 ===
+/bin/bash: line 1: nsys: command not found
+
+
+=== nsys profiler output, N=1024 ===
+/bin/bash: line 1: nsys: command not found
+
+
+=== nsys profiler output, N=4096 ===
+/bin/bash: line 1: nsys: command not found
+
