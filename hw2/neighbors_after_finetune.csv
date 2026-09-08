@@ -1,0 +1,16 @@
+word,rank,neighbor,cosine_sim
+cast,1,actors,0.5881
+cast,2,performances,0.5166
+cast,3,casting,0.5026
+score,1,soundtrack,0.6329
+score,2,composer,0.566
+score,3,cinematography,0.5585
+plot,1,storyline,0.656
+plot,2,story,0.5999
+plot,3,plots,0.5905
+screen,1,screens,0.5396
+screen,2,stage,0.4533
+screen,3,lebowski,0.414
+review,1,comment,0.6896
+review,2,reviews,0.5777
+review,3,imdb,0.5619

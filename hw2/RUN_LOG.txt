@@ -6,3 +6,4 @@
 2026-09-08 04:21:08,961 | Loaded IMDB dataset: 25000 train, 25000 test
 2026-09-08 04:22:16,106 | Tokenized 5937 IMDB reviews for fine-tuning (seed=5937)
 2026-09-08 04:25:00,690 | Fine-tuned Word2Vec on IMDB reviews (10 epochs, init from pretrained vectors)
+2026-09-08 04:27:04,945 | Extracted top-3 neighbors for 5 words AFTER fine-tuning
