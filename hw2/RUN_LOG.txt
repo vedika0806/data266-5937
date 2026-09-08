@@ -13,3 +13,6 @@
 2026-09-08 04:28:02,436 | Appended Q1 results to METRICS.md
 2026-09-08 04:41:54,394 | Appended Q1 full results + analysis to METRICS.md
 2026-09-08 04:48:03,390 | Fixed langchain import paths (text_splitter moved to langchain_text_splitters package)
+2026-09-08 04:48:31,630 | Starting Q2: RAG pipeline with LangChain on Wikipedia movie pages
+2026-09-08 04:50:04,374 | Starting Q2: RAG pipeline with LangChain on Wikipedia movie pages
+2026-09-08 05:14:52,637 | Built explicit RAG pipeline: prompt template + retriever + Ollama (llama3.2) LLM
