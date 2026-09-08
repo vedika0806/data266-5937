@@ -1,0 +1,12 @@
+Question: Who directed Inception?
+
+--- Retrieved chunk 1 ---
+Inception is a 2010  science fiction heist film written and directed by Christopher Nolan, who also produced it with his wife Emma Thomas. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating his targets' subconscious. He is offered a chance to have his criminal history erased as payment for implanting an idea into a target's subconscious. The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page, Tom Hardy, Cillian
+
+--- Retrieved chunk 2 ---
+Inception's premiere was held in London on July 8, 2010; it was released in both conventional and IMAX theaters beginning on July 16, 2010. Inception grossed $839 million worldwide, becoming the fourth-highest-grossing film of 2010. Considered one of the best films of the 2010s, Inception, among its numerous accolades, won four Oscars (Best Cinematography, Best Sound Editing, Best Sound Mixing, Best Visual Effects) and was nominated for four more (Best Picture, Best Original Screenplay, Best
+
+--- Retrieved chunk 3 ---
+by Warner Bros. in February 2009. Inception was filmed in six countries, beginning in Tokyo on June 19 and ending in Canada on November 22. Its official budget was US$160 million, split between Warner Bros. and Legendary. Nolan's reputation and success with The Dark Knight helped secure the film's $100 million in advertising expenditure.
+
+ANSWER: Christopher Nolan.

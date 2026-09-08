@@ -1,0 +1,12 @@
+Question: What real-world issue does Parasite explore?
+
+--- Retrieved chunk 1 ---
+Parasite (Korean: 기생충) is a 2019 South Korean black comedy thriller film directed by Bong Joon Ho, who co-wrote the screenplay with Han Jin-won. It stars Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong, Choi Woo-shik, Park So-dam, Jang Hye-jin, Park Myung-hoon, and Lee Jung-eun. The film follows a poor family who infiltrate the home and life of a wealthy family.
+
+--- Retrieved chunk 2 ---
+Since its release, Parasite has been regarded as Bong's magnum opus and was ranked in the 2022 Sight and Sound poll as the 90th best film of all time. In 2025, The New York Times ranked it as the best movie of the 21st century so far in a list based on a vote by readers, actors, and directors. As of February 2025, an HBO limited television series based on the film is in early development.
+
+--- Retrieved chunk 3 ---
+The script is based on a play Bong wrote in 2013. He later adapted it into a 15-page film draft, which was split into three different drafts by Han. Bong said he was inspired by the Korean film The Housemaid (1960) and the 1930s Christine and Léa Papin incident. Filming ran from May to September 2018 and included cinematographer Hong Kyung-pyo, editor Yang Jin-mo, and composer Jung Jae-il. Parasite premiered on 21 May 2019 at the Cannes Film Festival, where it became the first Korean film to
+
+ANSWER: I don't know.

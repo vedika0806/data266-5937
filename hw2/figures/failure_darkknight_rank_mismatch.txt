@@ -1,0 +1,12 @@
+Question: Who plays the Joker in The Dark Knight?
+
+--- Retrieved chunk 1 ---
+efforts are derailed by the Joker, an anarchistic mastermind who seeks to test how far Batman will go to save the city from chaos. The cast includes Christian Bale, Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman.
+
+--- Retrieved chunk 2 ---
+The Dark Knight was marketed with an innovative interactive viral campaign that initially focused on countering criticism of Ledger's casting by those who believed he was a poor choice to portray the Joker. Ledger died from an accidental prescription drug overdose in January 2008, leading to widespread interest from the press and public regarding his performance. When it was released in July, The Dark Knight received acclaim for its mature tone and themes, visual style, and
+
+--- Retrieved chunk 3 ---
+The Dark Knight is a 2008 superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan. Based on the DC Comics superhero Batman, it is the sequel to Batman Begins (2005), and the second installment in The Dark Knight trilogy. The plot follows the vigilante Batman, police lieutenant James Gordon, and district attorney Harvey Dent, who form an alliance to dismantle organized crime in Gotham City. Their efforts are derailed by the Joker, an anarchistic
+
+ANSWER: Heath Ledger.
