@@ -12,3 +12,4 @@
 2026-09-08 04:27:21,494 | Saved t-SNE visualization of 'plot' embedding shift
 2026-09-08 04:28:02,436 | Appended Q1 results to METRICS.md
 2026-09-08 04:41:54,394 | Appended Q1 full results + analysis to METRICS.md
+2026-09-08 04:48:03,390 | Fixed langchain import paths (text_splitter moved to langchain_text_splitters package)
