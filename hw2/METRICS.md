@@ -52,3 +52,11 @@
 **Least shifted word:** cast
 
 t-SNE visualization saved as `tsne_plot_shift.png`.
+
+### Analysis
+Before fine tuning, the nearest neighbours are just other forms of the same word- like "cast" is similiar to "casts", "casting" and so on. Since Google News is not trained on movie reviews, it is grouping the spelling/grammar words together.
+
+After fine tuning, the nearest neighbours are more semantically similar, like cast is closer to actors and performances, instead of casting. "Score" is closer to cinematography, composer etc. "Plot" is closer to storyline, review etc.
+
+"Review" shifted the most out of all five words because it might mean different things in general news but is very unambiguous in IMdb dataset.
+"Cast" did not move much, probably because it had the same sense in News as well.
