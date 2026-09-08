@@ -1,0 +1,9 @@
+technique,elapsed_sec,peak_gpu_mem_MB,final_loss,avg_loss,tensor_creation_cpu_sec,tensor_creation_gpu_sec
+default_init,0.1904,131.34,2.3041,2.3023,40.8204,0.7737
+xavier_init,0.0712,141.88,2.315,2.3383,40.8204,0.7737
+no_checkpointing,0.0723,152.42,2.3041,2.3023,40.8204,0.7737
+with_checkpointing,0.2559,162.96,2.3041,2.3023,40.8204,0.7737
+no_grad_accum,0.1038,173.5,2.3041,2.3023,40.8204,0.7737
+grad_accum_4steps,0.0928,189.03,2.3048,2.3023,40.8204,0.7737
+fp32,0.0727,205.12,2.3041,2.3023,40.8204,0.7737
+mixed_precision_amp,0.4204,216.44,2.3042,2.3023,40.8204,0.7737
