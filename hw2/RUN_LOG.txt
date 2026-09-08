@@ -24,3 +24,4 @@
 2026-09-08 05:43:41,990 | Built shared model/data config: batch=64, steps=50, hidden=1024
 2026-09-08 05:45:53,539 | Weight init experiment: default_final_loss=2.3041, xavier_final_loss=2.315
 2026-09-08 05:45:59,921 | Checkpointing experiment: no_ckpt_mem=152.42MB, with_ckpt_mem=162.96MB
+2026-09-08 05:46:14,305 | Grad accumulation experiment: no_accum_loss=2.3041, accum4_loss=2.3048
