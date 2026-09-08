@@ -31,3 +31,9 @@
 2026-09-08 05:52:45,748 | Grad accumulation experiment (isolated): no_accum_mem=173.5MB, accum4_mem=156.49MB
 2026-09-08 05:52:55,823 | Mixed precision experiment (isolated): fp32_mem=141.88MB, amp_mem=131.21MB
 2026-09-08 06:34:55,657 | Finalized Q3 findings in METRICS.md with corrected memory measurements
+2026-09-08 06:45:19,790 | --- Retroactive entries: real errors encountered during this session, added after the fact ---
+2026-09-08 06:45:19,791 | Q1 ERROR: HfUriError: Invalid HF URI 'hf://datasets/imdb@...' -- Repository id must be 'namespace/name', got 'imdb'. FIX: switched to load_dataset('stanfordnlp/imdb') after HF Hub renamed the dataset repo.
+2026-09-08 06:45:19,792 | Q2 ERROR: ModuleNotFoundError: No module named 'langchain.text_splitter' -- FIX: text splitters moved to separate langchain_text_splitters package in current LangChain versions; updated import accordingly.
+2026-09-08 06:45:19,793 | Q2 WARNING: pip dependency conflict -- google-colab 1.0.0 requires requests==2.32.4, but requests 2.34.2 was installed. Verified non-blocking: all langchain/faiss imports succeeded after the conflict, no runtime errors resulted.
+2026-09-08 06:45:19,793 | Q3 WARNING: FutureWarning -- torch.cuda.amp.GradScaler(args) and torch.cuda.amp.autocast(args) are deprecated. FIX: updated to torch.amp.GradScaler('cuda', args) and torch.amp.autocast('cuda', args).
+2026-09-08 06:45:19,794 | Q3 METHODOLOGY ISSUE: initial memory measurements showed monotonically increasing peak_gpu_mem_MB across all 8 experiments regardless of technique (131MB->216MB, see entries at 05:45-05:46), indicating leftover GPU allocations from prior experiments rather than true per-technique memory usage. FIX: added del model + torch.cuda.empty_cache() between experiments; reran (see entries at 05:52), which reversed the direction (215MB->131MB) and correctly showed checkpointing and mixed precision reducing memory relative to their baselines, matching theoretical expectation.
