@@ -30,3 +30,4 @@
 2026-09-08 05:52:36,618 | Checkpointing experiment (isolated): no_ckpt_mem=194.58MB, with_ckpt_mem=184.04MB
 2026-09-08 05:52:45,748 | Grad accumulation experiment (isolated): no_accum_mem=173.5MB, accum4_mem=156.49MB
 2026-09-08 05:52:55,823 | Mixed precision experiment (isolated): fp32_mem=141.88MB, amp_mem=131.21MB
+2026-09-08 06:34:55,657 | Finalized Q3 findings in METRICS.md with corrected memory measurements

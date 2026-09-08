@@ -115,3 +115,38 @@ content likely exists elsewhere on the page that didn't rank in the top 3 for th
 Question: "Who plays the Joker in The Dark Knight?"
 Chunk 1 lists the full cast but never pairs any actor to a specific role. Chunk 2 is the chunk that actually implies the answer. The LLM was still able to answer correctly since both chunks were in its context window, but the truly explicit answer wasn't the top-ranked chunk.
 
+
+## Q3: Optimization Techniques Exploration
+
+### Shared Experimental Setup
+Same model (4-layer MLP, hidden_dim=1024), same synthetic data (seed=5937),
+batch_size=64, 50 training steps.
+
+An initial run showed peak GPU memory increasing monotonically across every experiment regardless of technique. Some techniques (e.g.checkpointing) should reduce memory instead of increase. Since the previous experiments were not removed from the GPU memory, so each successive experiment's measurement
+sat on top of leftover allocations rather than a clean state.
+Adding `del model` + `torch.cuda.empty_cache()` between each CUDA experiment helped with the memory issue and it started decreasing as expected.More isolated experiments can get better results which would eliminate the run-order influence of the process.
+
+### Results Table
+| technique           |   elapsed_sec |   peak_gpu_mem_MB |   final_loss |   avg_loss |   tensor_creation_cpu_sec |   tensor_creation_gpu_sec |
+|:--------------------|--------------:|------------------:|-------------:|-----------:|--------------------------:|--------------------------:|
+| default_init        |        0.08   |            215.66 |       2.3041 |     2.3023 |                   40.8204 |                    0.7737 |
+| xavier_init         |        0.0839 |            205.12 |       2.315  |     2.3383 |                   40.8204 |                    0.7737 |
+| no_checkpointing    |        0.08   |            194.58 |       2.3041 |     2.3023 |                   40.8204 |                    0.7737 |
+| with_checkpointing  |        0.1998 |            184.04 |       2.3041 |     2.3023 |                   40.8204 |                    0.7737 |
+| no_grad_accum       |        0.0759 |            173.5  |       2.3041 |     2.3023 |                   40.8204 |                    0.7737 |
+| grad_accum_4steps   |        0.0687 |            156.49 |       2.3048 |     2.3023 |                   40.8204 |                    0.7737 |
+| fp32                |        0.075  |            141.88 |       2.3041 |     2.3023 |                   40.8204 |                    0.7737 |
+| mixed_precision_amp |        0.1152 |            131.21 |       2.3042 |     2.3023 |                   40.8204 |                    0.7737 |
+
+### Findings
+**Tensor Creation (CPU vs GPU):** CPU took 40s where as GPU took 0.77s for 50iterations of 5000x5000 matrix creation + matmul — roughly a 53x speedup.This is the expected result since GPUs are built for larger applications done parallely in contrast to a CPU which runs a single thread.
+**Weight Initialization:** Default init reached final loss 2.3041 vs Xavier init at 2.3150 — essentially identical (and Xavier's avg_loss, 2.3383, was actually slightly
+higher).Since the setup is such that the data has random noise and no real signals to learn from, such result was expected. In real data, Xavier will give smoother early gradients which would benefit in deeper networks.
+**Activation Checkpointing:** Time went from 0.0800s (no checkpointing) to 0.1998s (with
+checkpointing) — about 2.5x slower, matching the time-memory tradeoff of recomputing forward activations during backward instead of storing them. Peak memory
+went from 194.58MB to 184.04MB, which is modest given the model, however, can give better results in deeper networks. 
+**Gradient Accumulation:** No-accumulation final loss 2.3041 vs 4-step accumulation final
+loss 2.3048 since real data exposure is less. Peak memory also decreased slightly (173.50MB -> 156.49MB) after cleanup, consistent with accumulation processing smaller per-step batches under the hood.
+**Mixed Precision Training:** FP32 took 0.0750s vs AMP 0.1152s — AMP was slower here.
+Peak memory went from 141.88MB (fp32) to 131.21MB (AMP), a decrease in the expected
+direction.
