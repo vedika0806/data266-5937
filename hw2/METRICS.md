@@ -60,3 +60,58 @@ After fine tuning, the nearest neighbours are more semantically similar, like ca
 
 "Review" shifted the most out of all five words because it might mean different things in general news but is very unambiguous in IMdb dataset.
 "Cast" did not move much, probably because it had the same sense in News as well.
+
+## Q2: RAG Pipeline 
+
+### Questions, Retrieved Chunks, and Answers
+
+**Q1: Who directed Inception?**
+Top chunk directly named Christopher Nolan as writer/director. Answer: "Christopher Nolan." Correct, rank 1.
+
+**Q2: What crime family is central to The Godfather?**
+Top chunk named the Corleone family directly. Answer: "The Corleone mafia family." Correct, rank 1.
+
+**Q3: What real-world issue does Parasite explore?**
+Answer: "I don't know." The LLM correctly avoided hallucinating given weak context, but retrieval failed to surface the relevant content.
+
+**Q4: Who plays the Joker in The Dark Knight?**
+Rank 1 chunk listed the full cast without pairing actors to roles; rank 2 chunk referenced
+"Ledger's casting... to portray the Joker," which is what actually answered the question.
+Answer: "Heath Ledger." Correct, but the truly explicit answer was rank 2, not rank 1.
+
+**Q5: What nonlinear storytelling technique does Pulp Fiction use?**
+Answer described the 7-part spliced structure correctly. Correct, rank 1.
+
+### Chunk Size Comparison (500/50 vs 250/25)
+Re-ran Q1 and Q2 with a smaller chunk size (250 chars, 25 overlap). Final answers were
+identical in both cases ("Christopher Nolan"; "The Corleone family"), so chunk size didn't
+change the outcome here. What did change was chunk composition: under the smaller config,
+The Godfather's rank-1 chunk trimmed down to just the cast list and trilogy mention, while
+the phrase that actually names "the Corleone family" under patriarch Vito Corleone moved to
+chunk 2 instead of chunk 1. This shows that smaller chunks can separate a name from the
+sentence that gives it context, splitting information that was previously together in one
+chunk. It didn't hurt the final answer here only because the LLM still saw both chunks
+together in its context window — with a smaller top-k, this could have caused a real failure.
+
+### Retrieval Evaluation
+| question                                                     | correct_answer_found_in_top3   |   rank_of_first_relevant_chunk |
+|:-------------------------------------------------------------|:-------------------------------|-------------------------------:|
+| Who directed Inception?                                      | Yes                            |                              1 |
+| What crime family is central to The Godfather?               | Yes                            |                              1 |
+| What real-world issue does Parasite explore?                 | No                             |                            nan |
+| Who plays the Joker in The Dark Knight?                      | Yes                            |                              2 |
+| What nonlinear storytelling technique does Pulp Fiction use? | Yes                            |                              1 |
+
+**Retrieval Success Rate: 0.8** (4 out of 5 questions had a relevant chunk in the top 3)
+
+
+## RAG Failure Analysis
+**Failure 1: Correct document retrieved, but relevant chunk never surfaced (Parasite)**
+Question: "What real-world issue does Parasite explore?"
+The chunks were retrieved from the correct document, but none of them were pointing to the film's thematic content, so the LLM denied to answer.However, it was still a retrieval failure instead of LLM failure because actual thematic
+content likely exists elsewhere on the page that didn't rank in the top 3 for this query's embedding.
+
+**Failure 2: Correct answer present but not in the top-ranked chunk (The Dark Knight)**
+Question: "Who plays the Joker in The Dark Knight?"
+Chunk 1 lists the full cast but never pairs any actor to a specific role. Chunk 2 is the chunk that actually implies the answer. The LLM was still able to answer correctly since both chunks were in its context window, but the truly explicit answer wasn't the top-ranked chunk.
+

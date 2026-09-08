@@ -19,3 +19,4 @@
 2026-09-08 05:16:16,851 | Re-ran 2 questions with chunk_size=250/overlap=25, compared to original config
 2026-09-08 05:18:10,912 | Computed retrieval success rate: 0.8
 2026-09-08 05:27:37,770 | Documented 2 real RAG failure cases (Parasite retrieval miss, Dark Knight rank mismatch)
+2026-09-08 05:29:45,846 | Appended full Q2 results, chunk comparison, and failure analysis to METRICS.md
