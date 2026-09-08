@@ -1,0 +1,6 @@
+question,correct_answer_found_in_top3,rank_of_first_relevant_chunk
+Who directed Inception?,Yes,1.0
+What crime family is central to The Godfather?,Yes,1.0
+What real-world issue does Parasite explore?,No,
+Who plays the Joker in The Dark Knight?,Yes,2.0
+What nonlinear storytelling technique does Pulp Fiction use?,Yes,1.0
