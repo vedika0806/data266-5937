@@ -8,3 +8,4 @@
 2026-09-08 04:25:00,690 | Fine-tuned Word2Vec on IMDB reviews (10 epochs, init from pretrained vectors)
 2026-09-08 04:27:04,945 | Extracted top-3 neighbors for 5 words AFTER fine-tuning
 2026-09-08 04:27:10,383 | Built combined before/after neighbor comparison table
+2026-09-08 04:27:14,543 | Computed vector shift table. Most shifted=review, Least shifted=cast
