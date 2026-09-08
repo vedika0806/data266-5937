@@ -25,3 +25,4 @@
 2026-09-08 05:45:53,539 | Weight init experiment: default_final_loss=2.3041, xavier_final_loss=2.315
 2026-09-08 05:45:59,921 | Checkpointing experiment: no_ckpt_mem=152.42MB, with_ckpt_mem=162.96MB
 2026-09-08 05:46:14,305 | Grad accumulation experiment: no_accum_loss=2.3041, accum4_loss=2.3048
+2026-09-08 05:46:27,021 | Mixed precision experiment: fp32_time=0.0727s, amp_time=0.4204s, fp32_mem=205.12MB, amp_mem=216.44MB
