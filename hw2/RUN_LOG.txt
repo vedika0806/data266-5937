@@ -2,3 +2,4 @@
 2026-09-08 04:08:04,685 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
 2026-09-08 04:13:22,044 | Starting Q1: embedding-based transfer learning on IMDB
 2026-09-08 04:17:02,293 | Loaded pretrained word2vec-google-news-300
+2026-09-08 04:17:38,330 | Extracted top-3 neighbors for 5 words BEFORE fine-tuning
