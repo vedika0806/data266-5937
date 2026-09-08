@@ -20,3 +20,5 @@
 2026-09-08 05:18:10,912 | Computed retrieval success rate: 0.8
 2026-09-08 05:27:37,770 | Documented 2 real RAG failure cases (Parasite retrieval miss, Dark Knight rank mismatch)
 2026-09-08 05:29:45,846 | Appended full Q2 results, chunk comparison, and failure analysis to METRICS.md
+2026-09-08 05:43:41,967 | Starting Q3: optimization techniques exploration
+2026-09-08 05:43:41,990 | Built shared model/data config: batch=64, steps=50, hidden=1024
