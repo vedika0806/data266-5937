@@ -180,3 +180,15 @@
 [2026-09-10 23:14:19] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] N=1024 FP32 (corrected): 39.01 TFLOPS = 47.2% of peak
 [2026-09-10 23:14:34] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Wrote Part B section to METRICS.md
 [2026-09-10 23:14:49] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Saved fig_precision.png (final, with FP32 N=1024 correction noted)
+[2026-09-10 23:18:11] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Measured bandwidth: 887.0 GB/s
+[2026-09-10 23:18:27] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] AI matmul=5461.33 AI add=0.08
+[2026-09-10 23:18:36] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] AI matmul=5461.33 AI add=0.08
+[2026-09-10 23:32:58] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] === Part C — Bandwidth-bound vs Compute-bound ===
+[2026-09-10 23:32:58] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Memory bandwidth (elementwise add): 922.92 GB/s = 91.6% of peak (1008 GB/s), CV=0.10%
+[2026-09-10 23:32:58] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Matmul (FP32, N=16384): 51.51 TFLOPS = 62.4% of peak (82.6 TFLOPS), CV=0.49%
+[2026-09-10 23:32:58] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Arithmetic intensity — elementwise add: 0.0833 FLOPs/byte
+[2026-09-10 23:32:58] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Arithmetic intensity — matmul (FP32, naive byte-counting): 2730.67 FLOPs/byte
+[2026-09-10 23:32:58] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Roofline crossover intensity: 81.94 FLOPs/byte
+[2026-09-10 23:32:59] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Classification: elementwise add is memory-bound (AI 0.0833 << crossover 81.94)
+[2026-09-10 23:32:59] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Classification: matmul is compute-bound (AI 2730.67 >> crossover 81.94, ~33.3x past crossover)
+[2026-09-10 23:33:08] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Saved fig_roofline.png

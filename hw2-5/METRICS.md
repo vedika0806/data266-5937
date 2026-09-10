@@ -43,3 +43,38 @@ NVIDIA Ada GPU Architecture Whitepaper, Appendix A, Table 2 "GeForce RTX 4090 Fu
 | 16384 | TF32 | 83.86 | 0.06 | 101.5% |
 | 16384 | FP16 | 170.55 | 0.40 | 103.2% |
 | 16384 | BF16 | 170.30 | 0.48 | 103.1% |
+
+## Part C — Bandwidth-bound vs Compute-bound
+
+### Method
+Two operations were benchmarked: a large elementwise add (memory-bound) and a large square
+FP32 matmul at N=16384 (compute-bound). Both used CUDA-event timing with warmup, and
+10 repeated samples to quantify variance via coefficient of variation (CV).
+
+### Results
+
+| Metric | Elementwise Add | Matmul (FP32, N=16384) |
+|---|---|---|
+| Measured throughput | 922.92 GB/s | 51.51 TFLOPS |
+| % of peak | 91.6% (of 1008 GB/s) | 62.4% (of 82.6 TFLOPS) |
+| CV (variance) | 0.10% | 0.49% |
+| Arithmetic Intensity | 0.0833 FLOPs/byte | 2730.67 FLOPs/byte |
+
+**Roofline crossover intensity:** 81.94 FLOPs/byte (computed as FP32 peak TFLOPS / peak bandwidth GB/s).
+
+**Note on matmul AI:** computed using naive/conservative byte-counting — one read of A, one read
+of B, one write of C, no credit for tiling/cache reuse. This is a lower bound; real cuBLAS tiled
+kernels move less HBM traffic, so true arithmetic intensity is at least this high, likely higher.
+
+### Classification
+- Elementwise add: AI = 0.0833 FLOPs/byte, far below the crossover of 81.94
+  → **memory-bound**.
+- Matmul (FP32): AI = 2730.67 FLOPs/byte, roughly 33x above the
+  crossover → **compute-bound**.
+
+### Discussion
+The two operations sit on opposite extremes of the roofline: elementwise add achieves
+91.6% of peak bandwidth but is fundamentally limited by data movement (0.083 FLOPs
+performed per byte moved), while the FP32 matmul achieves 62.4% of peak compute
+throughput and is limited by the GPU's raw arithmetic rate rather than memory traffic, needing
+over 2700 FLOPs per byte moved from HBM to sustain its throughput.
