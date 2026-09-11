@@ -192,3 +192,123 @@
 [2026-09-10 23:32:59] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Classification: elementwise add is memory-bound (AI 0.0833 << crossover 81.94)
 [2026-09-10 23:32:59] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Classification: matmul is compute-bound (AI 2730.67 >> crossover 81.94, ~33.3x past crossover)
 [2026-09-10 23:33:08] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Saved fig_roofline.png
+[2026-09-10 23:33:24] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Wrote Part C section to METRICS.md
+[2026-09-10 23:43:37] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Attention config: batch=1 heads=8 d_head=64
+[2026-09-10 23:43:48] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=512 latency=0.0041s peak_mem=0.02GB
+[2026-09-10 23:43:48] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=1024 latency=0.0004s peak_mem=0.05GB
+[2026-09-10 23:43:49] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=2048 latency=0.0157s peak_mem=0.16GB
+[2026-09-10 23:43:49] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=4096 latency=0.0149s peak_mem=0.57GB
+[2026-09-10 23:43:49] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=8192 latency=0.0118s peak_mem=2.20GB
+[2026-09-10 23:43:49] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=16384 latency=0.0444s peak_mem=8.68GB
+[2026-09-10 23:44:02] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] No OOM observed in naive sweep range — extend seq_lens upward to find boundary
+[2026-09-10 23:44:12] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Quadratic fit coefficients (a,b,c): [3.2000000e-08 5.1200000e-06 1.0616832e-02]
+[2026-09-10 23:44:24] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=512 latency=0.0018s peak_mem=0.01GB
+[2026-09-10 23:44:24] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=1024 latency=0.0002s peak_mem=0.02GB
+[2026-09-10 23:44:24] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=2048 latency=0.0004s peak_mem=0.02GB
+[2026-09-10 23:44:24] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=4096 latency=0.0010s peak_mem=0.03GB
+[2026-09-10 23:44:24] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=8192 latency=0.0045s peak_mem=0.05GB
+[2026-09-10 23:44:24] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=16384 latency=0.0140s peak_mem=0.09GB
+[2026-09-10 23:44:24] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=32768 latency=0.0238s peak_mem=0.18GB
+[2026-09-10 23:44:24] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=512 speedup (naive/fused): 2.24x
+[2026-09-10 23:44:25] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=1024 speedup (naive/fused): 2.38x
+[2026-09-10 23:44:25] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=2048 speedup (naive/fused): 44.80x
+[2026-09-10 23:44:25] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=4096 speedup (naive/fused): 14.85x
+[2026-09-10 23:44:25] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=8192 speedup (naive/fused): 2.60x
+[2026-09-10 23:44:25] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=16384 speedup (naive/fused): 3.18x
+[2026-09-10 23:46:15] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Attention config: batch=1 heads=8 d_head=64
+[2026-09-10 23:46:33] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=512 latency=0.000086s (CV=4.55%) peak_mem=0.02GB
+[2026-09-10 23:46:33] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=1024 latency=0.000170s (CV=0.25%) peak_mem=0.05GB
+[2026-09-10 23:46:34] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=2048 latency=0.001671s (CV=150.81%) peak_mem=0.16GB
+[2026-09-10 23:46:34] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=4096 latency=0.001805s (CV=0.08%) peak_mem=0.57GB
+[2026-09-10 23:46:35] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=8192 latency=0.007159s (CV=0.13%) peak_mem=2.20GB
+[2026-09-10 23:46:40] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=16384 latency=0.028794s (CV=0.72%) peak_mem=8.68GB
+[2026-09-10 23:46:46] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] No OOM observed in naive sweep range — extending upward to find boundary
+[2026-09-10 23:46:47] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=24576: OK
+[2026-09-10 23:46:51] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=32768: OK
+[2026-09-10 23:47:10] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=49152: OK
+[2026-09-10 23:47:34] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Quadratic fit coefficients (a,b,c): a=3.2000000000e-08 b=5.1200000000e-06 c=0.0106
+[2026-09-10 23:47:37] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=512 latency=0.000080s (CV=18.99%) peak_mem=0.01GB
+[2026-09-10 23:47:37] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=1024 latency=0.000138s (CV=0.26%) peak_mem=0.02GB
+[2026-09-10 23:47:37] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=2048 latency=0.000318s (CV=0.08%) peak_mem=0.02GB
+[2026-09-10 23:47:38] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=4096 latency=0.001058s (CV=13.31%) peak_mem=0.03GB
+[2026-09-10 23:47:38] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=8192 latency=0.001245s (CV=24.46%) peak_mem=0.05GB
+[2026-09-10 23:47:38] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=16384 latency=0.004340s (CV=0.65%) peak_mem=0.09GB
+[2026-09-10 23:47:40] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=24576 latency=0.009909s (CV=0.63%) peak_mem=0.14GB
+[2026-09-10 23:47:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=32768 latency=0.017539s (CV=0.75%) peak_mem=0.18GB
+[2026-09-10 23:47:52] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] No OOM observed for fused attention up to L=32768 — boundary is beyond tested range
+[2026-09-10 23:47:54] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=512: naive=0.0862ms, fused=0.0799ms, speedup=1.08x
+[2026-09-10 23:47:54] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=1024: naive=0.1700ms, fused=0.1380ms, speedup=1.23x
+[2026-09-10 23:47:54] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=2048: naive=1.6714ms, fused=0.3178ms, speedup=5.26x
+[2026-09-10 23:47:54] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=4096: naive=1.8046ms, fused=1.0577ms, speedup=1.71x
+[2026-09-10 23:47:54] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=8192: naive=7.1587ms, fused=1.2453ms, speedup=5.75x
+[2026-09-10 23:47:54] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=16384: naive=28.7940ms, fused=4.3398ms, speedup=6.63x
+[2026-09-10 23:48:47] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=512 RE-RUN latency=0.000073s (CV=7.25%) peak_mem=0.01GB
+[2026-09-10 23:48:47] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=4096 RE-RUN latency=0.000361s (CV=61.43%) peak_mem=0.03GB
+[2026-09-10 23:48:48] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn L=8192 RE-RUN latency=0.001110s (CV=1.12%) peak_mem=0.05GB
+[2026-09-10 23:56:59] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Fused attention pinned to Flash Attention backend via torch.backends.cuda.sdp_kernel (enable_flash=True, enable_math=False, enable_mem_efficient=False)
+[2026-09-10 23:57:08] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn (flash-pinned) L=512 latency=0.000058s (CV=0.86%) peak_mem=0.03GB
+[2026-09-10 23:57:08] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn (flash-pinned) L=1024 latency=0.000160s (CV=43.08%) peak_mem=0.02GB
+[2026-09-10 23:57:08] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn (flash-pinned) L=2048 latency=0.000341s (CV=0.63%) peak_mem=0.03GB
+[2026-09-10 23:57:08] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn (flash-pinned) L=4096 latency=0.001259s (CV=12.16%) peak_mem=0.04GB
+[2026-09-10 23:57:08] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn (flash-pinned) L=8192 latency=0.001184s (CV=0.47%) peak_mem=0.07GB
+[2026-09-10 23:57:09] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn (flash-pinned) L=16384 latency=0.004053s (CV=0.65%) peak_mem=0.13GB
+[2026-09-10 23:57:11] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn (flash-pinned) L=24576 latency=0.010966s (CV=0.32%) peak_mem=0.19GB
+[2026-09-10 23:57:14] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused attn (flash-pinned) L=32768 latency=0.024708s (CV=1.08%) peak_mem=0.25GB
+[2026-09-10 23:58:22] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=512: naive=0.0862ms, fused(flash)=0.0582ms, speedup=1.48x
+[2026-09-10 23:58:22] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=1024: naive=0.1700ms, fused(flash)=0.1597ms, speedup=1.06x
+[2026-09-10 23:58:22] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=2048: naive=1.6714ms, fused(flash)=0.3406ms, speedup=4.91x
+[2026-09-10 23:58:22] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=4096: naive=1.8046ms, fused(flash)=1.2588ms, speedup=1.43x
+[2026-09-10 23:58:22] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=8192: naive=7.1587ms, fused(flash)=1.1838ms, speedup=6.05x
+[2026-09-10 23:58:22] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=16384: naive=28.7940ms, fused(flash)=4.0526ms, speedup=7.10x
+[2026-09-10 23:58:30] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] No OOM observed for fused attention up to L=32768
+[2026-09-10 23:59:24] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive attn L=4096 RE-RUN latency=0.001806s (CV=0.50%) peak_mem=0.57GB
+[2026-09-11 00:00:22] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=4096 (recomputed with high-confidence naive): naive=1.8063ms, fused=1.2588ms, speedup=1.43x
+[2026-09-11 00:03:35] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Started thermal sampling thread
+[2026-09-11 00:04:30] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Started thermal sampling thread
+[2026-09-11 00:24:33] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Sustained load complete
+[2026-09-11 00:24:33] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Saved thermal_log.csv
+[2026-09-11 00:32:30] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Peak (first 30s): 168.49 TFLOPS, Steady-state (last 5min): 163.86 TFLOPS, ratio=97.2%
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] === Part D — The Cost of Attention (Final) ===
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Config: batch=1, heads=8, d_head=64, dtype=float16
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Methodology: CUDA-event timing (torch.cuda.Event), single warmup block before timed samples (not per-sample warmup), 5-10 samples per config with CV reported.
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] --- Naive attention results ---
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive L=512: latency=0.0862ms (CV=4.55%) peak_mem=0.022GB
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive L=1024: latency=0.1700ms (CV=0.25%) peak_mem=0.049GB
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive L=2048: latency=1.6714ms (CV=150.81%) peak_mem=0.155GB
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive L=4096: latency=1.8063ms (CV=0.50%) peak_mem=0.573GB
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive L=8192: latency=7.1587ms (CV=0.13%) peak_mem=2.200GB
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] naive L=16384: latency=28.7940ms (CV=0.72%) peak_mem=8.684GB
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Naive OOM boundary: largest OK=49152, smallest fail=None
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Naive memory quadratic fit (a*L^2 + b*L + c): a=3.2000000000e-08, b=5.1200000000e-06, c=0.0106
+[2026-09-11 00:36:42] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] --- Backend pinning investigation ---
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] New API (torch.nn.attention.sdpa_kernel) failed: ImportError - cannot import name '_SDPBackend' from torch._C
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Fallback torch.backends.cuda.sdp_kernel(enable_flash=True, enable_math=False, enable_mem_efficient=False) succeeded
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] All fused attention results below use Flash Attention backend pinned via this fallback API
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] --- Fused attention results (Flash-pinned) ---
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused(flash) L=512: latency=0.0582ms (CV=0.86%) peak_mem=0.029GB
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused(flash) L=1024: latency=0.1597ms (CV=43.08%) peak_mem=0.022GB
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused(flash) L=2048: latency=0.3406ms (CV=0.63%) peak_mem=0.030GB
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused(flash) L=4096: latency=1.2588ms (CV=12.16%) peak_mem=0.044GB
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused(flash) L=8192: latency=1.1838ms (CV=0.47%) peak_mem=0.074GB
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused(flash) L=16384: latency=4.0526ms (CV=0.65%) peak_mem=0.133GB
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused(flash) L=24576: latency=10.9659ms (CV=0.32%) peak_mem=0.192GB
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] fused(flash) L=32768: latency=24.7080ms (CV=1.08%) peak_mem=0.251GB
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Fused OOM boundary: largest OK=32768, smallest fail=not reached in tested range
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] --- Speedup (naive/fused) ---
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=512: speedup=1.48x
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=1024: speedup=1.06x
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=2048: speedup=4.91x
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=4096: speedup=1.43x
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=8192: speedup=6.05x
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] L=16384: speedup=7.10x
+[2026-09-11 00:36:43] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Note: naive L=4096 re-measured with reps=50/warmup=30/samples=10 (CV=0.50%) confirming 1.806ms as accurate, not a measurement artifact. Non-quadratic local scaling at L=4096 attributed to GPU compute-occupancy not yet saturated at that size.
+[2026-09-11 00:36:53] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Wrote Part D section to METRICS.md
+[2026-09-11 00:37:04] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] === Part E — Sustained Load and Thermal Behaviour ===
+[2026-09-11 00:37:04] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Duration: 1200.0s, samples: 8945
+[2026-09-11 00:37:04] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Peak (first 30s): 168.49 TFLOPS
+[2026-09-11 00:37:04] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Steady-state (last 5min): 163.86 TFLOPS
+[2026-09-11 00:37:04] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Steady/peak ratio: 97.2%
+[2026-09-11 00:37:04] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Under-load clock range: 2505-2655 MHz, max temp: 84C
+[2026-09-11 00:37:04] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Throttling: power-limited (pinned at ~448-450W, at RTX 4090's 450W TGP), not thermal-limited (temp kept climbing 67C->79C+ while clock stayed flat). Onset ~5-15s into run.
+[2026-09-11 00:37:04] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Wrote Part E section to METRICS.md
+[2026-09-11 00:37:17] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Saved fig_thermal_clock_temp.png

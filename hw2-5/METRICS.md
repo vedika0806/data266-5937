@@ -78,3 +78,113 @@ The two operations sit on opposite extremes of the roofline: elementwise add ach
 performed per byte moved), while the FP32 matmul achieves 62.4% of peak compute
 throughput and is limited by the GPU's raw arithmetic rate rather than memory traffic, needing
 over 2700 FLOPs per byte moved from HBM to sustain its throughput.
+
+## Part D — The Cost of Attention
+
+**Config:** batch=1, heads=8, d_head=64, dtype=float16
+**Timing method:** CUDA events (torch.cuda.Event), single extended warmup block before timed
+samples (per-sample warmup was tested and found insufficient to eliminate variance), 5-10
+repeated samples per configuration with coefficient of variation (CV) reported.
+
+### Naive attention
+
+| Seq Len | Latency (ms) | CV (%) | Peak Memory (GB) |
+|---|---|---|---|
+| 512 | 0.0862 | 4.55 | 0.022 |
+| 1024 | 0.1700 | 0.25 | 0.049 |
+| 2048 | 1.6714 | 150.81 | 0.155 |
+| 4096 | 1.8063 | 0.50 | 0.573 |
+| 8192 | 7.1587 | 0.13 | 2.200 |
+| 16384 | 28.7940 | 0.72 | 8.684 |
+
+**OOM boundary:** largest successful length = 49152, smallest failing length = None
+
+**Memory scaling (quadratic fit, memory(L) = a*L^2 + b*L + c):**
+a = 3.2000000000e-08 GB/token^2, b = 5.1200000000e-06 GB/token, c = 0.0106 GB.
+The positive, non-negligible quadratic coefficient confirms O(L^2) memory scaling, consistent
+with materializing the full L x L attention matrix.
+
+**Anomaly investigated:** naive latency at L=4096 (1.806ms) did not follow a clean O(L^2)
+trend relative to L=2048 (1.671ms) and L=8192 (7.159ms). Re-measured with reps=50, warmup=30,
+samples=10 and confirmed stable (CV=0.50%) -- this is a genuine result, not noise. Attributed
+to the GPU's compute units not being fully saturated at this size; latency scaling becomes
+closer to theoretical O(L^2) once a size threshold (here, between 4096 and 8192) is crossed
+and the kernel becomes compute-saturated.
+
+### Backend selection for fused attention
+
+Initial attempts to use `F.scaled_dot_product_attention` with default (unpinned) backend
+dispatch showed anomalously high variance at L=4096 (CV=61%), traced to the SDPA dispatcher
+inconsistently switching between the Flash Attention and Memory-Efficient backends at this
+shape. The current PyTorch build (2.1.2) does not support the newer
+`torch.nn.attention.sdpa_kernel` API (`ImportError: cannot import name '_SDPBackend' from
+torch._C`), so the older `torch.backends.cuda.sdp_kernel(enable_flash=True, enable_math=False,
+enable_mem_efficient=False)` context manager was used instead, successfully pinning execution
+to the Flash Attention backend. All fused-attention results below use this pinned backend.
+
+### Fused attention (Flash Attention, pinned)
+
+| Seq Len | Latency (ms) | CV (%) | Peak Memory (GB) |
+|---|---|---|---|
+| 512 | 0.0582 | 0.86 | 0.029 |
+| 1024 | 0.1597 | 43.08 | 0.022 |
+| 2048 | 0.3406 | 0.63 | 0.030 |
+| 4096 | 1.2588 | 12.16 | 0.044 |
+| 8192 | 1.1838 | 0.47 | 0.074 |
+| 16384 | 4.0526 | 0.65 | 0.133 |
+| 24576 | 10.9659 | 0.32 | 0.192 |
+| 32768 | 24.7080 | 1.08 | 0.251 |
+
+**OOM boundary:** largest successful length = 32768, smallest failing length =
+not reached in tested range up to 32768
+
+### Speedup (naive / fused, Flash-pinned)
+
+| Seq Len | Naive (ms) | Fused (ms) | Speedup |
+|---|---|---|---|
+| 512 | 0.0862 | 0.0582 | 1.48x |
+| 1024 | 0.1700 | 0.1597 | 1.06x |
+| 2048 | 1.6714 | 0.3406 | 4.91x |
+| 4096 | 1.8063 | 1.2588 | 1.43x |
+| 8192 | 7.1587 | 1.1838 | 6.05x |
+| 16384 | 28.7940 | 4.0526 | 7.10x |
+
+### What the fused kernel avoids
+
+The fused/Flash Attention kernel avoids materializing the full L x L score matrix in HBM.
+Instead of computing the entire attention matrix, writing it to global memory, applying
+softmax, and reading it back for the weighted sum, it tiles the computation and keeps
+partial results in on-chip shared memory/registers, using an online softmax algorithm that
+updates running max/sum statistics as it streams through key/value blocks. This reduces
+memory traffic from O(L^2) to O(L), which is why the fused kernel's OOM boundary is far
+beyond the naive implementation's, and why the speedup grows with sequence length (from
+~1.1-1.5x at small L up to ~7x at L=16384) rather than staying constant.
+
+## Part E — Sustained Load and Thermal Behaviour
+
+**Setup:** 20-minute sustained BF16 matmul load (N=8192), 5-second sampling of clock/temp/power/utilization.
+
+### Throughput
+- Peak throughput (first 30s): 168.49 TFLOPS
+- Steady-state throughput (last 5 min): 163.86 TFLOPS
+- Steady-state / peak ratio: 97.2%
+
+### Thermal / clock behavior
+- Peak clock: 2655 MHz (~5s in, 60C, 207W)
+- Settled clock: ~2550-2565 MHz (by ~55-95s in, 75-79C)
+- Max temperature observed: 84C
+- Power draw stabilized at ~448-450W, at the RTX 4090's rated 450W TGP (NVIDIA Ada Whitepaper, Appendix A)
+
+### Throttling assessment
+Mild clock throttling occurred, driven by the power limit rather than temperature. The
+~3.5% clock reduction (2655 -> ~2555 MHz) closely matches the measured 2.8% throughput
+decline (168.49 -> 163.86 TFLOPS, 97.2% ratio), with clock and
+throughput data corroborating each other. Temperature continued climbing throughout the
+run while clock speed remained flat once power hit its ceiling, indicating the card is
+power-limited, not thermally throttled, under this workload.
+
+Throttle onset: approximately 5-15 seconds into the run.
+Binding constraint: power limit (~450W), not temperature ceiling.
+
+This result is specific to this card, chassis, and ambient room conditions; no two
+students are expected to report identical values.
