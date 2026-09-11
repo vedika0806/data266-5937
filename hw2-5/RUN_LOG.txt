@@ -312,3 +312,4 @@
 [2026-09-11 00:37:04] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Throttling: power-limited (pinned at ~448-450W, at RTX 4090's 450W TGP), not thermal-limited (temp kept climbing 67C->79C+ while clock stayed flat). Onset ~5-15s into run.
 [2026-09-11 00:37:04] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Wrote Part E section to METRICS.md
 [2026-09-11 00:37:17] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Saved fig_thermal_clock_temp.png
+[2026-09-11 00:37:29] [GPU-f0ce2985-2f23-4732-8ba8-cd27d18de22b] Saved fig_thermal.png

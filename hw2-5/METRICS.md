@@ -188,3 +188,17 @@ Binding constraint: power limit (~450W), not temperature ceiling.
 
 This result is specific to this card, chassis, and ambient room conditions; no two
 students are expected to report identical values.
+
+## Table HW2.5.1 — Summary
+
+| Measurement | Your GPU | Notes |
+|---|---|---|
+| Peak achieved TFLOPS (BF16) | 170.30 | N=16384, CUDA-event timing, CV=0.48% |
+| % of theoretical peak (BF16) | 103.1% | Peak=165.2 TFLOPS, NVIDIA Ada Whitepaper Appendix A Table 2 (dense, FP32-accumulate) |
+| Effective bandwidth (GB/s) | 922.92 | 91.6% of 1008 GB/s spec, elementwise add, CV=0.10% |
+| Naive attention OOM length | None | Largest OK=49152, smallest fail=None |
+| Fused attention OOM length | not reached (tested up to 32768) | Flash Attention backend, pinned via torch.backends.cuda.sdp_kernel |
+| Steady-state / peak throughput | 97.2% | 20-min sustained BF16 matmul, N=8192 |
+| Throttle onset (s, or none) | ~5-15s | Power-limited (~450W TGP), not thermal-limited |
+
+Every measurement above is logged with its GPU UUID in RUN_LOG.txt.
