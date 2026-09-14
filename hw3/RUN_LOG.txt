@@ -16,3 +16,4 @@
 2026-09-14 03:21:18,613 | Tokenized dataset: 51 tokens, vocab size 40
 2026-09-14 03:22:45,826 | Defined SelfAttentionLM with scaled dot-product self-attention from scratch
 2026-09-14 03:23:21,246 | Trained unmasked self-attention model, final loss=0.0833
+2026-09-14 03:23:31,921 | Computed and visualized unmasked self-attention heatmap
