@@ -18,3 +18,4 @@
 2026-09-14 03:23:21,246 | Trained unmasked self-attention model, final loss=0.0833
 2026-09-14 03:23:31,921 | Computed and visualized unmasked self-attention heatmap
 2026-09-14 03:23:53,942 | Trained causal-masked self-attention model, final loss=0.1497
+2026-09-14 03:24:13,653 | Computed and visualized causal-masked self-attention heatmap
