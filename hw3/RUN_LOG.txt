@@ -20,3 +20,4 @@
 2026-09-14 03:23:53,942 | Trained causal-masked self-attention model, final loss=0.1497
 2026-09-14 03:24:13,653 | Computed and visualized causal-masked self-attention heatmap
 2026-09-14 04:37:17,833 | Added Part 2 causal masking comparison to METRICS.md
+2026-09-14 04:41:36,220 | Added Part 1 comparison notes to METRICS.md
