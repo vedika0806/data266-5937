@@ -1,3 +1,15 @@
 2026-09-14 02:29:18,104 | === Session started for hw3 ===
 2026-09-14 02:29:37,312 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
 2026-09-14 02:45:41,496 | === Session started for hw3 ===
+2026-09-14 02:45:46,027 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-09-14 02:48:15,640 | === Logger re-initialized in G3-G3kcHv8UL after kernel likely restarted ===
+2026-09-14 02:48:15,920 | Initialized LangChain LLM client for prompt engineering experiments
+2026-09-14 02:54:16,887 | Initialized LangChain LLM client (Groq) for prompt engineering experiments
+2026-09-14 02:56:54,103 | Initialized LangChain LLM client (Groq, model=openai/gpt-oss-120b) for prompt engineering experiments
+2026-09-14 02:56:58,190 | Ran Zero-Shot prompting examples (math + logical reasoning)
+2026-09-14 02:58:01,880 | Ran Few-Shot prompting examples (math + logical reasoning)
+2026-09-14 02:58:18,909 | Ran explicit Chain-of-Thought prompting examples
+2026-09-14 02:58:40,544 | Ran Zero-Shot CoT prompting examples
+2026-09-14 02:59:34,992 | Ran Meta-Prompting examples
+2026-09-14 03:00:37,797 | Ran Tree-of-Thoughts examples
+2026-09-14 03:05:32,464 | === Session started for hw3 ===
