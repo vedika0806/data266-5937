@@ -22,3 +22,4 @@
 2026-09-14 04:37:17,833 | Added Part 2 causal masking comparison to METRICS.md
 2026-09-14 04:41:36,220 | Added Part 1 comparison notes to METRICS.md
 2026-09-15 07:01:32,926 | === Session started for hw3 ===
+2026-09-15 07:12:03,652 | Created AI_USE.md
