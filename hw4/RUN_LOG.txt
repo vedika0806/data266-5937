@@ -92,3 +92,4 @@
 2026-09-21 23:09:16,926 | Sanity checks passed (shape + causal mask)
 2026-09-21 23:09:29,584 | Training start: epochs=8, batch=32, lr=0.0004, optimizer=Adam
 2026-09-21 23:09:29,921 | Epoch 1/8 | train loss 3.0259 | 0s
+2026-09-21 23:09:31,454 | Epoch 2/8 | train loss 2.3850 | 0s
