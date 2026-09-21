@@ -27,3 +27,5 @@
 2026-09-21 20:29:27,836 | Saved generated_samples.txt
 2026-09-21 22:11:01,166 | === Session started for hw4 ===
 2026-09-21 22:11:50,564 | Sliding window dataset built: seq_len=128, stride=2, windows=805
+2026-09-21 22:12:40,130 | Tokenization done: vocab_size=49, total_tokens=1738
+2026-09-21 22:12:42,273 | Sliding window dataset built: seq_len=128, stride=2, windows=805
