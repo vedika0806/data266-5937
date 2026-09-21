@@ -2,3 +2,5 @@
 2026-09-21 20:21:51,809 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
 2026-09-21 20:22:46,021 | Imports done, seed=5937, device=cuda
 2026-09-21 20:23:42,282 | Loaded Shakespeare.txt (1738 chars)
+2026-09-21 20:23:56,239 | Tokenization done: vocab_size=49, total_tokens=1738
+2026-09-21 20:24:33,598 | Sliding window dataset built: seq_len=128, stride=8, windows=202
