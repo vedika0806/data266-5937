@@ -4,3 +4,6 @@
 2026-09-21 20:23:42,282 | Loaded Shakespeare.txt (1738 chars)
 2026-09-21 20:23:56,239 | Tokenization done: vocab_size=49, total_tokens=1738
 2026-09-21 20:24:33,598 | Sliding window dataset built: seq_len=128, stride=8, windows=202
+2026-09-21 20:24:52,574 | Defined MultiHeadCausalSelfAttention
+2026-09-21 20:25:03,861 | Defined DecoderBlock
+2026-09-21 20:25:11,822 | Model built: params=3216945, d_model=256, heads=4, layers=4
