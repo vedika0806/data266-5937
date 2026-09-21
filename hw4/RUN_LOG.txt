@@ -42,3 +42,4 @@
 2026-09-21 22:13:10,165 | Epoch 6/8 | train loss 1.8990 | 1s
 2026-09-21 22:13:12,237 | Epoch 7/8 | train loss 1.7521 | 1s
 2026-09-21 22:13:14,346 | Epoch 8/8 | train loss 1.5795 | 1s
+2026-09-21 22:13:20,947 | Saved training_loss_curve.png
