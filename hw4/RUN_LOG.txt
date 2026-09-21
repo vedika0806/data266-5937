@@ -85,3 +85,6 @@
 2026-09-21 23:06:54,370 | Imports done, seed=5937, device=cuda
 2026-09-21 23:06:59,308 | Tokenization done: vocab_size=49, total_tokens=1738
 2026-09-21 23:07:01,183 | Sliding window dataset built: seq_len=64, stride=1, windows=1673
+2026-09-21 23:07:42,118 | Defined MultiHeadCausalSelfAttention
+2026-09-21 23:08:16,227 | Defined DecoderBlock
+2026-09-21 23:08:38,850 | Model built: params=417585, d_model=128, heads=4, layers=2
