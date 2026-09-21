@@ -63,3 +63,4 @@
 2026-09-21 22:15:53,818 | Generated temperature=0.8 sample
 2026-09-21 22:15:54,945 | Generated temperature=1.5 sample
 2026-09-21 22:24:09,830 | Sliding window dataset built: seq_len=64, stride=1, windows=1673
+2026-09-21 22:24:33,666 | Model built: params=417329, d_model=128, heads=4, layers=2
