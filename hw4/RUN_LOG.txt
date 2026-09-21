@@ -121,3 +121,11 @@
 2026-09-21 23:14:37,584 | Epoch 7/8 | train loss 1.8471 | 0s
 2026-09-21 23:14:39,199 | Epoch 8/8 | train loss 1.7114 | 0s
 2026-09-21 23:15:27,072 | Saved training_loss_curve.png
+2026-09-21 23:15:30,257 | Defined generate() with greedy / temperature / top-k
+2026-09-21 23:15:32,610 | Generated greedy sample
+2026-09-21 23:15:35,684 | Generated temperature=0.3 sample
+2026-09-21 23:15:36,195 | Generated temperature=0.8 sample
+2026-09-21 23:15:36,687 | Generated temperature=1.5 sample
+2026-09-21 23:16:35,975 | Generated top-k k=3 sample
+2026-09-21 23:16:36,526 | Generated top-k k=40 sample
+2026-09-21 23:16:40,407 | Saved generated_samples.txt
