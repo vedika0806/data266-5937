@@ -109,3 +109,7 @@
 2026-09-21 23:14:13,719 | Defined MultiHeadCausalSelfAttention
 2026-09-21 23:14:15,964 | Defined DecoderBlock
 2026-09-21 23:14:18,244 | Model built: params=425777, d_model=128, heads=4, layers=2
+2026-09-21 23:14:24,256 | Imports done, seed=5937, device=cuda
+2026-09-21 23:14:24,276 | Sanity checks passed (shape + causal mask)
+2026-09-21 23:14:27,201 | Training start: epochs=8, batch=32, lr=0.0004, optimizer=Adam
+2026-09-21 23:14:27,692 | Epoch 1/8 | train loss 2.9987 | 0s
