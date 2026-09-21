@@ -75,3 +75,9 @@
 2026-09-21 22:25:26,212 | Epoch 7/8 | train loss 1.7442 | 0s
 2026-09-21 22:25:27,771 | Epoch 8/8 | train loss 1.6010 | 0s
 2026-09-21 22:25:35,122 | Saved training_loss_curve.png
+2026-09-21 22:25:50,763 | Defined generate() with greedy / temperature / top-k
+2026-09-21 22:25:54,369 | Generated greedy sample
+2026-09-21 22:26:00,700 | Generated temperature=0.3 sample
+2026-09-21 22:26:01,205 | Generated temperature=0.8 sample
+2026-09-21 22:26:01,696 | Generated temperature=1.5 sample
+2026-09-21 23:06:48,855 | === Session started for hw4 ===
