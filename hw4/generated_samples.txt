@@ -1,0 +1,54 @@
+===== greedy =====
+ROMEO:
+The at the at the the the is the the she s t that the at t be t t the athathe s wo the t the is s t athat she s s the s no t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t at at at t at at t t t at at t at t at at t t t t t t t t t t t t t t t t t t t t 
+
+===== temperature_0.3 =====
+ROMEO:
+The be wo t is t the thathe t thame s the inothat thar the is n me we athather bus the thathe nou ther t athar the alllll s athe me t s me s no theat t the be ame ame be ino me s s t me is be t t t is ar at name at in s s is ame is be is ise me thathe at s ame ame t we is is t s ame t ino me athe h
+
+===== temperature_0.8 =====
+ROMEO:
+Sh s t wor ais hather me noue afo Uove wo amet whe skergel is hame weme fat no bll thher atho nan:
+I sit and w;
+Hd n bere s:
+Oe 
+Teve s r not the,
+at be t sMe ame I it nouO he d thee.
+
+BA io the? far s ak R;
+T:
+Ta tin sh am, ameare bSan :
+
+Ce t teathe anfey athame th t b ain n sCan t my name fE
+Thh
+
+===== temperature_1.5 =====
+ROMEO:
+Sh srt wCkv,i,RoRtmyk Trkngue OfT?UovN vo aJvtTwT;
+Bkargelhilfhi,Wo nme f’t no WlmethheoDrthy nan:tIgrtEwe d w;ot!O
+BbUIU h:
+ver
+ROvesWeranotnH?UN
+atB ndBbeM;MaE: I’iL:nR;O hedo tSpe.y hA doO, t?f t?y
+re bR;Hanam
+B,gn AU rT, amiserdoSaum:TaCeme teaakd gTfey ahO m’Hhk Jsh ainven CO.T’d’ore?DdffEmefh
+
+===== topk_3 =====
+ROMEO:
+The be ar s s shather tho wo than t sho t at t whe s n that sho me weal is ano the thes ther wine therthe shar thathand t atheanome me t anome t atat me the thame amye ame me the theamere t ather my at atheananame t t me atheameanou athe mat me thathe an my athame the that man than t my at amer my 
+
+===== topk_40 =====
+ROMEO:
+Sh s t wor aispe the! my ngue Ofo Uove wo amet whe skargelhilfo wWo nme fat no Ell thheotathy nan:
+I sit and w;ot!e
+BberU h:
+verer Rou wr not thUN
+at be t sMy ame I it no;O he d thee.
+
+BA io ze ? f iy
+re bverenam
+B,gn de rT, ameare bSau :
+
+Ceme tearer gTAey atO me hamesh ainven t it d oreame fE
+Thh
+
