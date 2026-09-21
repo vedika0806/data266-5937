@@ -99,3 +99,4 @@
 2026-09-21 23:09:37,790 | Epoch 6/8 | train loss 1.8414 | 0s
 2026-09-21 23:09:39,616 | Epoch 7/8 | train loss 1.6787 | 0s
 2026-09-21 23:09:41,216 | Epoch 8/8 | train loss 1.4912 | 0s
+2026-09-21 23:09:45,173 | Saved training_loss_curve.png
