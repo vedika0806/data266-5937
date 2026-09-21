@@ -81,3 +81,7 @@
 2026-09-21 22:26:01,205 | Generated temperature=0.8 sample
 2026-09-21 22:26:01,696 | Generated temperature=1.5 sample
 2026-09-21 23:06:48,855 | === Session started for hw4 ===
+2026-09-21 23:06:52,861 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-09-21 23:06:54,370 | Imports done, seed=5937, device=cuda
+2026-09-21 23:06:59,308 | Tokenization done: vocab_size=49, total_tokens=1738
+2026-09-21 23:07:01,183 | Sliding window dataset built: seq_len=64, stride=1, windows=1673
