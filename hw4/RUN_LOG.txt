@@ -114,3 +114,4 @@
 2026-09-21 23:14:27,201 | Training start: epochs=8, batch=32, lr=0.0004, optimizer=Adam
 2026-09-21 23:14:27,692 | Epoch 1/8 | train loss 2.9987 | 0s
 2026-09-21 23:14:29,368 | Epoch 2/8 | train loss 2.3795 | 0s
+2026-09-21 23:14:31,097 | Epoch 3/8 | train loss 2.2104 | 0s
