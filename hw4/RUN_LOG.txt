@@ -67,3 +67,4 @@
 2026-09-21 22:24:56,250 | Defined DecoderBlock
 2026-09-21 22:25:16,324 | Training start: epochs=8, batch=32, lr=0.0004, optimizer=Adam
 2026-09-21 22:25:16,669 | Epoch 1/8 | train loss 2.9422 | 0s
+2026-09-21 22:25:18,303 | Epoch 2/8 | train loss 2.3776 | 0s
