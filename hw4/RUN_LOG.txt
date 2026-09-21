@@ -1,1 +1,4 @@
 2026-09-21 20:21:33,060 | === Session started for hw4 ===
+2026-09-21 20:21:51,809 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-09-21 20:22:46,021 | Imports done, seed=5937, device=cuda
+2026-09-21 20:23:42,282 | Loaded Shakespeare.txt (1738 chars)
