@@ -60,12 +60,15 @@ Result: Final loss is 1.711 higher than what was achieved for SEQ_LEN = 64 becau
 
 Diversity increases monotonically as expected: greedy < T=0.3 < T=0.8 < T=1.5, and k=3 < k=40. Real-word ratio is not perfectly monotonic (T=0.8 exceeds T=0.3)
 
-## Part 5: Decoding Strategy Analysis
+##Decoding Strategy Analysis
 **Greedy decoding** always selects the argmax character. It is very deterministic and has the lowest diversity. It has memorised some fragments and is looping on the same instead of generating new content.
+
 **Temperature sampling** : T = 0.3 stays closer to the source text with heavy repetition (diversity 0.796). T=0.8 produces more variety (0.899) and the highest real world ratio likely because of moderate randomness breaks reptition loops. T = 1.5 gives very diverse output and lowest real world ratio. 
+
 **Top-k sampling** restricts sampling to k most probable characters. k=3 stays closer to confident predictions with more variety than greedy (0.863). k = 40 allows a wider pool increasing diversity at the cost of coherence.
 
 **Most coherent output:** T = 0.8 is the most coherent output as it has the highest real-word ratio (0.261). 
+
 **Most diverse output:** Temperature = 1.5 has the highest distinct-word ratio (0.981), but is nearly unreadable noise
 
 
