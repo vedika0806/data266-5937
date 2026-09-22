@@ -1,7 +1,7 @@
 # GPU_RESERVATION.md — HW2.5
 
 ## Reservation Record
- - how did you access this GPU? 
+ - how did you access this GPU?
  - Filled in the google form for request and got it approved.
 
 ## Actual Usage
