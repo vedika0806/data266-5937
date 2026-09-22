@@ -75,4 +75,4 @@ Diversity increases monotonically as expected: greedy < T=0.3 < T=0.8 < T=1.5, a
 
 ## Architecture Note
 
-The decoder block uses a pre-norm design (`x = x + attn(LayerNorm(x))`, then `x = x + ffn(LayerNorm(x))`), matching the course demo notebook's design, extended to multi-head causal self-attention (4 heads, manual implementation — no `nn.MultiheadAttention` or `nn.Transformer` used). A final LayerNorm is applied before the output projection, also matching the demo.
+The decoder block uses a pre-norm design (`x = x + attn(LayerNorm(x))`, then `x = x + ffn(LayerNorm(x))`), matching the course demo notebook's design, extended to multi-head causal self-attention (4 heads, manual implementation — no `nn.MultiheadAttention` or `nn.Transformer` used). A final LayerNorm is applied before the output projection.
