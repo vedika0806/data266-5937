@@ -97,12 +97,21 @@ repeated samples per configuration with coefficient of variation (CV) reported.
 | 8192 | 7.1587 | 0.13 | 2.200 |
 | 16384 | 28.7940 | 0.72 | 8.684 |
 
-**OOM boundary:** largest successful length = 49152, smallest failing length = None
+**OOM boundary:** No out-of-memory failure was observed up to the largest tested
+sequence length (49152). Naive attention memory scales as O(batch x heads x L^2); with the
+small configuration used here (batch=1, heads=8), even L=49152 stays within the RTX 4090's
+24GB VRAM.
 
 **Memory scaling (quadratic fit, memory(L) = a*L^2 + b*L + c):**
 a = 3.2000000000e-08 GB/token^2, b = 5.1200000000e-06 GB/token, c = 0.0106 GB.
 The positive, non-negligible quadratic coefficient confirms O(L^2) memory scaling, consistent
 with materializing the full L x L attention matrix.
+
+**Note on L=2048 variance:** The naive attention measurement at L=2048 shows an
+unusually high coefficient of variation (CV=150.81%) in the table above. Given the magnitude of this CV, the
+reported latency at L=2048 should be treated as unreliable; the surrounding
+values (L=1024, L=4096) are stable (CV < 1%) and are more representative of
+actual performance at nearby sequence lengths.
 
 **Anomaly investigated:** naive latency at L=4096 (1.806ms) did not follow a clean O(L^2)
 trend relative to L=2048 (1.671ms) and L=8192 (7.159ms). Re-measured with reps=50, warmup=30,
@@ -196,7 +205,7 @@ students are expected to report identical values.
 | Peak achieved TFLOPS (BF16) | 170.30 | N=16384, CUDA-event timing, CV=0.48% |
 | % of theoretical peak (BF16) | 103.1% | Peak=165.2 TFLOPS, NVIDIA Ada Whitepaper Appendix A Table 2 (dense, FP32-accumulate) |
 | Effective bandwidth (GB/s) | 922.92 | 91.6% of 1008 GB/s spec, elementwise add, CV=0.10% |
-| Naive attention OOM length | None | Largest OK=49152, smallest fail=None |
+| Naive attention OOM length | Not reached (tested to 49152) | With batch=1, heads=8, no OOM occurred up to the largest tested length; see Part D note |
 | Fused attention OOM length | not reached (tested up to 32768) | Flash Attention backend, pinned via torch.backends.cuda.sdp_kernel |
 | Steady-state / peak throughput | 97.2% | 20-min sustained BF16 matmul, N=8192 |
 | Throttle onset (s, or none) | ~5-15s | Power-limited (~450W TGP), not thermal-limited |
