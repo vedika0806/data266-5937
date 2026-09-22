@@ -113,6 +113,12 @@ reported latency at L=2048 should be treated as unreliable; the surrounding
 values (L=1024, L=4096) are stable (CV < 1%) and are more representative of
 actual performance at nearby sequence lengths.
 
+**Note on L=2048 variance:** The naive attention measurement at L=2048 shows an
+unusually high coefficient of variation (CV=150.81%) in the table above. Given the magnitude of this CV, the
+reported latency at L=2048 should be treated as unreliable; the surrounding
+values (L=1024, L=4096) are stable (CV < 1%) and are more representative of
+actual performance at nearby sequence lengths.
+
 **Anomaly investigated:** naive latency at L=4096 (1.806ms) did not follow a clean O(L^2)
 trend relative to L=2048 (1.671ms) and L=8192 (7.159ms). Re-measured with reps=50, warmup=30,
 samples=10 and confirmed stable (CV=0.50%) -- this is a genuine result, not noise. Attributed
