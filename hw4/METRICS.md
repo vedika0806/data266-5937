@@ -14,7 +14,7 @@
 | Learning rate | 4e-4 |
 | Batch size | 32 |
 | Epochs | 8 |
-| Attention design | Pre-norm (x = x + attn(LayerNorm(x))), matching the course demo notebook |
+| Attention design | Pre-norm (x = x + attn(LayerNorm(x)))|
 
 ## Training Loss per Epoch (SEQ_LEN=128 final run)
 
