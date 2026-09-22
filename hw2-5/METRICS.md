@@ -217,3 +217,41 @@ students are expected to report identical values.
 | Throttle onset (s, or none) | ~5-15s | Power-limited (~450W TGP), not thermal-limited |
 
 Every measurement above is logged with its GPU UUID in RUN_LOG.txt.
+
+## Part F — Analysis
+
+Looking at all the results together, this RTX 4090 performed best (closest to its
+official white sheet specifications) when doing BF16 and FP16 matrix multiplication — it actually hit
+about 103% of its rated peak speed at the largest matrix size. It performed worst on
+plain FP32 math, only reaching about 61% of its peak there. The reason comes down to
+hardware design: FP32 math runs on the GPU's regular cores, doing one operation per
+core per cycle. BF16 and FP16 math instead run on special "Tensor Cores" built into
+this GPU, which can do many more calculations per cycle than the regular cores. That's
+why the same GPU looks so much faster in one mode versus the other — it's literally
+using different hardware internally. Going slightly over 100% of the "peak" number
+means the GPU was running its clock speed a bit higher than
+the official spec sheet assumes, which is normal and happens more in short bursts.
+
+For memory speed, the GPU moved data at about 92% of its rated maximum (1008 GB/s) when
+doing a simple, memory-heavy operation (adding two big arrays together). Matrix
+multiplication, on the other hand, is a "compute-heavy" operation — it does about 33
+times more math per byte of data moved than the crossover point where memory speed and
+compute speed become equally limiting. In simple terms: adding arrays is limited by how
+fast you can move data in and out, while matrix multiplication is limited by how fast
+you can do the actual math.
+
+The attention experiments in Part D matter indicate that  naive attention builds and stores a giant grid comparing
+ every token to every other token. The "fused" version (using Flash Attention) avoided ever building
+that full giant grid — it processes things in smaller chunks and never stores the whole
+thing in memory at once. Because of this, the fused version got relatively more and
+more advantageous as sequences got longer: only about 1.1–1.5x faster at short
+sequences, but over 7x faster at the longest sequence tested. The gap keeps growing
+because naive attention's memory use grows much faster than fused attention's does as
+sequences get longer.
+
+When running a heavy workload continuously for 20 minutes, the GPU's speed only dropped
+by about 2.8% from its initial burst of speed down to a steady, sustained level. The GPU's clock speed settled down once its power draw hit the card's rated
+450-watt limit — not because it got too hot. We know this because the temperature kept
+climbing well after the clock speed had already leveled off, which means power draw
+(not heat) was the actual bottleneck holding the speed down. This is a useful thing as better cooling wouldn't help this card run faster under sustained load, because
+it's not hitting a temperature limit — it's hitting a power limit first.
