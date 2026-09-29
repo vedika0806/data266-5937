@@ -4,3 +4,4 @@
 2026-09-29 17:40:32,022 | Selected 2 fixed demo dialogues from eval set
 2026-09-29 17:41:34,702 | Task 2: baseline inference saved to baseline_outputs.json
 2026-09-29 17:42:29,561 | Task 3: LoRA r=16 alpha=32 dropout=0.05; total=77649280, trainable=688128
+2026-09-29 17:45:21,782 | Task 4: trained r=16, final loss=1.4459; adapter saved
