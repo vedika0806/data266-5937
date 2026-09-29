@@ -1,0 +1,38 @@
+{
+  "rouge": {
+    "baseline": {
+      "rouge1": 0.1456,
+      "rouge2": 0.0444,
+      "rougeL": 0.1217,
+      "rougeLsum": 0.1211
+    },
+    "r4": {
+      "rouge1": 0.3673,
+      "rouge2": 0.1199,
+      "rougeL": 0.2921,
+      "rougeLsum": 0.2921
+    },
+    "r16": {
+      "rouge1": 0.3719,
+      "rouge2": 0.1222,
+      "rougeL": 0.2979,
+      "rougeLsum": 0.299
+    }
+  },
+  "loss": {
+    "r4": 1.5002408027648926,
+    "r16": 1.4459356307983398
+  },
+  "trainable": {
+    "r4": 172032,
+    "r16": 688128
+  },
+  "outputs_r4": [
+    "Mr. Blake tells Mr. Foster to send over training manuals to Mr. Foster. Mr. Foster will drop them off tomorrow afternoon. Mr. Foster will be back tomorrow before 1 o'clock.",
+    "Johnson tells #Person1# how to get started using the machines. Johnson tells Johnson how to get started using the machines. Johnson tells Johnson how to get started using the machines. Johnson tells Johnson how to get started using the machines. Johnson tells Johnson how to get started using the machines."
+  ],
+  "outputs_r16": [
+    "Mr. Blake tells Mr. Foster if he can send over training manuals to Mr. Foster's office tomorrow afternoon.",
+    "Johnson tells Johnson how to get started using the machines. Johnson tells Johnson how to get started using the machines. Johnson tells Johnson how to get started using the machines. Johnson tells Johnson how to get started using the machines. Johnson tells Johnson how to get started using the machines."
+  ]
+}
