@@ -26,3 +26,16 @@ Qualitatively, the ranks look similar: both produce third-person summaries but b
 and r=4 added an unsupported detail in Dialogue 0 that r=16 did not. 
 Overall, a 4x increase in rank gave at most a modest improvement, which suggests that for flan-t5-small on this short training run, 
 adapter capacity is not the bottleneck.
+
+
+## Task 7: Experiment Analysis
+
+LoRA fine-tuning improved ROUGE substantially over the baseline (ROUGE-1 0.146 -> 0.367 for r=4 and 0.372 for r=16; ROUGE-L 0.122 -> 0.292 and 0.298), 
+so most of the gain comes from adapting the model at all, not from the choice of rank. 
+Between ranks, r=16 (688,128 trainable params) was slightly better than r=4 (172,032) on every metric, 
+but only by about 0.5 ROUGE-1 points and 0.6 ROUGE-L points, and it reached a slightly lower final training loss (1.446 vs 1.500). 
+With only 50 evaluation examples, this gap is small enough that it may be within noise. 
+Qualitatively, the ranks look similar: both produce third-person summaries but both loop in Dialogue 1, 
+and r=4 added an unsupported detail in Dialogue 0 that r=16 did not. 
+Overall, a 4x increase in rank gave at most a modest improvement, which suggests that for flan-t5-small on this short training run, 
+adapter capacity is not the bottleneck.

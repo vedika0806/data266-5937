@@ -9,3 +9,4 @@
 2026-09-29 17:49:32,557 | Task 7: r=4 vs r=16 done. ROUGE={'baseline': {'rouge1': np.float64(0.1456), 'rouge2': np.float64(0.0444), 'rougeL': np.float64(0.1217), 'rougeLsum': np.float64(0.1211)}, 'r4': {'rouge1': np.float64(0.3673), 'rouge2': np.float64(0.1199), 'rougeL': np.float64(0.2921), 'rougeLsum': np.float64(0.2921)}, 'r16': {'rouge1': np.float64(0.3719), 'rouge2': np.float64(0.1222), 'rougeL': np.float64(0.2979), 'rougeLsum': np.float64(0.299)}}
 2026-09-29 18:50:07,313 | Added Task 6 comparison to METRICS.md
 2026-09-29 18:57:51,384 | Added final analysis to METRICS.md
+2026-09-29 18:59:14,779 | Added final analysis to METRICS.md
