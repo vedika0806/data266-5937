@@ -1,1 +1,4 @@
 2026-09-29 17:37:20,866 | === Session started for hw5 ===
+2026-09-29 17:37:45,798 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-09-29 17:38:15,206 | Task 1: dataset loaded and converted to input/target
+2026-09-29 17:40:32,022 | Selected 2 fixed demo dialogues from eval set
