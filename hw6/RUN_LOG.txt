@@ -79,3 +79,25 @@
 2026-10-06 17:26:36,983 | [C SimCLR] ep 19/20 loss=2.6437 pos_pair_top1=0.8451
 2026-10-06 17:26:47,266 | [C SimCLR] ep 20/20 loss=2.6365 pos_pair_top1=0.8475
 2026-10-06 17:26:47,357 | Part C pretraining done in 208s; projection head discarded
+2026-10-06 17:27:00,218 | [C SimCLR linear probe] ep 1/20 loss=1.6102 train_acc=0.6020 test_acc=0.4984
+2026-10-06 17:27:00,254 | [C SimCLR linear probe] ep 2/20 loss=1.2043 train_acc=0.6860 test_acc=0.5197
+2026-10-06 17:27:00,280 | [C SimCLR linear probe] ep 3/20 loss=0.9804 train_acc=0.7420 test_acc=0.5200
+2026-10-06 17:27:00,304 | [C SimCLR linear probe] ep 4/20 loss=0.8834 train_acc=0.7080 test_acc=0.5070
+2026-10-06 17:27:00,327 | [C SimCLR linear probe] ep 5/20 loss=0.8236 train_acc=0.7840 test_acc=0.5260
+2026-10-06 17:27:00,353 | [C SimCLR linear probe] ep 6/20 loss=0.7093 train_acc=0.8000 test_acc=0.5368
+2026-10-06 17:27:00,376 | [C SimCLR linear probe] ep 7/20 loss=0.6714 train_acc=0.8240 test_acc=0.5259
+2026-10-06 17:27:00,400 | [C SimCLR linear probe] ep 8/20 loss=0.6503 train_acc=0.8340 test_acc=0.5376
+2026-10-06 17:27:00,429 | [C SimCLR linear probe] ep 9/20 loss=0.6174 train_acc=0.8500 test_acc=0.5365
+2026-10-06 17:27:00,454 | [C SimCLR linear probe] ep 10/20 loss=0.5685 train_acc=0.8620 test_acc=0.5324
+2026-10-06 17:27:00,479 | [C SimCLR linear probe] ep 11/20 loss=0.5199 train_acc=0.8880 test_acc=0.5191
+2026-10-06 17:27:00,503 | [C SimCLR linear probe] ep 12/20 loss=0.5098 train_acc=0.9080 test_acc=0.5323
+2026-10-06 17:27:00,527 | [C SimCLR linear probe] ep 13/20 loss=0.4877 train_acc=0.9000 test_acc=0.5203
+2026-10-06 17:27:00,551 | [C SimCLR linear probe] ep 14/20 loss=0.4575 train_acc=0.9100 test_acc=0.5383
+2026-10-06 17:27:00,577 | [C SimCLR linear probe] ep 15/20 loss=0.4022 train_acc=0.9280 test_acc=0.5265
+2026-10-06 17:27:00,601 | [C SimCLR linear probe] ep 16/20 loss=0.3858 train_acc=0.9480 test_acc=0.5295
+2026-10-06 17:27:00,624 | [C SimCLR linear probe] ep 17/20 loss=0.3633 train_acc=0.9380 test_acc=0.5344
+2026-10-06 17:27:00,649 | [C SimCLR linear probe] ep 18/20 loss=0.3399 train_acc=0.9500 test_acc=0.5304
+2026-10-06 17:27:00,673 | [C SimCLR linear probe] ep 19/20 loss=0.3176 train_acc=0.9600 test_acc=0.5244
+2026-10-06 17:27:00,696 | [C SimCLR linear probe] ep 20/20 loss=0.3054 train_acc=0.9660 test_acc=0.5319
+2026-10-06 17:27:00,710 | [C SimCLR] encoder checksum unchanged -> frozen verified
+2026-10-06 17:27:00,713 | Part C done: test_acc=0.5319
