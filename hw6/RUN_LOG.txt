@@ -35,3 +35,25 @@
 2026-10-06 17:16:43,452 | [B rotation pretext] ep 14/15 loss=0.3546 rot_acc=0.8653
 2026-10-06 17:17:10,133 | [B rotation pretext] ep 15/15 loss=0.3433 rot_acc=0.8708
 2026-10-06 17:17:10,197 | Part B pretext done in 400s; rotation head discarded
+2026-10-06 17:17:22,970 | [B rotation linear probe] ep 1/20 loss=2.0249 train_acc=0.4980 test_acc=0.4108
+2026-10-06 17:17:22,991 | [B rotation linear probe] ep 2/20 loss=1.3281 train_acc=0.5640 test_acc=0.4576
+2026-10-06 17:17:23,012 | [B rotation linear probe] ep 3/20 loss=1.1132 train_acc=0.6460 test_acc=0.4911
+2026-10-06 17:17:23,037 | [B rotation linear probe] ep 4/20 loss=0.9659 train_acc=0.7040 test_acc=0.4960
+2026-10-06 17:17:23,063 | [B rotation linear probe] ep 5/20 loss=0.8639 train_acc=0.7640 test_acc=0.5158
+2026-10-06 17:17:23,089 | [B rotation linear probe] ep 6/20 loss=0.7616 train_acc=0.7820 test_acc=0.5060
+2026-10-06 17:17:23,112 | [B rotation linear probe] ep 7/20 loss=0.7270 train_acc=0.7960 test_acc=0.5173
+2026-10-06 17:17:23,133 | [B rotation linear probe] ep 8/20 loss=0.6667 train_acc=0.7980 test_acc=0.5091
+2026-10-06 17:17:23,153 | [B rotation linear probe] ep 9/20 loss=0.6460 train_acc=0.8500 test_acc=0.5381
+2026-10-06 17:17:23,173 | [B rotation linear probe] ep 10/20 loss=0.5962 train_acc=0.8400 test_acc=0.5146
+2026-10-06 17:17:23,194 | [B rotation linear probe] ep 11/20 loss=0.5650 train_acc=0.8320 test_acc=0.4963
+2026-10-06 17:17:23,214 | [B rotation linear probe] ep 12/20 loss=0.5127 train_acc=0.9180 test_acc=0.5348
+2026-10-06 17:17:23,234 | [B rotation linear probe] ep 13/20 loss=0.4551 train_acc=0.8880 test_acc=0.5123
+2026-10-06 17:17:23,259 | [B rotation linear probe] ep 14/20 loss=0.4848 train_acc=0.8940 test_acc=0.5118
+2026-10-06 17:17:23,280 | [B rotation linear probe] ep 15/20 loss=0.4782 train_acc=0.9380 test_acc=0.5331
+2026-10-06 17:17:23,301 | [B rotation linear probe] ep 16/20 loss=0.4159 train_acc=0.9280 test_acc=0.5390
+2026-10-06 17:17:23,321 | [B rotation linear probe] ep 17/20 loss=0.4458 train_acc=0.8800 test_acc=0.5176
+2026-10-06 17:17:23,344 | [B rotation linear probe] ep 18/20 loss=0.4000 train_acc=0.9480 test_acc=0.5264
+2026-10-06 17:17:23,364 | [B rotation linear probe] ep 19/20 loss=0.3233 train_acc=0.9280 test_acc=0.5213
+2026-10-06 17:17:23,385 | [B rotation linear probe] ep 20/20 loss=0.3389 train_acc=0.9440 test_acc=0.5266
+2026-10-06 17:17:23,393 | [B rotation] encoder checksum unchanged -> frozen verified
+2026-10-06 17:17:23,395 | Part B done: test_acc=0.5266
