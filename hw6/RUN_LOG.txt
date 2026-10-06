@@ -106,3 +106,6 @@
 2026-10-06 17:30:10,373 | Part D figure saved for query 2 (idx 4255)
 2026-10-06 17:30:13,100 | Part D figure saved for query 3 (idx 2414)
 2026-10-06 17:30:15,137 | Part D figure saved for query 4 (idx 4274)
+2026-10-06 17:30:19,005 | Part D Supervised (A): top-5 NN precision (all test queries) = 0.3894
+2026-10-06 17:30:19,056 | Part D Rotation SSL (B): top-5 NN precision (all test queries) = 0.4476
+2026-10-06 17:30:19,105 | Part D SimCLR (C): top-5 NN precision (all test queries) = 0.4761
