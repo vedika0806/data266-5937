@@ -1,0 +1,25 @@
+{
+  "A_supervised": {
+    "test_acc": 0.452875,
+    "epochs": 15,
+    "train_time_s": 14.91211748123169,
+    "nn_prec5": 0.389375
+  },
+  "B_rotation": {
+    "test_acc": 0.5266250371932983,
+    "pretext_epochs": 15,
+    "probe_epochs": 20,
+    "pretext_final_rot_acc": 0.8707832532051282,
+    "pretrain_time_s": 399.5843598842621,
+    "nn_prec5": 0.44765
+  },
+  "C_simclr": {
+    "test_acc": 0.5318750143051147,
+    "pretrain_epochs": 20,
+    "probe_epochs": 20,
+    "tau": 0.2,
+    "batch": 256,
+    "pretrain_time_s": 207.7204511165619,
+    "nn_prec5": 0.476125
+  }
+}
