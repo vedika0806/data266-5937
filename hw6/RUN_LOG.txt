@@ -114,3 +114,4 @@
 2026-10-06 20:15:31,356 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
 2026-10-06 20:15:45,760 | Setup done. device=cuda, gpu=Tesla T4, torch=2.11.0+cu130
 2026-10-06 20:17:44,457 | Added discussion to METRICS.md
+2026-10-06 20:29:21,333 | Data loaded: train=5000, test=8000, unlabeled=100000; labeled subset=500 (50/class, seed=5937)
