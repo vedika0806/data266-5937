@@ -1,1 +1,5 @@
 2026-10-06 17:00:40,131 | === Session started for hw6 ===
+2026-10-06 17:01:17,471 | Params: SID4=0, SEED=0, SLICE=0, HP_ID=0, CLS_A=0, CLS_B=1
+2026-10-06 17:01:23,435 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-10-06 17:01:42,472 | Setup done. device=cuda, gpu=Tesla T4, torch=2.11.0+cu130
+2026-10-06 17:09:45,955 | Data loaded: train=5000, test=8000, unlabeled=100000; labeled subset=500 (50/class, seed=5937)
