@@ -57,3 +57,25 @@
 2026-10-06 17:17:23,385 | [B rotation linear probe] ep 20/20 loss=0.3389 train_acc=0.9440 test_acc=0.5266
 2026-10-06 17:17:23,393 | [B rotation] encoder checksum unchanged -> frozen verified
 2026-10-06 17:17:23,395 | Part B done: test_acc=0.5266
+2026-10-06 17:22:37,158 | SimCLR augmentation sanity figure saved
+2026-10-06 17:23:30,435 | [C SimCLR] ep 1/20 loss=5.4110 pos_pair_top1=0.0685
+2026-10-06 17:23:41,133 | [C SimCLR] ep 2/20 loss=4.3805 pos_pair_top1=0.2317
+2026-10-06 17:23:51,640 | [C SimCLR] ep 3/20 loss=3.8277 pos_pair_top1=0.3987
+2026-10-06 17:24:01,959 | [C SimCLR] ep 4/20 loss=3.5734 pos_pair_top1=0.4840
+2026-10-06 17:24:12,158 | [C SimCLR] ep 5/20 loss=3.4377 pos_pair_top1=0.5405
+2026-10-06 17:24:22,427 | [C SimCLR] ep 6/20 loss=3.3325 pos_pair_top1=0.5859
+2026-10-06 17:24:32,724 | [C SimCLR] ep 7/20 loss=3.1974 pos_pair_top1=0.6349
+2026-10-06 17:24:43,072 | [C SimCLR] ep 8/20 loss=3.1400 pos_pair_top1=0.6593
+2026-10-06 17:24:53,424 | [C SimCLR] ep 9/20 loss=3.0489 pos_pair_top1=0.6996
+2026-10-06 17:25:03,768 | [C SimCLR] ep 10/20 loss=3.0013 pos_pair_top1=0.7133
+2026-10-06 17:25:14,183 | [C SimCLR] ep 11/20 loss=2.9278 pos_pair_top1=0.7465
+2026-10-06 17:25:24,551 | [C SimCLR] ep 12/20 loss=2.8797 pos_pair_top1=0.7617
+2026-10-06 17:25:34,903 | [C SimCLR] ep 13/20 loss=2.8231 pos_pair_top1=0.7777
+2026-10-06 17:25:45,251 | [C SimCLR] ep 14/20 loss=2.7897 pos_pair_top1=0.7952
+2026-10-06 17:25:55,538 | [C SimCLR] ep 15/20 loss=2.7465 pos_pair_top1=0.8092
+2026-10-06 17:26:05,886 | [C SimCLR] ep 16/20 loss=2.6983 pos_pair_top1=0.8304
+2026-10-06 17:26:16,254 | [C SimCLR] ep 17/20 loss=2.6833 pos_pair_top1=0.8320
+2026-10-06 17:26:26,623 | [C SimCLR] ep 18/20 loss=2.6561 pos_pair_top1=0.8418
+2026-10-06 17:26:36,983 | [C SimCLR] ep 19/20 loss=2.6437 pos_pair_top1=0.8451
+2026-10-06 17:26:47,266 | [C SimCLR] ep 20/20 loss=2.6365 pos_pair_top1=0.8475
+2026-10-06 17:26:47,357 | Part C pretraining done in 208s; projection head discarded
