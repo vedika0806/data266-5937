@@ -101,3 +101,8 @@
 2026-10-06 17:27:00,696 | [C SimCLR linear probe] ep 20/20 loss=0.3054 train_acc=0.9660 test_acc=0.5319
 2026-10-06 17:27:00,710 | [C SimCLR] encoder checksum unchanged -> frozen verified
 2026-10-06 17:27:00,713 | Part C done: test_acc=0.5319
+2026-10-06 17:30:06,566 | Part D queries (test idx): [58, 4255, 2414, 4274], classes=['car', 'airplane', 'truck', 'horse']
+2026-10-06 17:30:08,357 | Part D figure saved for query 1 (idx 58)
+2026-10-06 17:30:10,373 | Part D figure saved for query 2 (idx 4255)
+2026-10-06 17:30:13,100 | Part D figure saved for query 3 (idx 2414)
+2026-10-06 17:30:15,137 | Part D figure saved for query 4 (idx 4274)
