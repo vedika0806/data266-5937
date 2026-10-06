@@ -115,3 +115,6 @@
 2026-10-06 20:15:45,760 | Setup done. device=cuda, gpu=Tesla T4, torch=2.11.0+cu130
 2026-10-06 20:17:44,457 | Added discussion to METRICS.md
 2026-10-06 20:29:21,333 | Data loaded: train=5000, test=8000, unlabeled=100000; labeled subset=500 (50/class, seed=5937)
+2026-10-06 20:38:34,072 | SimCLR augmentation sanity figure saved
+2026-10-06 20:40:07,386 | Successfully restored results from results.json
+2026-10-06 20:40:37,190 | Added results table to METRICS.md
