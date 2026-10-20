@@ -25,3 +25,10 @@
 2026-10-20 21:30:44,776 | VAE epoch 9/10, total_loss=244.2221, reconstruction_loss=228.2130, kl_loss=16.0091
 2026-10-20 21:30:51,778 | VAE epoch 10/10, total_loss=243.7261, reconstruction_loss=227.7136, kl_loss=16.0125
 2026-10-20 21:30:51,784 | VAE training completed and model saved
+2026-10-20 21:32:59,480 | Saved training loss comparison plot
+2026-10-20 21:33:21,017 | FC-AE test MSE: 0.011885
+2026-10-20 21:33:34,905 | VAE test MSE: 0.014056
+2026-10-20 21:33:34,907 | VAE average KL loss: 16.241899
+2026-10-20 21:33:45,916 | Saved reconstruction comparison
+2026-10-20 21:34:09,412 | Saved VAE-generated sample images
+2026-10-20 21:34:24,623 | Updated METRICS.md
