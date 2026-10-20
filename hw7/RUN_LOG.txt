@@ -3,3 +3,25 @@
 2026-10-20 21:21:43,157 | Using device: cuda
 2026-10-20 21:24:07,340 | FashionMNIST dataset loaded
 2026-10-20 21:24:52,112 | Saved FashionMNIST sample visualization
+2026-10-20 21:26:55,184 | FC-AE epoch 1/10, loss=0.037447
+2026-10-20 21:27:01,951 | FC-AE epoch 2/10, loss=0.020243
+2026-10-20 21:27:08,763 | FC-AE epoch 3/10, loss=0.017539
+2026-10-20 21:27:16,032 | FC-AE epoch 4/10, loss=0.016157
+2026-10-20 21:27:23,035 | FC-AE epoch 5/10, loss=0.015061
+2026-10-20 21:27:29,975 | FC-AE epoch 6/10, loss=0.014132
+2026-10-20 21:27:36,891 | FC-AE epoch 7/10, loss=0.013324
+2026-10-20 21:27:43,785 | FC-AE epoch 8/10, loss=0.012721
+2026-10-20 21:27:51,021 | FC-AE epoch 9/10, loss=0.012237
+2026-10-20 21:27:58,829 | FC-AE epoch 10/10, loss=0.011854
+2026-10-20 21:27:58,842 | FC-AE training completed and model saved
+2026-10-20 21:29:47,611 | VAE epoch 1/10, total_loss=292.1878, reconstruction_loss=278.4622, kl_loss=13.7256
+2026-10-20 21:29:54,802 | VAE epoch 2/10, total_loss=258.1138, reconstruction_loss=242.8747, kl_loss=15.2391
+2026-10-20 21:30:01,984 | VAE epoch 3/10, total_loss=252.0489, reconstruction_loss=236.5475, kl_loss=15.5014
+2026-10-20 21:30:09,142 | VAE epoch 4/10, total_loss=249.1183, reconstruction_loss=233.3929, kl_loss=15.7254
+2026-10-20 21:30:16,312 | VAE epoch 5/10, total_loss=247.3664, reconstruction_loss=231.5476, kl_loss=15.8189
+2026-10-20 21:30:23,357 | VAE epoch 6/10, total_loss=246.2467, reconstruction_loss=230.3660, kl_loss=15.8807
+2026-10-20 21:30:30,498 | VAE epoch 7/10, total_loss=245.4005, reconstruction_loss=229.5085, kl_loss=15.8919
+2026-10-20 21:30:37,611 | VAE epoch 8/10, total_loss=244.7212, reconstruction_loss=228.7693, kl_loss=15.9519
+2026-10-20 21:30:44,776 | VAE epoch 9/10, total_loss=244.2221, reconstruction_loss=228.2130, kl_loss=16.0091
+2026-10-20 21:30:51,778 | VAE epoch 10/10, total_loss=243.7261, reconstruction_loss=227.7136, kl_loss=16.0125
+2026-10-20 21:30:51,784 | VAE training completed and model saved
