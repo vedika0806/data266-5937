@@ -13,3 +13,4 @@
 2026-10-26 18:29:55,076 | (b) Epoch 50/50 loss=0.0525
 2026-10-26 18:29:56,506 | (b) Training finished in 35.4 min, final loss=0.0525
 2026-10-26 18:30:07,481 | (b) Training loss plot saved: b_training_loss.png
+2026-10-26 18:30:18,059 | (c) DDPM sampling done: 64 samples, 100 steps, 1.56s
