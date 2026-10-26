@@ -1,1 +1,6 @@
 2026-10-26 17:51:52,684 | === Session started for hw8 (Mini Diffusion: DDPM -> DDIM) ===
+2026-10-26 17:52:20,447 | Imports done, device=cuda
+2026-10-26 17:52:36,361 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-10-26 17:52:57,860 | Schedule: T=100, beta 0.0001->0.02 linear, alpha_bar_T=0.3636
+2026-10-26 17:53:15,017 | MNIST loaded: 60000 train images, scaled to [-1,1], batch=128
+2026-10-26 17:53:45,759 | (a) Forward diffusion implemented; figure a_forward_diffusion.png saved
