@@ -11,3 +11,5 @@
 2026-10-26 18:15:44,743 | (b) Epoch 30/50 loss=0.0539
 2026-10-26 18:22:50,497 | (b) Epoch 40/50 loss=0.0531
 2026-10-26 18:29:55,076 | (b) Epoch 50/50 loss=0.0525
+2026-10-26 18:29:56,506 | (b) Training finished in 35.4 min, final loss=0.0525
+2026-10-26 18:30:07,481 | (b) Training loss plot saved: b_training_loss.png
