@@ -15,3 +15,4 @@
 2026-10-26 18:30:07,481 | (b) Training loss plot saved: b_training_loss.png
 2026-10-26 18:30:18,059 | (c) DDPM sampling done: 64 samples, 100 steps, 1.56s
 2026-10-26 18:30:31,456 | (d) DDIM sampling done: DDIM-50 0.86s, DDIM-20 0.30s
+2026-10-26 18:30:42,108 | (d) Checks: DDIM deterministic=False, DDPM diff=0.3138, MSE50=0.0002, MSE20=0.0007
