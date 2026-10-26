@@ -21,3 +21,4 @@
 2026-10-26 18:46:43,297 | Ablation: scaled schedule beta 1e-3->0.2, alpha_bar_T=0.000020
 2026-10-26 19:01:08,012 | Ablation model trained 20 epochs, final loss=0.0222
 2026-10-26 19:01:18,411 | Ablation comparison saved; schedule restored to assigned config
+2026-10-26 19:03:50,483 | Rewrote METRICS.md: main results, both diagnostics, ablation, summary
