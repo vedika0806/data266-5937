@@ -18,3 +18,5 @@
 2026-10-26 18:30:42,108 | (d) Checks: DDIM deterministic=False, DDPM diff=0.3138, MSE50=0.0002, MSE20=0.0007
 2026-10-26 18:41:10,309 | (d) Diagnostic: alpha_bar_T=0.3636, real x_T mean=-0.458; sampling from q(x_T|x0) saved to d_diag_real_xT.png
 2026-10-26 18:42:43,375 | (d) Sampling from Gaussian-matched x_T saved: d_matched_xT_comparison.png
+2026-10-26 18:46:43,297 | Ablation: scaled schedule beta 1e-3->0.2, alpha_bar_T=0.000020
+2026-10-26 19:01:08,012 | Ablation model trained 20 epochs, final loss=0.0222
