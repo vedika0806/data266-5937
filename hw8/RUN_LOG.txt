@@ -23,3 +23,4 @@
 2026-10-26 19:01:18,411 | Ablation comparison saved; schedule restored to assigned config
 2026-10-26 19:03:50,483 | Rewrote METRICS.md: main results, both diagnostics, ablation, summary
 2026-10-26 19:11:51,618 | Created AI_USE.md
+2026-10-26 19:15:41,768 | Copied executed notebook into repo
