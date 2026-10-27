@@ -1,0 +1,6 @@
+models/
+data/split.pt
+__pycache__/
+.ipynb_checkpoints/
+*.safetensors
+*.bin

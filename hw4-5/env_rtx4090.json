@@ -1,0 +1,14 @@
+{
+  "python": "3.10.13",
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+  "torch": "2.1.2",
+  "transformers": "not installed",
+  "vllm": "not installed",
+  "bitsandbytes": "not installed",
+  "datasets": "not installed",
+  "accelerate": "not installed",
+  "scikit-learn": "not installed",
+  "gpu_line": "GPU 0: NVIDIA GeForce RTX 4090 (UUID: GPU-5b052ad1-4272-40db-4b25-c930bf32b547)",
+  "gpu_index": 0,
+  "gpu_uuid": "GPU-5b052ad1-4272-40db-4b25-c930bf32b547"
+}
