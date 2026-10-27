@@ -1,0 +1,16 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "peak_alloc_gb": 4.012023296,
+  "peak_reserved_gb": 4.706009088,
+  "train_time_s": 31.80413870600023,
+  "wall_time_s": 34.35581236000053,
+  "throughput": 440.1942819271736,
+  "test_acc_final": 0.6840000152587891,
+  "test_acc_best": 0.6840000152587891,
+  "best_epoch": 2,
+  "batch": 32,
+  "epochs": 4,
+  "lr": 2e-05,
+  "max_len": 128,
+  "model": "bert-base-uncased"
+}

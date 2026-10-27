@@ -1,0 +1,32 @@
+/opt/conda/bin/python /root/Desktop/Vedika/data266-5937/hw4-5/scripts/train_bert.py --out /root/Desktop/Vedika/data266-5937/hw4-5/runs/hw4a_baseline.json --tag hw4a_baseline --split /root/Desktop/Vedika/data266-5937/hw4-5/data/split.pt --model bert-base-uncased --lr 2e-05 --warmup_frac 0.1 --weight_decay 0.01 --seed 5937 --bench_warmup 3 --bench_steps 20 --mode full --batch 32 --epochs 4 --save_model /root/Desktop/Vedika/data266-5937/hw4-5/models/hw4a_bert --save_preds /root/Desktop/Vedika/data266-5937/hw4-5/runs/hw4a_preds.npz
+
+{"epoch": 1, "train_loss": 0.9427940249443054, "val_loss": 0.7766878930727641, "val_acc": 0.6200000047683716, "epoch_time_s": 8.248458007000409, "samples_per_s": 424.32173347182885, "optimizer_steps": 110}
+{"epoch": 2, "train_loss": 0.6732454299926758, "val_loss": 0.715627542813619, "val_acc": 0.6746666431427002, "epoch_time_s": 7.737999349999882, "samples_per_s": 452.31329723490524, "optimizer_steps": 220}
+{"epoch": 3, "train_loss": 0.5012394189834595, "val_loss": 0.7358727072079977, "val_acc": 0.6746666431427002, "epoch_time_s": 7.880839675000061, "samples_per_s": 444.11511264502064, "optimizer_steps": 330}
+{"epoch": 4, "train_loss": 0.38382643461227417, "val_loss": 0.7718668985366821, "val_acc": 0.6679999828338623, "epoch_time_s": 7.936841673999879, "samples_per_s": 440.9814563223015, "optimizer_steps": 440}
+
+--- STDERR ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2031.29it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.weight                          | MISSING    | 
+classifier.bias                            | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]
+Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  3.51it/s]
+Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  3.51it/s]
