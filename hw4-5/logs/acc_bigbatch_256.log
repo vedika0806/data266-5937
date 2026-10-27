@@ -1,0 +1,28 @@
+/opt/conda/bin/python /root/Desktop/Vedika/data266-5937/hw4-5/scripts/train_bert_capped.py --out /root/Desktop/Vedika/data266-5937/hw4-5/runs/acc_bigbatch_256.json --tag acc_bigbatch_256 --split /root/Desktop/Vedika/data266-5937/hw4-5/data/split.pt --model bert-base-uncased --lr 2e-05 --warmup_frac 0.1 --weight_decay 0.01 --seed 5937 --bench_warmup 3 --bench_steps 20 --mode full --batch 256 --epochs 4
+
+{"epoch": 1, "train_loss": 1.0223008394241333, "val_loss": 0.9896538736025492, "val_acc": 0.5346666574478149, "epoch_time_s": 7.102298994999728, "samples_per_s": 492.798177387931, "optimizer_steps": 14}
+{"epoch": 2, "train_loss": 0.9428766369819641, "val_loss": 0.9250195027987163, "val_acc": 0.5693333148956299, "epoch_time_s": 6.409719535999102, "samples_per_s": 546.0457326319574, "optimizer_steps": 28}
+{"epoch": 3, "train_loss": 0.8817849159240723, "val_loss": 0.8736926616032918, "val_acc": 0.609333336353302, "epoch_time_s": 6.411411908000446, "samples_per_s": 545.9015970620362, "optimizer_steps": 42}
+{"epoch": 4, "train_loss": 0.8364083170890808, "val_loss": 0.8635108618736267, "val_acc": 0.5933333039283752, "epoch_time_s": 6.417595113998686, "samples_per_s": 545.3756333685585, "optimizer_steps": 56}
+
+--- STDERR ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2022.10it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.weight                          | MISSING    | 
+classifier.bias                            | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.

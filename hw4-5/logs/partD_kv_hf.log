@@ -1,0 +1,10 @@
+/opt/conda/bin/python /root/Desktop/Vedika/data266-5937/hw4-5/scripts/serve_bench_capped.py --out /root/Desktop/Vedika/data266-5937/hw4-5/runs/partD_kv_hf.json --tag partD_kv_hf --model Qwen/Qwen2.5-1.5B-Instruct --max_new_tokens 128 --batches 1,8,32 --n_req 64 --min_rounds 10 --seed 5937 --mode kv --kv_batch 8 --kv_max 262144
+
+
+--- STDERR ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:  54%|█████▍    | 182/338 [00:00<00:00, 1814.96it/s]
+Loading weights: 100%|██████████| 338/338 [00:00<00:00, 1902.97it/s]

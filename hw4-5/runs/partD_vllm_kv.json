@@ -1,0 +1,34 @@
+{
+  "tag": "partD_vllm_kv",
+  "mode": "vllm_kv",
+  "config": {
+    "mode": "vllm_kv",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "dtype": "bfloat16",
+    "batches": "1,8,32",
+    "max_new_tokens": 128,
+    "n_req": 64,
+    "min_rounds": 10,
+    "warmup": 2,
+    "gpu_mem_util": 0.9,
+    "max_model_len": 32768,
+    "kv_batch": 8,
+    "kv_chunk": 1024,
+    "kv_max": 262144,
+    "seed": 5937,
+    "tag": "partD_vllm_kv",
+    "out": "/root/Desktop/Vedika/data266-5937/hw4-5/runs/partD_vllm_kv.json"
+  },
+  "ok": true,
+  "oom": false,
+  "vllm_version": "0.31.0",
+  "kv_capacity_tokens": 651376,
+  "check": {
+    "batch": 8,
+    "prompt_tokens": 32728,
+    "context_tokens": 32760,
+    "seconds": 11.351135549999526,
+    "completed": 8
+  },
+  "_elapsed_s": 67.0959210395813
+}

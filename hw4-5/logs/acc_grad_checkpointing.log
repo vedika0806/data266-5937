@@ -1,0 +1,29 @@
+/opt/conda/bin/python /root/Desktop/Vedika/data266-5937/hw4-5/scripts/train_bert_capped.py --out /root/Desktop/Vedika/data266-5937/hw4-5/runs/acc_grad_checkpointing.json --tag acc_grad_checkpointing --split /root/Desktop/Vedika/data266-5937/hw4-5/data/split.pt --model bert-base-uncased --lr 2e-05 --warmup_frac 0.1 --weight_decay 0.01 --seed 5937 --bench_warmup 3 --bench_steps 20 --mode full --batch 32 --epochs 4 --grad_ckpt 1
+
+{"epoch": 1, "train_loss": 0.9423990249633789, "val_loss": 0.7819420800209046, "val_acc": 0.6146666407585144, "epoch_time_s": 10.818170151000231, "samples_per_s": 323.529760684749, "optimizer_steps": 110}
+{"epoch": 2, "train_loss": 0.6675990223884583, "val_loss": 0.7215943784713745, "val_acc": 0.6639999747276306, "epoch_time_s": 10.180389633000232, "samples_per_s": 343.7982362339628, "optimizer_steps": 220}
+{"epoch": 3, "train_loss": 0.4926500916481018, "val_loss": 0.7322186145782471, "val_acc": 0.6786666512489319, "epoch_time_s": 10.3546715829998, "samples_per_s": 338.01168602452503, "optimizer_steps": 330}
+{"epoch": 4, "train_loss": 0.3744622766971588, "val_loss": 0.7726762714385986, "val_acc": 0.671999990940094, "epoch_time_s": 10.407408319999377, "samples_per_s": 336.29890289537616, "optimizer_steps": 440}
+
+--- STDERR ---
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2022.81it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.seq_relationship.weight                | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.

@@ -1,0 +1,363 @@
+{
+  "tag": "partD_kv_hf",
+  "mode": "kv",
+  "config": {
+    "mode": "kv",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "dtype": "bfloat16",
+    "batches": "1,8,32",
+    "max_new_tokens": 128,
+    "n_req": 64,
+    "min_rounds": 10,
+    "warmup": 2,
+    "gpu_mem_util": 0.9,
+    "max_model_len": 4096,
+    "kv_batch": 8,
+    "kv_chunk": 1024,
+    "kv_max": 262144,
+    "seed": 5937,
+    "tag": "partD_kv_hf",
+    "out": "/root/Desktop/Vedika/data266-5937/hw4-5/runs/partD_kv_hf.json"
+  },
+  "ok": true,
+  "oom": false,
+  "layers": 28,
+  "kv_heads": 2,
+  "head_dim": 128,
+  "bytes_per_elem": 2,
+  "kv_bytes_per_token": 28672,
+  "batch": 8,
+  "chunk": 1024,
+  "max_position_embeddings": 32768,
+  "gpu_total_gb": 25.756696576,
+  "weights_gb": 3.088347136,
+  "points": [
+    {
+      "context": 1024,
+      "kv_measured_gb": 0.24346624,
+      "kv_theory_gb": 0.234881024,
+      "peak_alloc_gb": 3.873411072
+    },
+    {
+      "context": 2048,
+      "kv_measured_gb": 0.478347264,
+      "kv_theory_gb": 0.469762048,
+      "peak_alloc_gb": 4.110389248
+    },
+    {
+      "context": 3072,
+      "kv_measured_gb": 0.713228288,
+      "kv_theory_gb": 0.704643072,
+      "peak_alloc_gb": 4.347236352
+    },
+    {
+      "context": 4096,
+      "kv_measured_gb": 0.948109312,
+      "kv_theory_gb": 0.939524096,
+      "peak_alloc_gb": 4.582248448
+    },
+    {
+      "context": 5120,
+      "kv_measured_gb": 1.182990336,
+      "kv_theory_gb": 1.17440512,
+      "peak_alloc_gb": 4.818178048
+    },
+    {
+      "context": 6144,
+      "kv_measured_gb": 1.41787136,
+      "kv_theory_gb": 1.409286144,
+      "peak_alloc_gb": 5.054107648
+    },
+    {
+      "context": 7168,
+      "kv_measured_gb": 1.652752384,
+      "kv_theory_gb": 1.644167168,
+      "peak_alloc_gb": 5.345611776
+    },
+    {
+      "context": 8192,
+      "kv_measured_gb": 1.887633408,
+      "kv_theory_gb": 1.879048192,
+      "peak_alloc_gb": 5.647601664
+    },
+    {
+      "context": 9216,
+      "kv_measured_gb": 2.122514432,
+      "kv_theory_gb": 2.113929216,
+      "peak_alloc_gb": 5.950640128
+    },
+    {
+      "context": 10240,
+      "kv_measured_gb": 2.357395456,
+      "kv_theory_gb": 2.34881024,
+      "peak_alloc_gb": 6.253678592
+    },
+    {
+      "context": 11264,
+      "kv_measured_gb": 2.59227648,
+      "kv_theory_gb": 2.583691264,
+      "peak_alloc_gb": 6.557765632
+    },
+    {
+      "context": 12288,
+      "kv_measured_gb": 2.827157504,
+      "kv_theory_gb": 2.818572288,
+      "peak_alloc_gb": 6.85975552
+    },
+    {
+      "context": 13312,
+      "kv_measured_gb": 3.062038528,
+      "kv_theory_gb": 3.053453312,
+      "peak_alloc_gb": 7.162793984
+    },
+    {
+      "context": 14336,
+      "kv_measured_gb": 3.296919552,
+      "kv_theory_gb": 3.288334336,
+      "peak_alloc_gb": 7.465832448
+    },
+    {
+      "context": 15360,
+      "kv_measured_gb": 3.531800576,
+      "kv_theory_gb": 3.52321536,
+      "peak_alloc_gb": 7.769919488
+    },
+    {
+      "context": 16384,
+      "kv_measured_gb": 3.7666816,
+      "kv_theory_gb": 3.758096384,
+      "peak_alloc_gb": 8.071909376
+    },
+    {
+      "context": 17408,
+      "kv_measured_gb": 4.001562624,
+      "kv_theory_gb": 3.992977408,
+      "peak_alloc_gb": 8.37494784
+    },
+    {
+      "context": 18432,
+      "kv_measured_gb": 4.236443648,
+      "kv_theory_gb": 4.227858432,
+      "peak_alloc_gb": 8.677986304
+    },
+    {
+      "context": 19456,
+      "kv_measured_gb": 4.471324672,
+      "kv_theory_gb": 4.462739456,
+      "peak_alloc_gb": 8.981024768
+    },
+    {
+      "context": 20480,
+      "kv_measured_gb": 4.706205696,
+      "kv_theory_gb": 4.69762048,
+      "peak_alloc_gb": 9.284063232
+    },
+    {
+      "context": 21504,
+      "kv_measured_gb": 4.94108672,
+      "kv_theory_gb": 4.932501504,
+      "peak_alloc_gb": 9.587101696
+    },
+    {
+      "context": 22528,
+      "kv_measured_gb": 5.175967744,
+      "kv_theory_gb": 5.167382528,
+      "peak_alloc_gb": 9.89014016
+    },
+    {
+      "context": 23552,
+      "kv_measured_gb": 5.410848768,
+      "kv_theory_gb": 5.402263552,
+      "peak_alloc_gb": 10.1942272
+    },
+    {
+      "context": 24576,
+      "kv_measured_gb": 5.645729792,
+      "kv_theory_gb": 5.637144576,
+      "peak_alloc_gb": 10.496217088
+    },
+    {
+      "context": 25600,
+      "kv_measured_gb": 5.880610816,
+      "kv_theory_gb": 5.8720256,
+      "peak_alloc_gb": 10.799255552
+    },
+    {
+      "context": 26624,
+      "kv_measured_gb": 6.11549184,
+      "kv_theory_gb": 6.106906624,
+      "peak_alloc_gb": 11.102294016
+    },
+    {
+      "context": 27648,
+      "kv_measured_gb": 6.350372864,
+      "kv_theory_gb": 6.341787648,
+      "peak_alloc_gb": 11.40533248
+    },
+    {
+      "context": 28672,
+      "kv_measured_gb": 6.585253888,
+      "kv_theory_gb": 6.576668672,
+      "peak_alloc_gb": 11.708370944
+    },
+    {
+      "context": 29696,
+      "kv_measured_gb": 6.820134912,
+      "kv_theory_gb": 6.811549696,
+      "peak_alloc_gb": 12.011409408
+    },
+    {
+      "context": 30720,
+      "kv_measured_gb": 7.055015936,
+      "kv_theory_gb": 7.04643072,
+      "peak_alloc_gb": 12.314447872
+    },
+    {
+      "context": 31744,
+      "kv_measured_gb": 7.28989696,
+      "kv_theory_gb": 7.281311744,
+      "peak_alloc_gb": 12.617486336
+    },
+    {
+      "context": 32768,
+      "kv_measured_gb": 7.524777984,
+      "kv_theory_gb": 7.516192768,
+      "peak_alloc_gb": 12.9205248
+    },
+    {
+      "context": 33792,
+      "kv_measured_gb": 7.759659008,
+      "kv_theory_gb": 7.751073792,
+      "peak_alloc_gb": 13.223563264
+    },
+    {
+      "context": 34816,
+      "kv_measured_gb": 7.994540032,
+      "kv_theory_gb": 7.985954816,
+      "peak_alloc_gb": 13.526601728
+    },
+    {
+      "context": 35840,
+      "kv_measured_gb": 8.229421056,
+      "kv_theory_gb": 8.22083584,
+      "peak_alloc_gb": 13.829640192
+    },
+    {
+      "context": 36864,
+      "kv_measured_gb": 8.46430208,
+      "kv_theory_gb": 8.455716864,
+      "peak_alloc_gb": 14.132678656
+    },
+    {
+      "context": 37888,
+      "kv_measured_gb": 8.699183104,
+      "kv_theory_gb": 8.690597888,
+      "peak_alloc_gb": 14.43571712
+    },
+    {
+      "context": 38912,
+      "kv_measured_gb": 8.934064128,
+      "kv_theory_gb": 8.925478912,
+      "peak_alloc_gb": 14.738755584
+    },
+    {
+      "context": 39936,
+      "kv_measured_gb": 9.168945152,
+      "kv_theory_gb": 9.160359936,
+      "peak_alloc_gb": 15.042711552
+    },
+    {
+      "context": 40960,
+      "kv_measured_gb": 9.403826176,
+      "kv_theory_gb": 9.39524096,
+      "peak_alloc_gb": 15.344832512
+    },
+    {
+      "context": 41984,
+      "kv_measured_gb": 9.6387072,
+      "kv_theory_gb": 9.630121984,
+      "peak_alloc_gb": 15.647870976
+    },
+    {
+      "context": 43008,
+      "kv_measured_gb": 9.873588224,
+      "kv_theory_gb": 9.865003008,
+      "peak_alloc_gb": 15.95090944
+    },
+    {
+      "context": 44032,
+      "kv_measured_gb": 10.108469248,
+      "kv_theory_gb": 10.099884032,
+      "peak_alloc_gb": 16.253947904
+    },
+    {
+      "context": 45056,
+      "kv_measured_gb": 10.343350272,
+      "kv_theory_gb": 10.334765056,
+      "peak_alloc_gb": 16.556986368
+    },
+    {
+      "context": 46080,
+      "kv_measured_gb": 10.578231296,
+      "kv_theory_gb": 10.56964608,
+      "peak_alloc_gb": 16.860024832
+    },
+    {
+      "context": 47104,
+      "kv_measured_gb": 10.81311232,
+      "kv_theory_gb": 10.804527104,
+      "peak_alloc_gb": 17.163063296
+    },
+    {
+      "context": 48128,
+      "kv_measured_gb": 11.047993344,
+      "kv_theory_gb": 11.039408128,
+      "peak_alloc_gb": 17.46610176
+    },
+    {
+      "context": 49152,
+      "kv_measured_gb": 11.282874368,
+      "kv_theory_gb": 11.274289152,
+      "peak_alloc_gb": 17.769140224
+    },
+    {
+      "context": 50176,
+      "kv_measured_gb": 11.517755392,
+      "kv_theory_gb": 11.509170176,
+      "peak_alloc_gb": 18.072178688
+    },
+    {
+      "context": 51200,
+      "kv_measured_gb": 11.752636416,
+      "kv_theory_gb": 11.7440512,
+      "peak_alloc_gb": 18.375217152
+    },
+    {
+      "context": 52224,
+      "kv_measured_gb": 11.98751744,
+      "kv_theory_gb": 11.978932224,
+      "peak_alloc_gb": 18.679304192
+    },
+    {
+      "context": 53248,
+      "kv_measured_gb": 12.222398464,
+      "kv_theory_gb": 12.213813248,
+      "peak_alloc_gb": 18.98129408
+    },
+    {
+      "context": 54272,
+      "kv_measured_gb": 12.457279488,
+      "kv_theory_gb": 12.448694272,
+      "peak_alloc_gb": 19.284332544
+    },
+    {
+      "context": 55296,
+      "kv_measured_gb": 12.692160512,
+      "kv_theory_gb": 12.683575296,
+      "peak_alloc_gb": 19.587371008
+    }
+  ],
+  "stopped": "OOM while extending to 56320 tokens",
+  "max_context_ok": 55296,
+  "_elapsed_s": 52.921534299850464
+}

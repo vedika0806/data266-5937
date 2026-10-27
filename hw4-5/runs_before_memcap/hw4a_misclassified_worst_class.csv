@@ -1,0 +1,6 @@
+orig_row,text,sentiment,predicted,confidence,diagnosis
+2307,I was definitely hype for that Knicks and Nets game tonight & give Brooklyn they 1st L fuck you #HurricaneSandy,negative,positive,0.9173849,TODO: one-line diagnosis
+4331,Nuit Blanche is this weekend and with it comes seeing people I miss a lot. WHY ISN'T IT SATURDAY YET?!?! #fb,negative,positive,0.8748825,TODO: one-line diagnosis
+1272,@user @user lol Moyes went from 1st to 7th and LvG went from 7th back to CL and they're the same level? Only Arsenal fans,negative,neutral,0.87058455,TODO: one-line diagnosis
+5537,I hope the servers for the new naruto game are great. Cause the 3rd's game server sucks ass,negative,positive,0.869335,TODO: one-line diagnosis
+3784,"""Hey everyone, in case you forgot, ISIS is killing and raping Christians, homosexuals, and many more groups today. Enjoy your Saturday!""",negative,positive,0.8436605,TODO: one-line diagnosis

@@ -34,3 +34,50 @@
 2026-10-27 22:46:28,480 | sweep_baseline_b2048: OOM in 35s
 2026-10-27 22:46:28,502 | Part A: max batch 1024 on rtx4090
 2026-10-27 22:50:50,931 | Saved figures/partA_throughput_memory_vs_batch.png
+2026-10-27 22:51:58,872 | sweep_mixed_precision_b8: ok in 27s
+2026-10-27 22:52:13,707 | sweep_mixed_precision_b16: ok in 15s
+2026-10-27 22:52:25,580 | sweep_mixed_precision_b32: ok in 12s
+2026-10-27 22:52:37,279 | sweep_mixed_precision_b64: ok in 12s
+2026-10-27 22:52:51,595 | sweep_mixed_precision_b128: ok in 14s
+2026-10-27 22:53:07,521 | sweep_mixed_precision_b256: ok in 16s
+2026-10-27 22:56:34,845 | sweep_mixed_precision_b512: ok in 207s
+2026-10-27 23:12:23,547 | sweep_mixed_precision_b1024: ok in 949s
+2026-10-27 23:12:51,203 | sweep_mixed_precision_b2048: OOM in 28s
+2026-10-27 23:13:21,409 | sweep_grad_checkpointing_b8: ok in 30s
+2026-10-27 23:13:43,677 | sweep_grad_checkpointing_b16: ok in 22s
+2026-10-27 23:14:04,221 | sweep_grad_checkpointing_b32: ok in 21s
+2026-10-27 23:14:27,867 | sweep_grad_checkpointing_b64: ok in 24s
+2026-10-27 23:14:59,558 | sweep_grad_checkpointing_b128: ok in 32s
+2026-10-27 23:15:35,585 | sweep_grad_checkpointing_b256: ok in 36s
+2026-10-27 23:16:13,331 | sweep_grad_checkpointing_b512: ok in 38s
+2026-10-27 23:16:54,557 | sweep_grad_checkpointing_b1024: ok in 41s
+2026-10-27 23:19:32,723 | sweep_grad_checkpointing_b2048: ok in 158s
+2026-10-27 23:31:20,852 | sweep_grad_checkpointing_b4096: OOM in 6s
+2026-10-27 23:31:45,655 | sweep_8bit_optimizer_b8: ok in 25s
+2026-10-27 23:32:04,762 | sweep_8bit_optimizer_b16: ok in 19s
+2026-10-27 23:32:22,785 | sweep_8bit_optimizer_b32: ok in 18s
+2026-10-27 23:32:42,830 | sweep_8bit_optimizer_b64: ok in 20s
+2026-10-27 23:33:08,644 | sweep_8bit_optimizer_b128: ok in 26s
+2026-10-27 23:33:37,443 | sweep_8bit_optimizer_b256: ok in 29s
+2026-10-27 23:33:43,132 | sweep_8bit_optimizer_b512: OOM in 6s
+2026-10-27 23:34:41,505 | accum_eff1024: ok in 58s
+2026-10-27 23:36:25,287 | accum_eff2048: ok in 104s
+2026-10-27 23:37:48,971 | acc_mixed_precision: ok in 26s
+2026-10-27 23:38:38,673 | acc_grad_checkpointing: ok in 50s
+2026-10-27 23:39:21,892 | acc_8bit_optimizer: ok in 43s
+2026-10-27 23:39:58,857 | acc_accum_32x8: ok in 37s
+2026-10-27 23:40:33,853 | acc_bigbatch_256: ok in 35s
+2026-10-27 23:41:05,245 | sweep_best_combination_b8: ok in 25s
+2026-10-27 23:41:21,355 | sweep_best_combination_b16: ok in 16s
+2026-10-27 23:41:34,549 | sweep_best_combination_b32: ok in 13s
+2026-10-27 23:41:47,605 | sweep_best_combination_b64: ok in 13s
+2026-10-27 23:42:03,061 | sweep_best_combination_b128: ok in 15s
+2026-10-27 23:42:20,301 | sweep_best_combination_b256: ok in 17s
+2026-10-27 23:42:26,131 | sweep_best_combination_b512: OOM in 6s
+2026-10-27 23:42:53,726 | acc_best_combination: ok in 28s
+2026-10-27 23:45:18,131 | Saved figures/partB_techniques.png
+2026-10-27 23:47:25,210 | partD_serve_vllm: ok in 113s
+2026-10-27 23:50:09,550 | partD_serve_hf: ok in 164s
+2026-10-27 23:51:26,098 | partD_vllm_kv: ok in 67s
+2026-10-27 23:52:19,022 | partD_kv_hf: ok in 53s
+2026-10-27 23:52:19,153 | Saved figures/partD_kv_cache_vs_context.png
