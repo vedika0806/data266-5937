@@ -1,0 +1,55 @@
+{
+  "tag": "hw4a_serve_hf",
+  "mode": "hf",
+  "config": {
+    "mode": "hf",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "dtype": "bfloat16",
+    "batches": "1,8,32",
+    "max_new_tokens": 128,
+    "n_req": 64,
+    "min_rounds": 10,
+    "warmup": 2,
+    "gpu_mem_util": 0.9,
+    "max_model_len": 4096,
+    "kv_batch": 8,
+    "kv_chunk": 1024,
+    "kv_max": 262144,
+    "seed": 5937,
+    "tag": "hw4a_serve_hf",
+    "out": "/root/Desktop/Vedika/data266-5937/hw4-5/runs/hw4a_serve_hf.json"
+  },
+  "ok": true,
+  "oom": false,
+  "rows": [
+    {
+      "configuration": "HF pipeline, batch 1",
+      "batch": 1,
+      "requests": 64,
+      "tokens_per_s": 52.45002686557857,
+      "p50_ms": 2430.0129855000705,
+      "p95_ms": 2574.7532252005385,
+      "mean_ms": 2440.41819707823,
+      "requests_per_s": 0.4097658348873326,
+      "total_tokens": 8192,
+      "total_time_s": 156.18676461300674
+    }
+  ],
+  "retokenized_mean_tokens": 128.0,
+  "samples": [
+    {
+      "prompt": "Summarise the difference between precision and recall for a non-technical manager.",
+      "output": "Sure! For a non-technical manager, it's important to understand that Precision and Recall are two key metrics used in evaluating the performance of machine learning models or systems.\n\n**Precision**: This metric measures how many of the predictions made by the model were actually correct. In other words, it tells us what percentage of the \"positive\" cases (those we want the model to identify) that the model correctly identified as positive. A high precision means that the model is good at not making false positives.\n\n**Recall**: On the other hand, Recall measures how well the model was able to find all the \"positive\" cases. It tells"
+    },
+    {
+      "prompt": "Give three tips for writing a clear bug report.",
+      "output": "1. Be specific: When reporting a bug, provide as much detail as possible about the issue you're experiencing. This includes describing the steps to reproduce the problem and any error messages or logs that may be relevant.\n\n2. Use clear language: Avoid using jargon or technical terms that might confuse others who are not familiar with your system or codebase. Instead, use simple, straightforward language to describe what is happening and how it can be fixed.\n\n3. Include all necessary information: A good bug report should include enough information so that someone else can easily understand the issue and fix it. This means including details such as the version of software"
+    },
+    {
+      "prompt": "Describe how a GPU differs from a CPU in one paragraph.",
+      "output": "A Graphics Processing Unit (GPU) and a Central Processing Unit (CPU) differ significantly in their architecture and function. The primary difference lies in the way they handle data processing tasks. A CPU is designed to perform general-purpose computations and manage multiple threads of execution efficiently. It has a large number of cores that can execute instructions simultaneously, making it well-suited for complex calculations and multitasking.\n\nIn contrast, a GPU is optimized specifically for handling graphics-intensive tasks such as rendering images, videos, and 3D models. GPUs have thousands or even millions of smaller cores called streaming multiprocessors, each capable of performing parallel operations on small chunks"
+    }
+  ],
+  "peak_alloc_gb": 3.107312128,
+  "_elapsed_s": 174.12337446212769
+}

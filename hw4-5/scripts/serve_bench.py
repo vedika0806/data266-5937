@@ -34,7 +34,7 @@ p.add_argument("--kv_max", type=int, default=262144)
 p.add_argument("--seed", type=int, default=5937)
 p.add_argument("--tag", default="")
 p.add_argument("--out", required=True)
-a = p.parse_args()
+a = p.parse_args() if __name__ == "__main__" else None
 
 # Own prompts ("experiment with your own prompt"). Edit freely; keep the list fixed between HW4.a and Part D.
 PROMPTS = [
@@ -56,8 +56,7 @@ PROMPTS = [
     "Compare trains and planes for a 500-mile trip in a few sentences.",
 ]
 
-result = {"tag": a.tag, "mode": a.mode, "config": vars(a).copy(), "ok": False, "oom": False}
-
+result = {"tag": a.tag, "mode": a.mode, "config": vars(a).copy(), "ok": False, "oom": False} if a else {}
 
 def is_oom(e):
     try:
@@ -242,18 +241,19 @@ def run_kv():
     result["max_context_ok"] = L
 
 
-try:
-    {"hf": run_hf, "vllm": run_vllm, "kv": run_kv, "vllm_kv": run_vllm_kv}[a.mode]()
-    result["ok"] = True
-except Exception as e:  # noqa: BLE001
-    if is_oom(e):
-        result["oom"] = True
-        result["error"] = "OOM: " + str(e)[:300]
-    else:
-        result["error"] = traceback.format_exc()[-3000:]
-        print(result["error"], file=sys.stderr)
-finally:
-    os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
-    with open(a.out, "w") as f:
-        json.dump(result, f, indent=2)
-sys.exit(0 if (result["ok"] or result["oom"]) else 1)
+if __name__ == "__main__":
+    try:
+        {"hf": run_hf, "vllm": run_vllm, "kv": run_kv, "vllm_kv": run_vllm_kv}[a.mode]()
+        result["ok"] = True
+    except Exception as e:  # noqa: BLE001
+        if is_oom(e):
+            result["oom"] = True
+            result["error"] = "OOM: " + str(e)[:300]
+        else:
+            result["error"] = traceback.format_exc()[-3000:]
+            print(result["error"], file=sys.stderr)
+    finally:
+        os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
+        with open(a.out, "w") as f:
+            json.dump(result, f, indent=2)
+    sys.exit(0 if (result["ok"] or result["oom"]) else 1)
