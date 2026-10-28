@@ -81,3 +81,4 @@
 2026-10-27 23:51:26,098 | partD_vllm_kv: ok in 67s
 2026-10-27 23:52:19,022 | partD_kv_hf: ok in 53s
 2026-10-27 23:52:19,153 | Saved figures/partD_kv_cache_vs_context.png
+2026-10-28 00:01:54,617 | accum_eff256: ok in 27s
