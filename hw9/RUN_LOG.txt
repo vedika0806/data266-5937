@@ -9,3 +9,4 @@
 2026-11-02 22:56:59,008 | Encoded training set in 1629s
 2026-11-02 22:56:59,830 | Latents ready: (60000, 4, 32, 32), mean=-0.0245, std=1.3606
 2026-11-02 22:57:24,510 | Forward diffusion figure saved for t=[0, 250, 500, 750, 999]
+2026-11-02 22:58:02,720 | U-Net built: 14.74 M params, attention at [('down', 16), ('down', 16), ('mid', 8), ('up', 16), ('up', 16), ('up', 16)]
