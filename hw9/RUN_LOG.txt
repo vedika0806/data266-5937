@@ -8,3 +8,4 @@
 2026-11-02 22:29:43,200 | VAE reconstruction MSE=0.000125 on [-1,1], 0.000031 on [0,1], 1000 test images
 2026-11-02 22:56:59,008 | Encoded training set in 1629s
 2026-11-02 22:56:59,830 | Latents ready: (60000, 4, 32, 32), mean=-0.0245, std=1.3606
+2026-11-02 22:57:24,510 | Forward diffusion figure saved for t=[0, 250, 500, 750, 999]
