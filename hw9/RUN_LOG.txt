@@ -72,3 +72,4 @@
 2026-11-03 02:21:12,095 | U-Net built: 14.74 M params, attention at [('down', 16), ('down', 16), ('mid', 8), ('up', 16), ('up', 16), ('up', 16)]
 2026-11-03 02:22:21,066 | Reloaded trained U-Net from /content/drive/MyDrive/data266_hw9/unet_latest.pt after runtime disconnect, 50 epochs
 2026-11-03 02:22:25,607 | Saved loss curve, loss CSV and final U-Net weights
+2026-11-03 02:25:00,996 | Sampled 64 images with w=3.0 in 131s
