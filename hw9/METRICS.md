@@ -46,8 +46,9 @@ both flat and heeled boots.
 **Weaker classes.** Sandals are the weakest class: their thin straps give fragmented or blobby shapes in several
 samples, probably because small structures are hard to preserve in a latent space that is downsampled 8 times.
 Bags and some pullovers are often nearly solid white with little interior detail, and 3 of the 6 bags are
-close to plain rectangles. This may be a saturation effect from the strong guidance, which pushes samples
-toward high contrast. Shirts, pullovers and coats look similar to each other, which is expected because these
+close to plain rectangles. The cause is unclear. Guidance may contribute, but the sampled latent std (1.379) is close to the
+training latent std (1.3606), so the latents show no overall saturation. The training latent std is also above
+1, which means the standard scaling factor does not give these latents exactly unit variance. Shirts, pullovers and coats look similar to each other, which is expected because these
 classes have similar shapes in Fashion-MNIST.
 
 **Image sharpness.** Edges look soft. The source images are only 28x28 and were enlarged to 256x256 for the VAE,
