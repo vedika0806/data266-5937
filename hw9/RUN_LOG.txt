@@ -73,3 +73,4 @@
 2026-11-03 02:22:21,066 | Reloaded trained U-Net from /content/drive/MyDrive/data266_hw9/unet_latest.pt after runtime disconnect, 50 epochs
 2026-11-03 02:22:25,607 | Saved loss curve, loss CSV and final U-Net weights
 2026-11-03 02:25:00,996 | Sampled 64 images with w=3.0 in 131s
+2026-11-03 02:36:47,918 | Added results and analysis to METRICS.md
