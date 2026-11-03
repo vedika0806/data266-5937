@@ -60,3 +60,5 @@
 2026-11-03 01:04:59,321 | Epoch 48/50 loss=0.04975 time=158s
 2026-11-03 01:07:37,682 | Epoch 49/50 loss=0.04969 time=158s
 2026-11-03 01:10:16,100 | Epoch 50/50 loss=0.05001 time=158s
+2026-11-03 01:10:18,265 | Training finished: final loss=0.05001
+2026-11-03 02:16:54,444 | === Session started for hw9 ===
