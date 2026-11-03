@@ -62,3 +62,6 @@
 2026-11-03 01:10:16,100 | Epoch 50/50 loss=0.05001 time=158s
 2026-11-03 01:10:18,265 | Training finished: final loss=0.05001
 2026-11-03 02:16:54,444 | === Session started for hw9 ===
+2026-11-03 02:16:58,531 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-11-03 02:18:51,574 | Config: img=256, latent=4x32x32, T=1000, epochs=50, lr=2e-05, batch=64, w=3.0
+2026-11-03 02:18:54,436 | Fashion-MNIST loaded
