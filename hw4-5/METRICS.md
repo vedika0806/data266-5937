@@ -13,10 +13,10 @@
 ### Per-epoch training
 | epoch | train_loss | val_loss | val_acc | epoch_time_s |
 |---|---|---|---|---|
-| 1.0000 | 0.9428 | 0.7767 | 0.6200 | 8.2485 |
-| 2.0000 | 0.6732 | 0.7156 | 0.6747 | 7.7380 |
-| 3.0000 | 0.5012 | 0.7359 | 0.6747 | 7.8808 |
-| 4.0000 | 0.3838 | 0.7719 | 0.6680 | 7.9368 |
+| 1 | 0.9428 | 0.7767 | 0.6200 | 8.2485 |
+| 2 | 0.6732 | 0.7156 | 0.6747 | 7.7380 |
+| 3 | 0.5012 | 0.7359 | 0.6747 | 7.8808 |
+| 4 | 0.3838 | 0.7719 | 0.6680 | 7.9368 |
 
 Validation loss stopped improving after epoch 2 (min val loss 0.7156). Training 2 more epoch(s) cost 15.8 s of GPU time, raised validation loss to 0.7719, and moved test accuracy from 0.6840 (best checkpoint) to 0.6840 (last epoch).
 
@@ -41,11 +41,11 @@ Worst class: **negative** (lowest recall).
 ### Five misclassified `negative` tweets
 | orig_row | text | true | predicted | confidence | diagnosis |
 |---|---|---|---|---|---|
-| 2307 | I was definitely hype for that Knicks and Nets game tonight & give Brooklyn they 1st L fuck you #HurricaneSandy | negative | positive | 0.917 | TODO: one-line diagnosis |
-| 4331 | Nuit Blanche is this weekend and with it comes seeing people I miss a lot. WHY ISN'T IT SATURDAY YET?!?! #fb | negative | positive | 0.875 | TODO: one-line diagnosis |
-| 1272 | @user @user lol Moyes went from 1st to 7th and LvG went from 7th back to CL and they're the same level? Only Arsenal fans | negative | neutral | 0.871 | TODO: one-line diagnosis |
-| 5537 | I hope the servers for the new naruto game are great. Cause the 3rd's game server sucks ass | negative | positive | 0.869 | TODO: one-line diagnosis |
-| 3784 | "Hey everyone, in case you forgot, ISIS is killing and raping Christians, homosexuals, and many more groups today. Enjoy your Saturday!" | negative | positive | 0.844 | TODO: one-line diagnosis |
+| 2307 | I was definitely hype for that Knicks and Nets game tonight & give Brooklyn they 1st L fuck you #HurricaneSandy | negative | positive | 0.917 | Hype/excitement words dominate; the negativity is profanity aimed at a hashtag (#HurricaneSandy cancelled the game). |
+| 4331 | Nuit Blanche is this weekend and with it comes seeing people I miss a lot. WHY ISN'T IT SATURDAY YET?!?! #fb | negative | positive | 0.875 | Arguably label noise: excited impatience about an event reads as positive. |
+| 1272 | @user @user lol Moyes went from 1st to 7th and LvG went from 7th back to CL and they're the same level? Only Arsenal fans | negative | neutral | 0.871 | Football banter/mockery needs domain context; no explicit negative words, so the model falls back to neutral. |
+| 5537 | I hope the servers for the new naruto game are great. Cause the 3rd's game server sucks ass | negative | positive | 0.869 | Mixed sentiment: the hopeful first clause outweighs the slang complaint ('sucks ass'). |
+| 3784 | "Hey everyone, in case you forgot, ISIS is killing and raping Christians, homosexuals, and many more groups today. Enjoy your Saturday!" | negative | positive | 0.844 | Sarcasm: the cheerful 'Enjoy your Saturday!' flips the meaning of a grim message. |
 
 ### Training memory and time (baseline for HW4.5 only)
 - Peak GPU memory: **4.01 GB allocated** (4.71 GB reserved)
@@ -83,6 +83,18 @@ Only one card (RTX 4090) was used, as allowed by clarification #3, so the cross-
 
 ![A](figures/partA_throughput_memory_vs_batch.png)
 
+### Measurement note: WSL sysmem fallback
+On this machine (WSL2 with the Windows NVIDIA driver), batches that exceeded the 4090's 24 GB did not raise OOM: the driver spilled into system RAM over PCIe and ran 10-50x slower. These points are kept in the raw tables but excluded from the max-batch and comparison numbers; later runs capped PyTorch at 95% of VRAM (`torch.cuda.set_per_process_memory_fraction`) so oversized batches fail cleanly. Raw results before the cap: `runs_before_memcap/`; flags: `runs/spill_flags.csv`.
+
+| technique | batch | peak_reserved_gb | throughput (samp/s) |
+|---|---|---|---|
+| baseline | 512 | 43.3 | 24.9 |
+| baseline | 1024 | 85.7 | 20.0 |
+| mixed_precision | 512 | 28.9 | 65.5 |
+| mixed_precision | 1024 | 55.6 | 15.3 |
+| grad_checkpointing | 2048 | 32.9 | 125.1 |
+
+
 ## Part B — Memory techniques
 ### Table HW4.5.1 — rtx4090
 | Technique | Max batch | Throughput @ batch 256 (samp/s) | Peak memory @ batch 256 (GB) | Eval accuracy (test) | Max batch (raw sweep, incl. WSL spill) |
@@ -112,7 +124,7 @@ Gradient checkpointing: **27.2% throughput lost**, 17.47 GB saved at batch 256.
 
 Effective batch achieved: **2048** on physical batch 32.
 
-Apply mixed precision (bf16) first: at the HW4 batch of 32 it raised throughput from 440 to 740 samples/s (+68%), cut peak memory from 4.01 to 3.26 GB and kept test accuracy at 0.684, so it saves memory with no throughput cost. On a 32 GB card I would not bother with gradient checkpointing (-24% throughput at batch 32, 335 vs 440 samples/s) or the 8-bit optimiser (0.7 GB saved, -7% throughput): BERT-base peaks at 4.0 GB at the HW4 batch, and even the fp32 throughput knee at batch 256 fits in 22.2 GB. Gradient accumulation's lower accuracy (0.612) comes from taking only 56 optimiser steps at an unchanged learning rate, not from accumulation itself; a true batch of 256 gave 0.592.
+Apply mixed precision (bf16) first: at the HW4 batch of 32 it raised throughput from 440 to 740 samples/s (+68%), cut peak memory from 4.01 to 3.26 GB and kept test accuracy at 0.684, so it saves memory with no throughput cost. On a 32 GB card I would not bother with gradient checkpointing (-24% throughput at batch 32, 335 vs 440 samples/s) or the 8-bit optimiser (0.7 GB saved and -7% throughput at batch 32; 0.65 GB and -1.2% at batch 256): BERT-base peaks at 4.0 GB at the HW4 batch, and even the fp32 throughput knee at batch 256 fits in 22.2 GB. Gradient accumulation's lower accuracy (0.612) comes from taking only 56 optimiser steps at an unchanged learning rate, not from accumulation itself; a true batch of 256 gave 0.592.
 
 ![B](figures/partB_techniques.png)
 
