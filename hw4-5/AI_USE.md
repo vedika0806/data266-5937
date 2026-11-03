@@ -5,7 +5,7 @@
 I used AI throughout in HW4.5. It also helped me debug the lab environment: a
 PyTorch/MKL threading conflict, a missing C compiler for Triton, a vLLM multiprocessing crash, and FlashInfer needing
 `nvcc`.
-The AI generated the notebook and job scripts for HW4.5 for the HF/vLLM and KV-cache benchmarks),
+The AI helped with job scripts for HW4.5 for the HF/vLLM and KV-cache benchmarks),
 
 ## 2. One specific wrong thing the AI produced?
 
