@@ -70,3 +70,5 @@
 2026-11-03 02:20:53,635 | Latents ready: (60000, 4, 32, 32), mean=-0.0245, std=1.3606
 2026-11-03 02:21:01,723 | Forward diffusion figure saved for t=[0, 250, 500, 750, 999]
 2026-11-03 02:21:12,095 | U-Net built: 14.74 M params, attention at [('down', 16), ('down', 16), ('mid', 8), ('up', 16), ('up', 16), ('up', 16)]
+2026-11-03 02:22:21,066 | Reloaded trained U-Net from /content/drive/MyDrive/data266_hw9/unet_latest.pt after runtime disconnect, 50 epochs
+2026-11-03 02:22:25,607 | Saved loss curve, loss CSV and final U-Net weights
