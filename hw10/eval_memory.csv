@@ -1,0 +1,17 @@
+turn,strategy,reranking,memory,search_query,n_relevant,P@5,R@5,P@10,R@10,MRR
+1,fixed,without,without,How are extrasolar planets detected?,11,0.8,0.36363636363636365,0.6,0.5454545454545454,1.0
+2,fixed,without,without,What are the main sources of uncertainty or error in those measurements?,17,0.0,0.0,0.0,0.0,0.0
+1,fixed,without,with,How are extrasolar planets detected?,11,0.8,0.36363636363636365,0.6,0.5454545454545454,1.0
+2,fixed,without,with,How are extrasolar planets detected? What are the main sources of uncertainty or error in those measurements?,17,0.8,0.23529411764705882,0.6,0.35294117647058826,1.0
+1,fixed,with,without,How are extrasolar planets detected?,11,0.4,0.18181818181818182,0.7,0.6363636363636364,1.0
+2,fixed,with,without,What are the main sources of uncertainty or error in those measurements?,17,0.0,0.0,0.0,0.0,0.0
+1,fixed,with,with,How are extrasolar planets detected?,11,0.4,0.18181818181818182,0.7,0.6363636363636364,1.0
+2,fixed,with,with,How are extrasolar planets detected? What are the main sources of uncertainty or error in those measurements?,17,0.8,0.23529411764705882,0.7,0.4117647058823529,1.0
+1,sentence,without,without,How are extrasolar planets detected?,12,0.8,0.3333333333333333,0.6,0.5,0.5
+2,sentence,without,without,What are the main sources of uncertainty or error in those measurements?,14,0.0,0.0,0.0,0.0,0.0
+1,sentence,without,with,How are extrasolar planets detected?,12,0.8,0.3333333333333333,0.6,0.5,0.5
+2,sentence,without,with,How are extrasolar planets detected? What are the main sources of uncertainty or error in those measurements?,14,0.4,0.14285714285714285,0.5,0.35714285714285715,1.0
+1,sentence,with,without,How are extrasolar planets detected?,12,0.2,0.08333333333333333,0.5,0.4166666666666667,1.0
+2,sentence,with,without,What are the main sources of uncertainty or error in those measurements?,14,0.0,0.0,0.0,0.0,0.0
+1,sentence,with,with,How are extrasolar planets detected?,12,0.2,0.08333333333333333,0.5,0.4166666666666667,1.0
+2,sentence,with,with,How are extrasolar planets detected? What are the main sources of uncertainty or error in those measurements?,14,0.8,0.2857142857142857,0.8,0.5714285714285714,1.0

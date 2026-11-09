@@ -15,3 +15,5 @@
 2026-11-09 20:22:19,687 | Evaluation (no memory): fixed / with rerank: P@5=0.67 MRR=0.73; fixed / without rerank: P@5=0.47 MRR=0.67; sentence / with rerank: P@5=0.60 MRR=0.73; sentence / without rerank: P@5=0.67 MRR=0.83
 2026-11-09 20:22:22,101 | Saved metrics_chunking_reranking.png and precision_at5_per_query.png
 2026-11-09 20:22:37,709 | Conversational memory demo on topic=exoplanet; turn2='What are the main sources of uncertainty or error in those measurements?'
+2026-11-09 20:23:02,917 | Generated flan-t5-base answers for turn 1/2 with and without memory
+2026-11-09 20:23:22,095 | Memory eval turn2: fixed/without/without: P@5=0.00; fixed/without/with: P@5=0.80; fixed/with/without: P@5=0.00; fixed/with/with: P@5=0.80; sentence/without/without: P@5=0.00; sentence/without/with: P@5=0.40; sentence/with/without: P@5=0.00; sentence/with/with: P@5=0.80
