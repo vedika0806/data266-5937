@@ -1,1 +1,3 @@
 2026-11-09 20:13:53,908 | === Session started for hw10 ===
+2026-11-09 20:14:25,842 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-11-09 20:14:49,544 | Installed chromadb / sentence-transformers / datasets; device=cuda
