@@ -1,0 +1,5 @@
+strategy,reranking,P@5,R@5,P@10,R@10,MRR,config
+fixed,with,0.667,0.153,0.5,0.213,0.733,fixed / with rerank
+fixed,without,0.467,0.113,0.4,0.174,0.667,fixed / without rerank
+sentence,with,0.6,0.153,0.467,0.229,0.733,sentence / with rerank
+sentence,without,0.667,0.168,0.6,0.295,0.833,sentence / without rerank

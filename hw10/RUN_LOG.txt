@@ -11,3 +11,5 @@
 2026-11-09 20:20:47,922 | Queries selected: [('Q1', 'qcd'), ('Q2', 'cmb'), ('Q3', 'magnetism')]; conversation topic=exoplanet
 2026-11-09 20:21:01,996 | Ran dense retrieval (no reranking) for all queries x both strategies
 2026-11-09 20:21:07,090 | Ran retrieval with cross-encoder reranking for all queries x both strategies
+2026-11-09 20:21:16,466 | Manual label overrides: 0
+2026-11-09 20:22:19,687 | Evaluation (no memory): fixed / with rerank: P@5=0.67 MRR=0.73; fixed / without rerank: P@5=0.47 MRR=0.67; sentence / with rerank: P@5=0.60 MRR=0.73; sentence / without rerank: P@5=0.67 MRR=0.83
