@@ -96,15 +96,30 @@ notebook (Cell 11); 0 individual judgments were overridden manually after readin
 
 
 ## Discussion
-- **Reranking.** The bi-encoder embeds query and chunk separately, so it ranks by general topical similarity. The cross-encoder reads the
-  query and chunk together and can reward chunks that address the specific *aspect* asked (e.g. *how it is measured*, not just *mentions the topic*).
-  Because it only re-orders the top 30, it cannot recover a relevant chunk the dense step missed; any gain shows up mainly in P@5 and MRR.
-- **Chunking.** Fixed windows cut 92% of chunks mid-sentence and can merge the end of one section
-  with the start of the next, which dilutes the embedding. Sentence-aware chunks keep ideas whole and respect section breaks, but are shorter
-  and uneven in length; the overlap in fixed windows also creates near-duplicate neighbours that can crowd the top-K.
-- **Memory.** The follow-up never names the topic, so the bare query matches "uncertainty / error" passages from unrelated papers.
-  Prepending the previous turn restores the topic, which is why turn-2 precision changes the most of any comparison. The rule-based
-  trigger is simple: it would misfire on a new standalone question that happens to contain "this"/"that", and concatenation grows the query
-  over long conversations (we cap history at 2 turns). An LLM-based query rewriter would be the next step.
-- **Limitations.** Only 3 standalone queries + 1 conversation; relevance is a keyword rubric (consistent, but it can reward
-  term overlap and miss paraphrases); Recall@K is low by construction when a topic has many relevant chunks, because K ≤ 10.
+
+**Reranking (mixed result).** Reranking helped fixed chunks (P@5 0.467 → 0.667, MRR 0.667 → 0.733) but hurt sentence chunks
+(P@5 0.667 → 0.600, MRR 0.833 → 0.733). The largest drop was Q2 (CMB), where MRR fell from 1.0 to 0.2 in both strategies, and turn 1 of
+the conversation, where P@5 fell from 0.8 to 0.4 (fixed) and 0.8 to 0.2 (sentence). Likely reasons: (1) the cross-encoder was trained
+on MS MARCO web search, not lower-cased arXiv text with the math stripped out, so its sense of "relevant" differs from ours;
+(2) our keyword rubric can mark a chunk not relevant even when it answers the question in different words, so some "drops" may be
+rubric false negatives. Reranking only re-orders the top 30 dense candidates, so it can't recover anything the dense step missed.
+
+**Chunking.** Without reranking, sentence-aware chunks beat fixed windows (P@5 +0.20, MRR +0.17). Fixed windows cut 92% of chunks
+mid-sentence and can join the end of one section with the start of the next, which blurs the embedding. With reranking the two are
+roughly tied (P@5 −0.067, which is one chunk in one query), because the cross-encoder partly makes up for messy boundaries in fixed
+chunks. Recall isn't directly comparable across strategies because each collection has a different number of relevant chunks.
+
+**Conversational memory (clearest effect).** The follow-up "...uncertainty or error in those measurements?" never names the topic.
+Without memory, P@5 = 0 and MRR = 0 in all four configurations: it found uncertainty passages from unrelated papers. Adding the
+previous question ("How are extrasolar planets detected?") raised turn-2 P@5 to 0.4–0.8 and MRR to 1.0 in every configuration
+(mean P@5 +0.70). Turn-1 rows are identical with and without memory, as expected, since memory only rewrites follow-ups.
+Limits: the follow-up trigger is a word list, so it would misfire on a new question containing "this" or "that", and the
+query keeps growing as the conversation continues (history is capped at 2 turns). An LLM query rewriter would be the next step.
+
+**Best configuration.** Fixed + reranking and sentence without reranking tie on P@5 (0.667); sentence without reranking wins on
+MRR (0.833 vs 0.733) and R@10 (0.295 vs 0.213).
+
+**Limitations.** Only 3 standalone queries and 1 conversation, so a difference of ±0.067 in mean P@5 is a single chunk and not
+meaningful; only the ±0.2 differences and the memory effect are clear. Relevance is a keyword rubric: consistent across
+configurations, but it rewards keyword overlap and misses paraphrases. Recall@K is low by design because topics have
+11–32 relevant chunks and K ≤ 10.
