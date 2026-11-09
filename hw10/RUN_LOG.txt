@@ -21,3 +21,4 @@
 2026-11-09 20:34:55,477 | Rewrote METRICS.md Discussion to match actual results
 2026-11-09 20:56:27,948 | Created AI_USE.md
 2026-11-09 21:02:20,498 | Created AI_USE.md
+2026-11-09 21:02:41,114 | Copied notebook with outputs into repo as rag_reranking_chunking_memory.ipynb
