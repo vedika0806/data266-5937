@@ -6,3 +6,4 @@
 2026-11-09 20:16:38,140 | Chunking done: fixed=4351 chunks (mean 148.6 words); sentence=4644 chunks (mean 133.6 words)
 2026-11-09 20:16:45,620 | Saved chunk_length_distribution.png
 2026-11-09 20:17:44,760 | Embedded chunks with sentence-transformers/all-MiniLM-L6-v2: fixed=(4351, 384), sentence=(4644, 384)
+2026-11-09 20:19:06,732 | Indexed in ChromaDB: arxiv_fixed=4351, arxiv_sentence=4644
