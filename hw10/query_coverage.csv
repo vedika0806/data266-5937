@@ -1,0 +1,21 @@
+topic,query,rel_fixed,rel_docs_fixed,rel_sentence,rel_docs_sentence,followup_rel_fixed
+qcd,What does QCD predict about quarks and hadron properties?,32,5,25,5,22
+cmb,What do cosmic microwave background measurements tell us about cosmological parameters?,18,2,21,2,11
+magnetism,What are the magnetic properties and ordering of spin systems?,18,4,16,4,1
+star_formation,What drives star formation in galaxies?,15,4,16,4,2
+solar,What causes solar flares and heating of the corona?,15,3,16,4,6
+grb,What powers gamma-ray bursts and their afterglows?,13,1,15,1,15
+exoplanet,How are extrasolar planets detected?,11,1,12,1,17
+random_graph,What properties of random graphs and networks are proved?,9,5,11,5,3
+galaxy_cluster,How are the masses of galaxy clusters measured?,8,1,6,1,1
+protein,How do proteins fold and bind?,7,1,4,1,5
+entanglement,How is quantum entanglement quantified and measured?,7,3,8,3,0
+monte_carlo,How are Monte Carlo simulations performed?,6,5,6,5,1
+black_hole,How is the mass of a black hole measured or estimated?,5,2,7,2,6
+dark_matter,How is dark matter detected or constrained by observations?,2,1,3,1,2
+phase_transition,How are phase transitions and critical behaviour characterized?,2,1,3,1,0
+graphene,What are the electronic properties of graphene?,2,2,2,2,0
+neutrino,How are neutrino masses and oscillations measured?,2,2,3,3,9
+neutron_star,What determines the mass and radius of neutron stars?,0,0,0,0,0
+superconductivity,What is the pairing mechanism in superconductors?,0,0,0,0,3
+neural_net,How are neural networks trained for classification?,0,0,0,0,0

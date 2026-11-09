@@ -7,3 +7,5 @@
 2026-11-09 20:16:45,620 | Saved chunk_length_distribution.png
 2026-11-09 20:17:44,760 | Embedded chunks with sentence-transformers/all-MiniLM-L6-v2: fixed=(4351, 384), sentence=(4644, 384)
 2026-11-09 20:19:06,732 | Indexed in ChromaDB: arxiv_fixed=4351, arxiv_sentence=4644
+2026-11-09 20:20:10,472 | Retrieval ready (dense top-10; rerank 30->10 with cross-encoder/ms-marco-MiniLM-L-6-v2)
+2026-11-09 20:20:47,922 | Queries selected: [('Q1', 'qcd'), ('Q2', 'cmb'), ('Q3', 'magnetism')]; conversation topic=exoplanet
