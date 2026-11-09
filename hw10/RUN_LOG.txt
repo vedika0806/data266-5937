@@ -3,3 +3,4 @@
 2026-11-09 20:14:49,544 | Installed chromadb / sentence-transformers / datasets; device=cuda
 2026-11-09 20:15:08,111 | Loaded 100 docs (hub: ccdv/arxiv-summarization [document/train]); mean article words=6517
 2026-11-09 20:16:24,944 | Preprocessed 100 docs (removed @xmath/@xcite placeholders, fixed punctuation spacing)
+2026-11-09 20:16:38,140 | Chunking done: fixed=4351 chunks (mean 148.6 words); sentence=4644 chunks (mean 133.6 words)
