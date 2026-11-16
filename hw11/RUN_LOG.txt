@@ -27,3 +27,5 @@
 2026-11-16 22:03:43,667 | Zero-shot CIFAR-10 done: overall accuracy=0.8906
 2026-11-16 22:05:20,940 | Computed per-class accuracy; saved p2_per_class_accuracy.png
 2026-11-16 22:05:30,647 | Saved p2_confusion_matrix_counts.png and p2_confusion_matrix_normalized.png
+2026-11-16 22:06:06,255 | Saved p2_example_predictions.png
+2026-11-16 22:19:32,301 | Added written findings to METRICS.md
