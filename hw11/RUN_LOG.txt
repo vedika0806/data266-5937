@@ -3,3 +3,6 @@
 2026-11-16 21:15:00,890 | Imports done, device=cuda
 2026-11-16 21:15:27,966 | Loaded CLIP model openai/clip-vit-base-patch32
 2026-11-16 21:16:20,370 | Loaded FashionMNIST test set, sampled 100/class = 1000 images (seed=5937)
+2026-11-16 21:16:52,625 | Caption defined: 'an image of a Sneaker' (CLS_A=7)
+2026-11-16 21:17:48,325 | Extracted + L2-normalized CLIP embeddings for caption and 1000 images
+2026-11-16 21:18:11,612 | Computed cosine similarity for all 1000 images; per-class stats table built
