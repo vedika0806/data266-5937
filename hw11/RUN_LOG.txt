@@ -11,3 +11,7 @@
 2026-11-16 21:19:02,254 | Saved p1_similarity_boxplot_by_class.png and p1_similarity_hist_target_vs_rest.png
 2026-11-16 21:19:27,157 | Part1 metrics: target_rank=1, P@100=0.6300, AUC=0.9607
 2026-11-16 21:33:54,229 | === Session started for hw11 ===
+2026-11-16 21:34:21,742 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-11-16 21:35:02,039 | Imports done, device=cuda
+2026-11-16 21:35:27,852 | Loaded CLIP model openai/clip-vit-base-patch32
+2026-11-16 21:56:39,841 | Loaded CIFAR-10 test set, sampled 100/class = 1000 images (seed=5937)
