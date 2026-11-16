@@ -15,3 +15,6 @@
 2026-11-16 21:35:02,039 | Imports done, device=cuda
 2026-11-16 21:35:27,852 | Loaded CLIP model openai/clip-vit-base-patch32
 2026-11-16 21:56:39,841 | Loaded CIFAR-10 test set, sampled 100/class = 1000 images (seed=5937)
+2026-11-16 21:58:29,199 | Caption defined: 'an image of a horse' (CLS_A=7)
+2026-11-16 21:58:39,719 | Extracted + L2-normalized CLIP embeddings for caption and 1000 images
+2026-11-16 21:58:47,731 | Computed cosine similarity for all 1000 images; per-class stats table built
