@@ -75,3 +75,52 @@ Class mix of the 100 most similar images: horse: 81, deer: 15, bird: 3, cat: 1
 - Part 1's high Precision@100 (81%) and AUC (0.97) for horse match horse's high zero-shot recall (96.8%).
 - The 15 deer among the top 100 horse-like images in Part 1 explain why horse's precision (0.832) is much lower than its recall.
 - The same embedding geometry explains both experiments: deer images sit near the "horse" text embedding.
+
+## Part 2 — Zero-shot classification (CIFAR-10)
+
+Model: `openai/clip-vit-base-patch32` | Dataset: CIFAR-10 test set, all 10,000 images | No training (zero-shot)
+Prompts: `an image of a {}` for each class | Prediction = argmax cosine similarity
+
+**Overall accuracy: 89.06%**
+
+### Per-class accuracy
+| class      |   correct |   total | accuracy   | most_confused_with   |
+|:-----------|----------:|--------:|:-----------|:---------------------|
+| airplane   |       895 |    1000 | 89.50%     | bird                 |
+| automobile |       937 |    1000 | 93.70%     | truck                |
+| bird       |       875 |    1000 | 87.50%     | horse                |
+| cat        |       870 |    1000 | 87.00%     | dog                  |
+| deer       |       789 |    1000 | 78.90%     | horse                |
+| dog        |       890 |    1000 | 89.00%     | cat                  |
+| frog       |       757 |    1000 | 75.70%     | cat                  |
+| horse      |       968 |    1000 | 96.80%     | dog                  |
+| ship       |       957 |    1000 | 95.70%     | airplane             |
+| truck      |       968 |    1000 | 96.80%     | automobile           |
+
+### Confusion matrix (rows = true, columns = predicted)
+|                  |   airplane |   automobile |   bird |   cat |   deer |   dog |   frog |   horse |   ship |   truck |
+|:-----------------|-----------:|-------------:|-------:|------:|-------:|------:|-------:|--------:|-------:|--------:|
+| true: airplane   |        895 |            6 |     47 |     0 |      0 |     3 |      0 |       1 |     29 |      19 |
+| true: automobile |          3 |          937 |      0 |     0 |      0 |     1 |      0 |       0 |      3 |      56 |
+| true: bird       |         10 |            1 |    875 |    28 |     28 |    18 |      5 |      32 |      3 |       0 |
+| true: cat        |          3 |            4 |     17 |   870 |      8 |    81 |      5 |       8 |      3 |       1 |
+| true: deer       |          3 |            1 |     22 |    20 |    789 |    26 |      5 |     132 |      2 |       0 |
+| true: dog        |          0 |            1 |     12 |    73 |      9 |   890 |      1 |      12 |      2 |       0 |
+| true: frog       |          1 |            3 |     66 |    95 |     19 |    39 |    757 |      10 |     10 |       0 |
+| true: horse      |          4 |            0 |      4 |     6 |      7 |    10 |      0 |     968 |      0 |       1 |
+| true: ship       |         26 |            5 |      2 |     1 |      0 |     1 |      0 |       0 |    957 |       8 |
+| true: truck      |          0 |           26 |      0 |     0 |      0 |     0 |      0 |       0 |      6 |     968 |
+
+### Top confusions
+| true       | predicted   |   count |
+|:-----------|:------------|--------:|
+| deer       | horse       |     132 |
+| frog       | cat         |      95 |
+| cat        | dog         |      81 |
+| dog        | cat         |      73 |
+| frog       | bird        |      66 |
+| automobile | truck       |      56 |
+| airplane   | bird        |      47 |
+| frog       | dog         |      39 |
+
+
