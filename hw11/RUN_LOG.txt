@@ -6,3 +6,7 @@
 2026-11-16 21:16:52,625 | Caption defined: 'an image of a Sneaker' (CLS_A=7)
 2026-11-16 21:17:48,325 | Extracted + L2-normalized CLIP embeddings for caption and 1000 images
 2026-11-16 21:18:11,612 | Computed cosine similarity for all 1000 images; per-class stats table built
+2026-11-16 21:18:26,579 | Saved p1_images_with_scores_per_class.png
+2026-11-16 21:18:51,160 | Saved p1_top12_most_similar.png and p1_top12_least_similar.png
+2026-11-16 21:19:02,254 | Saved p1_similarity_boxplot_by_class.png and p1_similarity_hist_target_vs_rest.png
+2026-11-16 21:19:27,157 | Part1 metrics: target_rank=1, P@100=0.6300, AUC=0.9607
