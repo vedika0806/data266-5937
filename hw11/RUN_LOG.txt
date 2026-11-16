@@ -1,1 +1,5 @@
 2026-11-16 21:13:58,470 | === Session started for hw11 ===
+2026-11-16 21:14:29,101 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-11-16 21:15:00,890 | Imports done, device=cuda
+2026-11-16 21:15:27,966 | Loaded CLIP model openai/clip-vit-base-patch32
+2026-11-16 21:16:20,370 | Loaded FashionMNIST test set, sampled 100/class = 1000 images (seed=5937)
