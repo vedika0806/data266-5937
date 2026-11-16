@@ -22,3 +22,4 @@
 2026-11-16 22:00:13,795 | Saved p1_top12_most_similar.png and p1_top12_least_similar.png
 2026-11-16 22:00:51,956 | Saved p1_similarity_boxplot_by_class.png and p1_similarity_hist_target_vs_rest.png
 2026-11-16 22:00:55,539 | Part1 metrics: target_rank=1, P@100=0.8100, AUC=0.9723
+2026-11-16 22:01:46,991 | Added Part 1 results to METRICS.md
