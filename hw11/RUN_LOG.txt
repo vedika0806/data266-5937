@@ -18,3 +18,7 @@
 2026-11-16 21:58:29,199 | Caption defined: 'an image of a horse' (CLS_A=7)
 2026-11-16 21:58:39,719 | Extracted + L2-normalized CLIP embeddings for caption and 1000 images
 2026-11-16 21:58:47,731 | Computed cosine similarity for all 1000 images; per-class stats table built
+2026-11-16 21:59:56,851 | Saved p1_images_with_scores_per_class.png
+2026-11-16 22:00:13,795 | Saved p1_top12_most_similar.png and p1_top12_least_similar.png
+2026-11-16 22:00:51,956 | Saved p1_similarity_boxplot_by_class.png and p1_similarity_hist_target_vs_rest.png
+2026-11-16 22:00:55,539 | Part1 metrics: target_rank=1, P@100=0.8100, AUC=0.9723
