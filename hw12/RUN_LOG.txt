@@ -15,3 +15,5 @@
 2026-11-23 23:18:57,978 | Base latency: gen p50=1897.9 ms p95=2385.2 ms; peak=1.011 GB
 2026-11-23 23:19:10,210 | Base saved: size=999.5 MB; results -> p1_results.json
 2026-11-23 23:23:50,150 | GPTQ quantized ({'bits': 4, 'group_size': 128, 'desc_act': False, 'sym': True, 'n_calib': 128, 'calib_len': 512}) in 4.2 min; size=471.1 MB
+2026-11-23 23:24:46,221 | GPTQ Wikitext2 test perplexity=14.339 (loss=2.6630); kernels=[]
+2026-11-23 23:26:28,392 | GPTQ latency: gen p50=2795.9 ms p95=3464.5 ms; peak=0.474 GB
