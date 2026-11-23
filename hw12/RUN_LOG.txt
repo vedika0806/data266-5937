@@ -17,3 +17,4 @@
 2026-11-23 23:23:50,150 | GPTQ quantized ({'bits': 4, 'group_size': 128, 'desc_act': False, 'sym': True, 'n_calib': 128, 'calib_len': 512}) in 4.2 min; size=471.1 MB
 2026-11-23 23:24:46,221 | GPTQ Wikitext2 test perplexity=14.339 (loss=2.6630); kernels=[]
 2026-11-23 23:26:28,392 | GPTQ latency: gen p50=2795.9 ms p95=3464.5 ms; peak=0.474 GB
+2026-11-23 23:28:05,162 | Part1 table + findings written to METRICS.md (PPL +9.7%, size 2.12x, mem 2.13x, latency 0.68x)

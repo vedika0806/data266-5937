@@ -100,5 +100,12 @@
     "peak_mem_load_eval_GB": 3.572215808,
     "kernel_classes": [],
     "sample": "The history of the Roman Empire is a fascinating tale of conquest, empire, and the rise of a powerful civilization. The Romans were a diverse group of people who spoke different languages and had different customs, but they all shared a common"
+  },
+  "summary": {
+    "ppl_rel_change_pct": 9.708999010697838,
+    "size_reduction_x": 2.121652979612935,
+    "mem_reduction_x": 2.1314341787374422,
+    "gen_speedup_x": 0.6788074444361157,
+    "prefill_speedup_x": 0.6598311251139706
   }
 }
