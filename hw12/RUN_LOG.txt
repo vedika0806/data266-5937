@@ -6,3 +6,6 @@
 2026-11-23 23:03:13,095 | Wikitext2: test=299078 tokens, train=2518423 tokens; 128 calib windows x 512 tok (train split); 30 latency prompts x 128 tok (test split)
 2026-11-23 23:05:35,194 | Installed packages: {'torch': '2.15.0', 'transformers': '5.24.0', 'optimum': '2.3.0', 'gptqmodel': '7.12.2', 'accelerate': '1.16.0', 'datasets': '5.2.0', 'gdown': '6.5.2'}
 2026-11-23 23:14:11,227 | === Session started for hw12 ===
+2026-11-23 23:14:14,960 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-11-23 23:14:33,369 | Installed packages: {'torch': '2.15.0', 'transformers': '5.24.0', 'optimum': '2.3.0', 'gptqmodel': '7.12.2', 'accelerate': '1.16.0', 'datasets': '5.2.0', 'gdown': '6.5.2'}
+2026-11-23 23:15:51,152 | Imports done, device=cuda, GPU=Tesla T4
