@@ -1,0 +1,25 @@
+{
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "dataset": "Salesforce/wikitext/wikitext-2-raw-v1",
+  "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "desc_act": false,
+    "sym": true,
+    "n_calib": 128,
+    "calib_len": 512
+  },
+  "eval_seqlen": 2048,
+  "latency": {
+    "n_prompts": 30,
+    "prompt_len": 128,
+    "new_tokens": 64,
+    "warmup": 3,
+    "batch_size": 1,
+    "decoding": "greedy"
+  },
+  "gpu": "Tesla T4",
+  "seed": 5937
+}
