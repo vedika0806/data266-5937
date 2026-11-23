@@ -9,3 +9,4 @@
 2026-11-23 23:14:14,960 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
 2026-11-23 23:14:33,369 | Installed packages: {'torch': '2.15.0', 'transformers': '5.24.0', 'optimum': '2.3.0', 'gptqmodel': '7.12.2', 'accelerate': '1.16.0', 'datasets': '5.2.0', 'gdown': '6.5.2'}
 2026-11-23 23:15:51,152 | Imports done, device=cuda, GPU=Tesla T4
+2026-11-23 23:16:20,000 | Part1 config: model=Qwen/Qwen2.5-0.5B@060db6499f32faf8b98477b0a26969ef7d8b9987, wikitext=Salesforce/wikitext/wikitext-2-raw-v1@b08601e04326c79dfdd32d625aee71d232d685c3, GPTQ={'bits': 4, 'group_size': 128, 'desc_act': False, 'sym': True, 'n_calib': 128, 'calib_len': 512}
