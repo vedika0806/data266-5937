@@ -49,5 +49,10 @@
     "params_M": 494.032768,
     "dtype": "float16",
     "sample": "The history of the Roman Empire is one of the most fascinating in the world. It is a fascinating history because it is the history of the world. It is a history of the world because it is the history of the world."
+  },
+  "gptq": {
+    "quant_minutes": 4.233611266233334,
+    "size_MB": 471.106258,
+    "weights_MB": 459.383592
   }
 }
