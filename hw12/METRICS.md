@@ -14,31 +14,31 @@ Peak memory: `torch.cuda.max_memory_allocated` during the latency benchmark. Siz
 
 | Configuration                      |   Quality metric (Wikitext-2 test PPL ↓) | p50 / p95 latency (ms)   |   Peak memory (GB) |   Size on disk (MB) |
 |:-----------------------------------|-----------------------------------------:|:-------------------------|-------------------:|--------------------:|
-| Base LLM (Qwen/Qwen2.5-0.5B, FP16) |                                   13.07  | 1897.9 / 2385.2          |              1.011 |               999.5 |
-| GPTQ-quantized LLM (4-bit, g128)   |                                   14.339 | 2795.9 / 3464.5          |              0.474 |               471.1 |
+| Base LLM (Qwen/Qwen2.5-0.5B, FP16) |                                   13.07  | 2113.3 / 4758.9          |              1.012 |               999.5 |
+| GPTQ-quantized LLM (4-bit, g128)   |                                   14.354 | 5927.8 / 6357.9          |              0.944 |               471.1 |
 
 Additional measurements:
 
 | Configuration   |   eval loss (nats/token) | prefill 512 tok p50 / p95 (ms)   |   ms / generated token (p50) |   peak memory during PPL eval (GB) |   weights only (MB) |
 |:----------------|-------------------------:|:---------------------------------|-----------------------------:|-----------------------------------:|--------------------:|
-| Base FP16       |                   2.5703 | 33.74 / 37.99                    |                        29.65 |                              4.111 |               988.1 |
-| GPTQ 4-bit      |                   2.663  | 51.14 / 57.21                    |                        43.69 |                              3.572 |               459.4 |
+| Base FP16       |                   2.5703 | 39.78 / 51.20                    |                        33.02 |                              4.119 |               988.1 |
+| GPTQ 4-bit      |                   2.6641 | 90.79 / 126.39                   |                        92.62 |                              4.039 |               459.4 |
 
 ![base vs gptq](p1_base_vs_gptq.png)
 ![latency distribution](p1_latency_distribution.png)
 
 Sample greedy continuation of "The history of the Roman Empire":
 - Base: 'The history of the Roman Empire is one of the most fascinating in the world. It is a fascinating history because it is the history of the world. It is a history of the world because it is the history of the world.'
-- GPTQ: 'The history of the Roman Empire is a fascinating tale of conquest, empire, and the rise of a powerful civilization. The Romans were a diverse group of people who spoke different languages and had different customs, but they all shared a common'
+- GPTQ: 'The history of the Roman Empire is one of the most fascinating and complex stories in the history of the world. The Romans were a people who had a unique blend of culture, history, and philosophy. They were also known for their'
 
 ### Part 1 findings
 
-- **Quality cost:** perplexity rose from 13.070 to 14.339 (+9.7%), i.e. eval loss 2.5703 → 2.6630 nats/token.
+- **Quality cost:** perplexity rose from 13.070 to 14.354 (+9.8%), i.e. eval loss 2.5703 → 2.6641 nats/token.
 - **Size:** 1000 MB → 471 MB on disk (2.12× smaller). It is not 4× because GPTQ quantizes only the transformer
   linear layers; the Qwen/Qwen2.5-0.5B embedding matrix (151,936 × 896, tied with the LM head) stays in FP16, and each group of 128 weights also stores a scale and zero point.
-- **Peak GPU memory during generation:** 1.011 GB → 0.474 GB (2.13× lower). KV cache and activations stay FP16, so memory shrinks less than the weights.
-- **Latency (batch 1, 128-token prompt, 64 new tokens):** p50 1897.9 → 2795.9 ms, p95 2385.2 → 3464.5 ms
-  — the GPTQ model is 1.47× slower. Prefill of 512 tokens: 33.74 → 51.14 ms.
+- **Peak GPU memory during generation:** 1.012 GB → 0.944 GB (1.07× lower). KV cache and activations stay FP16, so memory shrinks less than the weights.
+- **Latency (batch 1, 128-token prompt, 64 new tokens):** p50 2113.3 → 5927.8 ms, p95 4758.9 → 6357.9 ms
+  — the GPTQ model is 2.81× slower. Prefill of 512 tokens: 39.78 → 90.79 ms.
   Kernel used: n/a. For a 0.5 B model at batch 1, each decoding step is dominated by per-layer kernel-launch overhead rather than by reading weights, and the 4-bit weights must be dequantized inside the kernel, so GPTQ gives no real speed-up here; its gain is memory and storage.
-- **Quantization cost:** 4.2 min on Tesla T4 with 128 calibration windows — no training and no labels.
+- **Quantization cost:** 1.5 min on Tesla T4 with 128 calibration windows — no training and no labels.
 <!-- END part1 -->

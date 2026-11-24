@@ -103,10 +103,10 @@
     "sample": "The history of the Roman Empire is one of the most fascinating and complex stories in the history of the world. The Romans were a people who had a unique blend of culture, history, and philosophy. They were also known for their"
   },
   "summary": {
-    "ppl_rel_change_pct": 9.708999010697838,
+    "ppl_rel_change_pct": 9.824748857730192,
     "size_reduction_x": 2.121652979612935,
-    "mem_reduction_x": 2.1314341787374422,
-    "gen_speedup_x": 0.6788074444361157,
-    "prefill_speedup_x": 0.6598311251139706
+    "mem_reduction_x": 1.0728098922444196,
+    "gen_speedup_x": 0.3565032945997236,
+    "prefill_speedup_x": 0.43818302732040815
   }
 }
