@@ -60,3 +60,5 @@
 2026-11-24 20:05:16,939 | KD run sub30k_Asweep_T1_a0.25: T=1, alpha=0.25, test acc=0.9284, train 6.1 min, final CE=0.2025, KLD=0.1804
 2026-11-24 20:12:16,598 | KD run sub30k_Asweep_T1_a0.5: T=1, alpha=0.5, test acc=0.9293, train 6.2 min, final CE=0.2027, KLD=0.1815
 2026-11-24 20:19:16,436 | KD run sub30k_Asweep_T1_a0.75: T=1, alpha=0.75, test acc=0.9282, train 6.2 min, final CE=0.2020, KLD=0.1808
+2026-11-24 20:19:18,841 | Alpha sweep at T=1: a=0.25: 0.9284, a=0.5: 0.9293, a=0.75: 0.9282; best run=sub30k_Tsweep_T1_a0.5
+2026-11-24 20:19:27,356 | Saved sweep accuracy plots and loss-curve plots
