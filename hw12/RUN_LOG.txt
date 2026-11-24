@@ -38,3 +38,7 @@
 2026-11-24 18:12:34,106 | Installed packages: {'torch': '2.14.1+cu130', 'transformers': '5.24.1', 'optimum': '2.3.0', 'gptqmodel': '7.10.0', 'accelerate': '1.16.0', 'datasets': '5.2.0', 'gdown': '6.5.2'}
 2026-11-24 18:12:45,116 | Imports done, device=cuda, GPU=Tesla T4
 2026-11-24 18:12:50,793 | Part1 config: model=Qwen/Qwen2.5-0.5B@060db6499f32faf8b98477b0a26969ef7d8b9987, wikitext=Salesforce/wikitext/wikitext-2-raw-v1@b08601e04326c79dfdd32d625aee71d232d685c3, GPTQ={'bits': 4, 'group_size': 128, 'desc_act': False, 'sym': True, 'n_calib': 128, 'calib_len': 512}
+2026-11-24 18:13:48,501 | Wikitext2: test=299078 tokens, train=2518423 tokens; 128 calib windows x 512 tok (train split); 30 latency prompts x 128 tok (test split)
+2026-11-24 18:14:35,012 | Base FP16 Wikitext2 test perplexity=13.070 (loss=2.5703)
+2026-11-24 18:16:14,635 | Base latency: gen p50=2113.3 ms p95=4758.9 ms; peak=1.012 GB
+2026-11-24 18:16:25,426 | Base saved: size=999.5 MB; results -> p1_results.json
