@@ -66,3 +66,4 @@
 2026-11-24 20:23:30,878 | Per-class: most degraded class=Business (drop 3.00 pts); 96 teacher-right/student-wrong cases; picked idx [110, 1124, 3576, 4603, 5392]
 2026-11-24 20:26:44,184 | Part2 results written to METRICS.md
 2026-11-24 20:27:21,510 | Comparison written: latency-bound -> distillation, memory-bound -> GPTQ quantization
+2026-11-24 20:38:19,167 | Table HW11.2: teacher acc=0.9443 p50=9.35ms peak=3.956GB size=438.7MB | student(sub30k_Tsweep_T1_a0.5) acc=0.9293 p50=4.74ms peak=3.786GB size=268.6MB
