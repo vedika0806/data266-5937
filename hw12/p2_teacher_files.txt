@@ -1,0 +1,7 @@
+/content/work/teacher_model/teacher_model
+config.json	0.00 MB
+model.safetensors	437.96 MB
+special_tokens_map.json	0.00 MB
+tokenizer.json	0.71 MB
+tokenizer_config.json	0.00 MB
+vocab.txt	0.23 MB

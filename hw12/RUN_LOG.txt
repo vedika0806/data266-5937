@@ -46,3 +46,13 @@
 2026-11-24 18:25:46,994 | GPTQ Wikitext2 test perplexity=14.354 (loss=2.6641); kernels=[]
 2026-11-24 18:29:13,067 | GPTQ latency: gen p50=5927.8 ms p95=6357.9 ms; peak=0.944 GB
 2026-11-24 18:29:26,128 | Part1 table + findings written to METRICS.md (PPL +9.8%, size 2.12x, mem 1.07x, latency 0.36x)
+2026-11-24 18:56:34,744 | Teacher uploaded from local machine (teacher_model.7z) and extracted to /content/work/teacher_model/teacher_model (6 files)
+2026-11-24 18:59:36,068 | Teacher loaded locally: bert, 12 layers, 109.5M params; AG News fancyzhx/ag_news@eb185aade064a813bc0b7f42de02595523103ca4: train=120000, test=7600, classes=['World', 'Sports', 'Business', 'Sci/Tech']
+2026-11-24 19:00:38,111 | Teacher test accuracy=0.9443; per-class={'World': 0.9489473684210527, 'Sports': 0.988421052631579, 'Business': 0.9136842105263158, 'Sci/Tech': 0.9263157894736842}
+2026-11-24 19:20:58,668 | Teacher logits extracted for all 120000 train samples -> p2_teacher_train_logits.npy; teacher train acc=0.9895, mean max-prob=0.9951
+2026-11-24 19:22:00,556 | Student distilbert/distilbert-base-uncased@12040accade4e8a0f71eabdb258fecc2e7e948be; train config {'epochs': 1, 'batch_size': 32, 'lr': 5e-05, 'weight_decay': 0.01, 'warmup_ratio': 0.06, 'grad_clip': 1.0, 'max_len': 128, 'precision': 'bfloat16 autocast', 'seed': 5937, 'log_every': 50, 'student': 'distilbert/distilbert-base-uncased@12040accade4e8a0f71eabdb258fecc2e7e948be', 'train_subset': 30000}
+2026-11-24 19:29:56,275 | KD run sub30k_Tsweep_T1_a0.5: T=1, alpha=0.5, test acc=0.9293, train 6.1 min, final CE=0.2027, KLD=0.1815
+2026-11-24 19:37:15,155 | KD run sub30k_Tsweep_T2_a0.5: T=2, alpha=0.5, test acc=0.9278, train 6.2 min, final CE=0.2391, KLD=0.5080
+2026-11-24 19:44:19,177 | KD run sub30k_Tsweep_T5_a0.5: T=5, alpha=0.5, test acc=0.9271, train 6.2 min, final CE=0.2654, KLD=0.8136
+2026-11-24 19:51:45,379 | KD run sub30k_Tsweep_T10_a0.5: T=10, alpha=0.5, test acc=0.9275, train 6.2 min, final CE=0.2650, KLD=0.7858
+2026-11-24 19:52:03,737 | Temperature sweep done: T=1: 0.9293, T=2: 0.9278, T=5: 0.9271, T=10: 0.9275; best T=1

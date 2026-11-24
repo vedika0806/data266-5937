@@ -1,0 +1,102 @@
+{
+  "sub30k_Tsweep_T1_a0.5": {
+    "name": "sub30k_Tsweep_T1_a0.5",
+    "sweep": "Tsweep",
+    "T": 1,
+    "alpha": 0.5,
+    "accuracy": 0.9293421052631579,
+    "per_class": {
+      "World": 0.9242105263157895,
+      "Sports": 0.9852631578947368,
+      "Business": 0.8836842105263157,
+      "Sci/Tech": 0.9242105263157895
+    },
+    "train_seconds": 367.76387740300015,
+    "steps": 938,
+    "final_window": {
+      "step": 938,
+      "epoch": 1.0,
+      "loss": 0.19212422088572853,
+      "ce": 0.20273460398771262,
+      "kld": 0.18151384062672915,
+      "lr": 0.0,
+      "elapsed_s": 367.5
+    },
+    "log_csv": "logs/kd_sub30k_Tsweep_T1_a0.5.csv"
+  },
+  "sub30k_Tsweep_T2_a0.5": {
+    "name": "sub30k_Tsweep_T2_a0.5",
+    "sweep": "Tsweep",
+    "T": 2,
+    "alpha": 0.5,
+    "accuracy": 0.9277631578947368,
+    "per_class": {
+      "World": 0.9257894736842105,
+      "Sports": 0.9842105263157894,
+      "Business": 0.88,
+      "Sci/Tech": 0.9210526315789473
+    },
+    "train_seconds": 370.27872122400004,
+    "steps": 938,
+    "final_window": {
+      "step": 938,
+      "epoch": 1.0,
+      "loss": 0.3735309462798269,
+      "ce": 0.23908366037434653,
+      "kld": 0.5079782428710085,
+      "lr": 0.0,
+      "elapsed_s": 370.1
+    },
+    "log_csv": "logs/kd_sub30k_Tsweep_T2_a0.5.csv"
+  },
+  "sub30k_Tsweep_T5_a0.5": {
+    "name": "sub30k_Tsweep_T5_a0.5",
+    "sweep": "Tsweep",
+    "T": 5,
+    "alpha": 0.5,
+    "accuracy": 0.9271052631578948,
+    "per_class": {
+      "World": 0.9247368421052632,
+      "Sports": 0.9857894736842105,
+      "Business": 0.8736842105263158,
+      "Sci/Tech": 0.9242105263157895
+    },
+    "train_seconds": 370.144569346,
+    "steps": 938,
+    "final_window": {
+      "step": 938,
+      "epoch": 1.0,
+      "loss": 0.5394855125954277,
+      "ce": 0.2654157221611393,
+      "kld": 0.8135553033728349,
+      "lr": 0.0,
+      "elapsed_s": 370.0
+    },
+    "log_csv": "logs/kd_sub30k_Tsweep_T5_a0.5.csv"
+  },
+  "sub30k_Tsweep_T10_a0.5": {
+    "name": "sub30k_Tsweep_T10_a0.5",
+    "sweep": "Tsweep",
+    "T": 10,
+    "alpha": 0.5,
+    "accuracy": 0.9275,
+    "per_class": {
+      "World": 0.9294736842105263,
+      "Sports": 0.9852631578947368,
+      "Business": 0.8742105263157894,
+      "Sci/Tech": 0.9210526315789473
+    },
+    "train_seconds": 370.71023947899994,
+    "steps": 938,
+    "final_window": {
+      "step": 938,
+      "epoch": 1.0,
+      "loss": 0.525430486782601,
+      "ce": 0.26501380671796043,
+      "kld": 0.7858471697882602,
+      "lr": 0.0,
+      "elapsed_s": 370.5
+    },
+    "log_csv": "logs/kd_sub30k_Tsweep_T10_a0.5.csv"
+  }
+}
