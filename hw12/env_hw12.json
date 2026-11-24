@@ -1,13 +1,13 @@
 {
   "gpu": "Tesla T4",
   "gpu_mem_GB": 15.6,
-  "cuda": "13.2",
+  "cuda": "13.0",
   "python": "3.13.16",
   "packages": {
-    "torch": "2.15.0",
+    "torch": "2.14.1+cu130",
     "transformers": "5.24.0",
     "optimum": "2.3.0",
-    "gptqmodel": "7.12.2",
+    "gptqmodel": "7.10.0",
     "accelerate": "1.16.0",
     "datasets": "5.2.0",
     "gdown": "6.5.2"

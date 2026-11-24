@@ -19,3 +19,6 @@
 2026-11-23 23:26:28,392 | GPTQ latency: gen p50=2795.9 ms p95=3464.5 ms; peak=0.474 GB
 2026-11-23 23:28:05,162 | Part1 table + findings written to METRICS.md (PPL +9.7%, size 2.12x, mem 2.13x, latency 0.68x)
 2026-11-24 02:14:00,280 | === Session started for hw12 ===
+2026-11-24 02:14:39,854 | Params: SID4=5937, SEED=5937, SLICE=937, HP_ID=3, CLS_A=7, CLS_B=6
+2026-11-24 02:16:01,181 | Installed packages: {'torch': '2.14.1+cu130', 'transformers': '5.24.0', 'optimum': '2.3.0', 'gptqmodel': '7.10.0', 'accelerate': '1.16.0', 'datasets': '5.2.0', 'gdown': '6.5.2'}
+2026-11-24 02:16:55,456 | Imports done, device=cuda, GPU=Tesla T4
