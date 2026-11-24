@@ -56,3 +56,5 @@
 2026-11-24 19:44:19,177 | KD run sub30k_Tsweep_T5_a0.5: T=5, alpha=0.5, test acc=0.9271, train 6.2 min, final CE=0.2654, KLD=0.8136
 2026-11-24 19:51:45,379 | KD run sub30k_Tsweep_T10_a0.5: T=10, alpha=0.5, test acc=0.9275, train 6.2 min, final CE=0.2650, KLD=0.7858
 2026-11-24 19:52:03,737 | Temperature sweep done: T=1: 0.9293, T=2: 0.9278, T=5: 0.9271, T=10: 0.9275; best T=1
+2026-11-24 19:57:48,748 | Fixed failed pushes: moved ['hw12/teacher_model.7z', 'hw9/latent_unet.pt'] out of the repo, added *.7z/*.zip to .gitignore, pushed Part 2 teacher + temperature-sweep results
+2026-11-24 20:05:16,939 | KD run sub30k_Asweep_T1_a0.25: T=1, alpha=0.25, test acc=0.9284, train 6.1 min, final CE=0.2025, KLD=0.1804

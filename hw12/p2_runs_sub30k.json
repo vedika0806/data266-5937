@@ -98,5 +98,30 @@
       "elapsed_s": 370.5
     },
     "log_csv": "logs/kd_sub30k_Tsweep_T10_a0.5.csv"
+  },
+  "sub30k_Asweep_T1_a0.25": {
+    "name": "sub30k_Asweep_T1_a0.25",
+    "sweep": "Asweep",
+    "T": 1,
+    "alpha": 0.25,
+    "accuracy": 0.9284210526315789,
+    "per_class": {
+      "World": 0.9242105263157895,
+      "Sports": 0.9847368421052631,
+      "Business": 0.8821052631578947,
+      "Sci/Tech": 0.9226315789473685
+    },
+    "train_seconds": 364.5248785160002,
+    "steps": 938,
+    "final_window": {
+      "step": 938,
+      "epoch": 1.0,
+      "loss": 0.18590469001547286,
+      "ce": 0.20253110451525763,
+      "kld": 0.18036255122799622,
+      "lr": 0.0,
+      "elapsed_s": 364.4
+    },
+    "log_csv": "logs/kd_sub30k_Asweep_T1_a0.25.csv"
   }
 }
