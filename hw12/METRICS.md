@@ -145,3 +145,9 @@ Five examples (true class = Business; teacher right, student wrong; picked with 
 ![per class](p2_per_class_accuracy.png)
 ![confusion](p2_confusion_teacher_student.png)
 <!-- END part2 -->
+
+<!-- BEGIN comparison -->
+## Quantization vs. distillation
+
+GPTQ keeps the Qwen/Qwen2.5-0.5B architecture and only stores its linear-layer weights in 4 bits, so it cut the model on disk 2.12× and peak GPU memory 1.07× for a +9.8% change in Wikitext-2 perplexity, while batch-1 generation latency changed by 0.36× (slowing it down), because the 4-bit weights must be dequantized inside every matmul and a small model at batch 1 is not limited by weight reads. Distillation instead removes compute: the 6-layer DistilBERT student is 1.63× smaller on disk, uses 1.00× less peak memory and is 1.37× faster at p50 batch-1 latency than its 12-layer BERT teacher, at a cost of -1.50 accuracy points against that same teacher on AG News. The costs are also different in kind: GPTQ needed 1.5 minutes of calibration on unlabeled text and no training, whereas distillation needed teacher logits for 120,000 labeled samples and 43 minutes of student training (30,000 samples per student) across 7 runs, plus a sweep to tune T and α. For a latency-bound deployment I would consider distillation first, because it removes layers, so every forward pass does less work (measured 1.37× faster here vs. 0.36× for GPTQ); for a memory-bound deployment I would consider GPTQ quantization first, because it cuts the bytes per weight with no retraining (measured 1.07× less memory and 2.12× smaller on disk here). The two are complementary: a distilled student can itself be quantized afterwards.
+<!-- END comparison -->
