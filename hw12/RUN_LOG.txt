@@ -32,3 +32,4 @@
 2026-11-24 17:57:21,905 | Base FP16 Wikitext2 test perplexity=13.070 (loss=2.5703)
 2026-11-24 17:58:38,642 | Base latency: gen p50=1898.7 ms p95=4650.1 ms; peak=1.012 GB
 2026-11-24 17:58:53,235 | Base saved: size=999.5 MB; results -> p1_results.json
+2026-11-24 18:03:43,814 | GPTQ quantized ({'bits': 4, 'group_size': 128, 'desc_act': False, 'sym': True, 'n_calib': 128, 'calib_len': 512}) in 4.5 min; size=471.1 MB
