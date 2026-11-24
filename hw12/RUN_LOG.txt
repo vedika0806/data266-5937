@@ -71,3 +71,4 @@
 2026-11-24 20:39:50,637 | Per-class: most degraded class=Business (drop 3.00 pts); 96 teacher-right/student-wrong cases; picked idx [110, 1124, 3576, 4603, 5392]
 2026-11-24 20:40:34,106 | Part2 results written to METRICS.md
 2026-11-24 20:40:41,722 | Comparison written: latency-bound -> distillation, memory-bound -> GPTQ quantization
+2026-11-24 21:00:44,913 | Created AI_USE.md
