@@ -39,7 +39,7 @@ Sample greedy continuation of "The history of the Roman Empire":
 - **Peak GPU memory during generation:** 1.012 GB → 0.944 GB (1.07× lower). KV cache and activations stay FP16, so memory shrinks less than the weights.
 - **Latency (batch 1, 128-token prompt, 64 new tokens):** p50 2113.3 → 5927.8 ms, p95 4758.9 → 6357.9 ms
   — the GPTQ model is 2.81× slower. Prefill of 512 tokens: 39.78 → 90.79 ms.
-  Kernel used: n/a. For a 0.5 B model at batch 1, each decoding step is dominated by per-layer kernel-launch overhead rather than by reading weights, and the 4-bit weights must be dequantized inside the kernel, so GPTQ gives no real speed-up here; its gain is memory and storage.
+    Kernel used: torch (GPT-QModel backend; Marlin cannot compile on a T4).
 - **Quantization cost:** 1.5 min on Tesla T4 with 128 calibration windows — no training and no labels.
 <!-- END part1 -->
 
