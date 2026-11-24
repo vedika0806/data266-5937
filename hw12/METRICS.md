@@ -105,13 +105,13 @@ over 938 steps (6.1 min).
 
 | Configuration                                         | Accuracy   | p50 / p95 latency (ms)   |   Peak memory (GB) |   Size on disk (MB) |
 |:------------------------------------------------------|:-----------|:-------------------------|-------------------:|--------------------:|
-| Teacher (BERT-base, 109 M params)                     | 94.43%     | 14.84 / 40.89            |              3.956 |               438.7 |
-| Best distilled student (DistilBERT, 67 M; T=1, α=0.5) | 92.93%     | 10.81 / 24.37            |              3.956 |               268.6 |
+| Teacher (BERT-base, 109 M params)                     | 94.43%     | 9.35 / 17.85             |              3.956 |               438.7 |
+| Best distilled student (DistilBERT, 67 M; T=1, α=0.5) | 92.93%     | 4.74 / 10.84             |              3.786 |               268.6 |
 
 | Configuration   |   test-set inference time (s, batch 256) |   throughput (samples/s) |   weights only (MB) |   parameters (M) |
 |:----------------|-----------------------------------------:|-------------------------:|--------------------:|-----------------:|
-| Teacher         |                                    56.39 |                      135 |               438   |            109.5 |
-| Best student    |                                    26.44 |                      287 |               267.8 |             67   |
+| Teacher         |                                    56.11 |                      135 |               438   |            109.5 |
+| Best student    |                                    26.32 |                      289 |               267.8 |             67   |
 
 Latency: batch 1, 500 seeded test samples, FP32, model call only. Peak memory: batch-256 pass over the full test set. Size: `save_pretrained` folder
 (the teacher as delivered in the archive: 438.9 MB).
