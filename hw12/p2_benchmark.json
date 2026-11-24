@@ -1,0 +1,27 @@
+{
+  "best_run": "sub30k_Tsweep_T1_a0.5",
+  "best_T": 1,
+  "teacher_folder_MB": 438.910977,
+  "teacher": {
+    "accuracy": 0.9443421052631579,
+    "p50_ms": 14.84230749974813,
+    "p95_ms": 40.88856735133959,
+    "testset_seconds": 56.38725419399998,
+    "throughput_per_s": 134.78223241465616,
+    "peak_mem_GB": 3.956257792,
+    "size_MB": 438.678035,
+    "weights_MB": 437.9648,
+    "params_M": 109.485316
+  },
+  "student": {
+    "accuracy": 0.9293421052631579,
+    "p50_ms": 10.812735999934375,
+    "p95_ms": 24.36855895030021,
+    "testset_seconds": 26.442396766000456,
+    "throughput_per_s": 287.41721362308783,
+    "peak_mem_GB": 3.956257792,
+    "size_MB": 268.551503,
+    "weights_MB": 267.83872,
+    "params_M": 66.956548
+  }
+}
