@@ -72,3 +72,4 @@
 2026-11-24 20:40:34,106 | Part2 results written to METRICS.md
 2026-11-24 20:40:41,722 | Comparison written: latency-bound -> distillation, memory-bound -> GPTQ quantization
 2026-11-24 21:00:44,913 | Created AI_USE.md
+2026-11-24 21:01:14,822 | Copied notebook with outputs into repo as HW12_DATA266_5937.ipynb
