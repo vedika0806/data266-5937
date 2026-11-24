@@ -70,3 +70,4 @@
 2026-11-24 20:38:48,069 | Part1 table + findings written to METRICS.md (PPL +9.8%, size 2.12x, mem 1.07x, latency 0.36x)
 2026-11-24 20:39:50,637 | Per-class: most degraded class=Business (drop 3.00 pts); 96 teacher-right/student-wrong cases; picked idx [110, 1124, 3576, 4603, 5392]
 2026-11-24 20:40:34,106 | Part2 results written to METRICS.md
+2026-11-24 20:40:41,722 | Comparison written: latency-bound -> distillation, memory-bound -> GPTQ quantization

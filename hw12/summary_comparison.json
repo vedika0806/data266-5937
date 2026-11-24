@@ -6,8 +6,8 @@
   },
   "distill": {
     "size_x": 1.6334968529295477,
-    "mem_x": 1.0,
-    "latency_x": 1.3726689988397212
+    "mem_x": 1.044932102306458,
+    "latency_x": 1.972609190418582
   },
   "latency_bound_first": "distillation",
   "memory_bound_first": "GPTQ quantization"
